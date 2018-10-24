@@ -11,7 +11,7 @@ public class Main {
             System.out.println("andrius ir lukas dx");
             System.out.println("andrius ir lukas dx");
             System.out.println("andrius ir lukas dx");System.out.println("andrius ir lukas dx");System.out.println("andrius ir lukas dx");
-
+            System.out.println("andrius ir lukas dxs");
 
         }
 
