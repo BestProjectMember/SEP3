@@ -8,7 +8,7 @@ public class Main {
         
 
         for (int i = 0; i<11; i++) {
-            System.out.println("andrius dx");
+            System.out.println("andrius ir lukas dx");
         }
 
     }
