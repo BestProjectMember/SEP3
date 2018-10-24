@@ -7,7 +7,9 @@ public class Main {
         System.out.println("Hello World Friends :)");
         
 
+        for (int i = 0; i<11; i++) {
 
+        }
 
     }
 }
