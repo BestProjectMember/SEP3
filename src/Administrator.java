@@ -4,6 +4,7 @@ public class Administrator {
     private String administratorID;
     private String telephoneNumber;
     private TenantList tenantList;
+    private ApartmentList apartmentList;
 
     public Administrator(String firstName, String lastName, String administratorID, String telephoneNumber) {
         this.firstName = firstName;
@@ -11,6 +12,7 @@ public class Administrator {
         this.administratorID = administratorID;
         this.telephoneNumber = telephoneNumber;
         this.tenantList = new TenantList();
+        this.apartmentList = new ApartmentList();
     }
 
     public String getFirstName() {
@@ -53,6 +55,12 @@ public class Administrator {
         tenantList.removeTenantByID(ID);
     }
 
+    public void addApartment(Apartment apartment) throws Exception{
+        apartmentList.addApartment(apartment);
+    }
 
+    public void removeApartmentByNumber(int number){
+        apartmentList.removeApartmentByNumber(number);
+    }
 
 }
