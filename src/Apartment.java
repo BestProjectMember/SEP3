@@ -66,13 +66,7 @@ public class Apartment {
 
     @Override
     public String toString() {
-        return "Apartment{" +
-                "number=" + number +
-                ", location='" + location + '\'' +
-                ", size=" + size +
-                ", status=" + status +
-                ", price=" + price +
-                ", floor=" + floor +
-                '}';
+       String all = number + " " + location + " " + size + " " + status + " " + price + " " + floor;
+       return all;
     }
 }
