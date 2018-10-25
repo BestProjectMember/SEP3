@@ -23,7 +23,7 @@ public class ApartmentList {
             list.add(apartment);
         }
 
-    public void removeApartment(int number) {
+    public void removeApartmentByNumber(int number) {
         for (int i = 0; i<list.size(); i++) {
             if (number == list.get(i).getNumber()) {
                 list.remove(i);
