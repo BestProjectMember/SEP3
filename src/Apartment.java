@@ -64,6 +64,7 @@ public class Apartment {
         this.floor = floor;
     }
 
+
     @Override
     public String toString() {
         return "Apartment{" +
