@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a25aa3b1-1860-40ab-b8ba-915e3f114af6" name="Default Changelist" comment="added Apartment, ApartmentList (adding, removing) classes">
+      <change afterPath="$PROJECT_DIR$/src/addApartmentScene.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/addTenantScene.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/apartmentScene.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mainScene.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tenantsScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TEST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEST.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tenant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tenant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TenantList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TenantList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SEP3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SEP3.iml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,24 +49,28 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="2019" />
+          <entry key="java" value="2103" />
           <entry key="txt" value="98" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2019" />
+          <entry key="JAVA" value="2103" />
           <entry key="PLAIN_TEXT" value="98" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="7" />
+          <entry key="fxml" value="6" />
+          <entry key="java" value="8" />
+          <entry key="jpg" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="7" />
+          <entry key="Image" value="1" />
+          <entry key="JAVA" value="8" />
+          <entry key="XML" value="6" />
         </counts>
       </usages-collector>
     </session>
@@ -83,19 +90,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/TEST.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="68" column="39" selection-start-line="68" selection-start-column="39" selection-end-line="68" selection-end-column="39" />
+            <state relative-caret-position="130">
+              <caret line="117" column="7" selection-start-line="117" selection-start-column="7" selection-end-line="117" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#245#246#0" expanded="true" />
@@ -109,6 +107,70 @@
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Administrator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="13" selection-start-column="13" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/apartmentScene.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mainScene.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tenantsScene.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="10" column="39" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/addApartmentScene.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/addTenantScene.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/login.jpg">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -139,61 +201,6 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitattributes">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Apartment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-320">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
-              <folding>
-                <element signature="e#498#499#0" expanded="true" />
-                <element signature="e#527#528#0" expanded="true" />
-                <element signature="e#568#569#0" expanded="true" />
-                <element signature="e#604#605#0" expanded="true" />
-                <element signature="e#639#640#0" expanded="true" />
-                <element signature="e#670#671#0" expanded="true" />
-                <element signature="e#718#719#0" expanded="true" />
-                <element signature="e#758#759#0" expanded="true" />
-                <element signature="e#789#790#0" expanded="true" />
-                <element signature="e#816#817#0" expanded="true" />
-                <element signature="e#856#857#0" expanded="true" />
-                <element signature="e#888#889#0" expanded="true" />
-                <element signature="e#921#922#0" expanded="true" />
-                <element signature="e#950#951#0" expanded="true" />
-                <element signature="e#995#996#0" expanded="true" />
-                <element signature="e#1031#1032#0" expanded="true" />
-                <element signature="e#1063#1064#0" expanded="true" />
-                <element signature="e#1091#1092#0" expanded="true" />
-                <element signature="e#1133#1134#0" expanded="true" />
-                <element signature="e#1167#1168#0" expanded="true" />
-                <element signature="e#1196#1197#0" expanded="true" />
-                <element signature="e#1224#1225#0" expanded="true" />
-                <element signature="e#1263#1264#0" expanded="true" />
-                <element signature="e#1297#1298#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ApartmentList.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="33" column="4" lean-forward="true" selection-start-line="33" selection-start-column="4" selection-end-line="35" selection-end-column="5" />
-              <folding>
-                <element signature="e#126#127#0" expanded="true" />
-                <element signature="e#175#176#0" expanded="true" />
-                <element signature="e#496#497#0" expanded="true" />
-                <element signature="e#530#531#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -201,6 +208,7 @@
       <list>
         <option value="Class" />
         <option value="AnnotationType" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -218,6 +226,12 @@
         <option value="$PROJECT_DIR$/src/Tenant.java" />
         <option value="$PROJECT_DIR$/src/TenantList.java" />
         <option value="$PROJECT_DIR$/src/TEST.java" />
+        <option value="$PROJECT_DIR$/src/loginScene.fxml" />
+        <option value="$PROJECT_DIR$/src/apartmentScene.fxml" />
+        <option value="$PROJECT_DIR$/src/mainScene.fxml" />
+        <option value="$PROJECT_DIR$/src/tenantsScene.fxml" />
+        <option value="$PROJECT_DIR$/src/addApartmentScene.fxml" />
+        <option value="$PROJECT_DIR$/src/addTenantScene.fxml" />
       </list>
     </option>
   </component>
@@ -265,11 +279,11 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540472995985" />
-    <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/SEP2Test" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540475068885" />
+    <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/SEP2Client" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
@@ -508,43 +522,42 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TEST_testApartmentCanBeAddedAndRemoved - 2018.10.25 at 14h 13m 29s.xml">
-      <configuration name="TEST.testApartmentCanBeAddedAndRemoved" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TEST_testTwoApartmentsCanBeAdded - 2018.10.25 at 14h 18m 27s.xml">
-      <configuration name="TEST.testTwoApartmentsCanBeAdded" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TEST_testTwoApartmentsCanBeAdded - 2018.10.25 at 14h 23m 15s.xml">
-      <configuration name="TEST.testTwoApartmentsCanBeAdded" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TEST - 2018.10.25 at 14h 23m 22s.xml">
-      <configuration name="TEST" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TEST_testTwoApartmentsCanBeAddedAndRemoved - 2018.10.25 at 14h 24m 34s.xml">
-      <configuration name="TEST.testTwoApartmentsCanBeAddedAndRemoved" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TEST_testTwoApartmentsCanBeAddedAndRemoved - 2018.10.25 at 14h 26m 11s.xml">
-      <configuration name="TEST.testTwoApartmentsCanBeAddedAndRemoved" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TEST_testExceptionAddingItemWhichExists - 2018.10.25 at 14h 46m 33s.xml">
-      <configuration name="TEST.testExceptionAddingItemWhichExists" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TEST_testExceptionAddingItemWhichExists - 2018.10.25 at 14h 46m 56s.xml">
-      <configuration name="TEST.testExceptionAddingItemWhichExists" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TEST_testTwoApartmentsCanBeAdded - 2018.10.25 at 14h 47m 35s.xml">
       <configuration name="TEST.testTwoApartmentsCanBeAdded" configurationId="JUnit" />
     </history-entry>
     <history-entry file="TEST_testTwoApartmentsCanBeAdded - 2018.10.25 at 14h 48m 08s.xml">
       <configuration name="TEST.testTwoApartmentsCanBeAdded" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TEST_testOneTenantCanBeAdded - 2018.10.25 at 15h 07m 26s.xml">
+      <configuration name="TEST.testOneTenantCanBeAdded" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TEST_testTenantCanBeAddedAndRemoved - 2018.10.25 at 15h 07m 29s.xml">
+      <configuration name="TEST.testTenantCanBeAddedAndRemoved" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TEST_testTenantListIsEmptyWhenCreated - 2018.10.25 at 15h 07m 33s.xml">
+      <configuration name="TEST.testTenantListIsEmptyWhenCreated" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TEST_testApartmentListIsEmptyWhenCreated - 2018.10.25 at 15h 07m 37s.xml">
+      <configuration name="TEST.testApartmentListIsEmptyWhenCreated" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TEST_testTenantListCreation - 2018.10.25 at 15h 07m 40s.xml">
+      <configuration name="TEST.testTenantListCreation" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TEST_testApartmentListCreation - 2018.10.25 at 15h 07m 43s.xml">
+      <configuration name="TEST.testApartmentListCreation" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TEST_testTwoTenantsCanBeAdded - 2018.10.25 at 15h 09m 42s.xml">
+      <configuration name="TEST.testTwoTenantsCanBeAdded" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TEST_testTwoTenantsCanBeAddedAndRemoved - 2018.10.25 at 15h 09m 45s.xml">
+      <configuration name="TEST.testTwoTenantsCanBeAddedAndRemoved" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10563000" />
+    <option name="totallyTimeSpent" value="12716000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13087249" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -555,15 +568,15 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49731544" visible="true" weight="0.32844576" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49597314" visible="true" weight="0.32844576" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49932885" weight="0.398827" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5026846" side_tool="true" visible="true" weight="0.32844576" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50402683" side_tool="true" visible="true" weight="0.32844576" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32991204" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -633,7 +646,7 @@
     <entry file="file://$PROJECT_DIR$/src/ApartmentList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="33" column="4" lean-forward="true" selection-start-line="33" selection-start-column="4" selection-end-line="35" selection-end-column="5" />
+          <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="35" selection-end-column="5" />
           <folding>
             <element signature="e#126#127#0" expanded="true" />
             <element signature="e#175#176#0" expanded="true" />
@@ -669,8 +682,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TEST.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="68" column="39" selection-start-line="68" selection-start-column="39" selection-end-line="68" selection-end-column="39" />
+        <state relative-caret-position="130">
+          <caret line="117" column="7" selection-start-line="117" selection-start-column="7" selection-end-line="117" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#245#246#0" expanded="true" />
@@ -684,6 +697,67 @@
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/loginScene.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="11" column="49" lean-forward="true" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Administrator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/apartmentScene.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mainScene.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitattributes">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tenantsScene.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="39" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/addApartmentScene.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/addTenantScene.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.jpg">
+      <provider selected="true" editor-type-id="images" />
     </entry>
   </component>
   <component name="masterDetails">
@@ -725,7 +799,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.8</last-edited>
+          <last-edited>11</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -742,7 +816,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
