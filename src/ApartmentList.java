@@ -20,6 +20,10 @@ public class ApartmentList {
         }
     }
 
+    public int size() {
+        return list.size();
+    }
+
     public String getAllApartments() {
         String a = "";
         for (int i = 0; i<list.size(); i++) {
