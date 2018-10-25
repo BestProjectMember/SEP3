@@ -2,12 +2,12 @@ public class Apartment {
 
     private int number;
     private String location;
-    private double size;
+    private int size;
     private boolean status;
     private double price;
     private int floor;
 
-    public Apartment(int number, String location, double size, boolean status, double price, int floor) {
+    public Apartment(int number, String location, int size, boolean status, double price, int floor) {
         this.number = number;
         this.location = location;
         this.size = size;
@@ -36,7 +36,7 @@ public class Apartment {
         return size;
     }
 
-    public void setSize(double size) {
+    public void setSize(int size) {
         this.size = size;
     }
 
