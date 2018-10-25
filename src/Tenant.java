@@ -1,3 +1,5 @@
+import java.util.Date;
+
 public class Tenant {
     private String firstName;
     private String lastName;

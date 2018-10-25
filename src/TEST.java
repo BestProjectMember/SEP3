@@ -1,19 +1,28 @@
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
+import java.util.Date;
+
 import static org.junit.Assert.*;
 
 public class TEST {
 
-    private ApartmentList list;
+    private ApartmentList apartmentList;
+    private TenantList tenantList;
 
-    private boolean isEmpty() {
-        return list.size() == 0;
+    private boolean apartmentListIsEmpty() {
+        return apartmentList.size() == 0;
+    }
+
+    private boolean tenantListIsEmpty() {
+        return tenantList.size() == 0;
     }
 
     @Before
     public void setUp() {
-        list = new ApartmentList();
+        apartmentList = new ApartmentList();
+        tenantList = new TenantList();
     }
 
     @After
@@ -23,44 +32,82 @@ public class TEST {
 
     // Zero
     @Test
-    public void testApartmentCreation() {
+    public void testApartmentListCreation() {
+    }
+    // Zero
+    @Test
+    public void testTenantListCreation() {
     }
 
     @Test
-    public void testApartmentListEmptyWhenCreated() {
-        assertTrue(isEmpty());
+    public void testApartmentListIsEmptyWhenCreated() {
+        assertTrue(apartmentListIsEmpty());
+    }
+
+    @Test
+    public void testTenantListIsEmptyWhenCreated() {
+        assertTrue(tenantListIsEmpty());
     }
 
     // One
     @Test
-    public void testOneApartmentCanBeAdded() {
-        list.addApartment(new Apartment(11, "1233", 23.3, true, 10.2, 1 ));
-        assertFalse(isEmpty());
+    public void testOneApartmentCanBeAdded() throws Exception {
+        apartmentList.addApartment(new Apartment(11, "1233", 23.3, true, 10.2, 1 ));
+        assertFalse(apartmentListIsEmpty());
     }
 
     @Test
-    public void testApartmentCanBeAddedAndRemoved() {
-        list.addApartment(new Apartment(11, "1233", 23.3, true, 10.2, 1 ));
-        list.removeApartment(11);
-        assertTrue(isEmpty());
+    public void testApartmentCanBeAddedAndRemoved() throws Exception {
+        apartmentList.addApartment(new Apartment(11, "1233", 23.3, true, 10.2, 1 ));
+        apartmentList.removeApartment(11);
+        assertTrue(apartmentListIsEmpty());
+    }
+
+    @Test
+    public void testOneTenantCanBeAdded() throws Exception {
+        tenantList.addTenant(new Tenant("test", "test", "11", new Date(11/1/1998), "test", "123", "M"));
+        assertFalse(tenantListIsEmpty());
+    }
+
+    @Test
+    public void testTenantCanBeAddedAndRemoved() throws Exception {
+        tenantList.addTenant(new Tenant("test", "test", "11", new Date(11/1/1998), "test", "123", "M"));
+        tenantList.removeTenantByID("11");
+        assertTrue(apartmentListIsEmpty());
     }
 
 //    MORE OR MANY
         @Test
-        public void testTwoApartmentsCanBeAdded() {
-            list.addApartment(new Apartment(11, "1233", 23.3, true, 10.2, 1 ));
-            list.addApartment(new Apartment(12, "1233", 23.3, true, 10.2, 1 ));
-            assertFalse(isEmpty());
+        public void testTwoApartmentsCanBeAdded() throws Exception {
+            apartmentList.addApartment(new Apartment(11, "1233", 23.3, true, 10.2, 1 ));
+            apartmentList.addApartment(new Apartment(12, "1233", 23.3, true, 10.2, 1 ));
+            assertFalse(apartmentListIsEmpty());
         }
 
         @Test
-        public void testTwoApartmentsCanBeAddedAndRemoved() {
-            list.addApartment(new Apartment(11, "1233", 23.3, true, 10.2, 1 ));
-            list.addApartment(new Apartment(12, "1233", 23.3, true, 10.2, 1 ));
-            list.removeApartment(11);
-            list.removeApartment(12);
-            assertTrue(isEmpty());
+        public void testTwoApartmentsCanBeAddedAndRemoved() throws Exception {
+            apartmentList.addApartment(new Apartment(11, "1233", 23.3, true, 10.2, 1 ));
+            apartmentList.addApartment(new Apartment(12, "1233", 23.3, true, 10.2, 1 ));
+            apartmentList.removeApartment(11);
+            apartmentList.removeApartment(12);
+            assertTrue(apartmentListIsEmpty());
         }
+
+    @Test
+    public void testTwoTenantsCanBeAdded() throws Exception {
+        tenantList.addTenant(new Tenant("test", "test", "11", new Date(11/1/1998), "test", "123", "M"));
+        tenantList.addTenant(new Tenant("test", "test", "13", new Date(11/1/1998), "test", "123", "M"));
+        assertFalse(tenantListIsEmpty());
+    }
+
+    @Test
+    public void testTwoTenantsCanBeAddedAndRemoved() throws Exception {
+        tenantList.addTenant(new Tenant("test", "test", "11", new Date(11/1/1998), "test", "123", "M"));
+        tenantList.addTenant(new Tenant("test", "test", "13", new Date(11/1/1998), "test", "123", "M"));
+        apartmentList.removeApartment(11);
+        apartmentList.removeApartment(13);
+        assertTrue(apartmentListIsEmpty());
+    }
 
 
 
@@ -71,17 +118,15 @@ public class TEST {
      */
 
 
-    // EXCEPTIONAL BEHAVIOUR
+     //EXCEPTIONAL BEHAVIOUR
 
-//    @Test (expected = ItemExistsException.class)
-//    public void testExceptionAddingItemWhichExists() throws SQLException, ItemExistsException {
-//        ItemList list = new ItemList();
-//        Item item1 = new Item(1, "testName", "testSize", 111, "testType", "testLocation");
-//        Item item2 = new Item(1, "testName", "testSize", 111, "testType", "testLocation");
-//        list.add(item1);
-//        list.add(item2);
-//
-//    }
+    @Test (expected = Exception.class)
+    public void testExceptionAddingApartmentWhichExists() throws Exception {
+        apartmentList.addApartment(new Apartment(11, "1233", 23.3, true, 10.2, 1 ));
+        apartmentList.addApartment(new Apartment(12, "1233", 23.3, true, 10.2, 1 ));
+    }
+
+
 //
 //    @Test (expected = EmployeeExistsException.class)
 //    public void testExceptionAddingDuplicateEmployee() throws SQLException, EmployeeExistsException {
