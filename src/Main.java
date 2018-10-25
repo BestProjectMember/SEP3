@@ -1,6 +1,6 @@
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
         ApartmentList list = new ApartmentList();
         Apartment apartment = new Apartment(11, "1233", 1, true, 10.2, 1 );

@@ -8,13 +8,9 @@ public class TenantList {
         this.tenantList = new ArrayList<>();
     }
 
-    public void setTenantList(ArrayList<Tenant> tenantList) {
-        this.tenantList = tenantList;
-    }
-
     public void addTenant(Tenant tenant) throws Exception
     {
-        // checking if there is tenat with same id
+        // checking if there is tenant with same id
         for(int i = 0; i < tenantList.size(); i++)
         {
             if(tenantList.get(i).getTenantID().equals(tenant.getTenantID()))
@@ -44,4 +40,7 @@ public class TenantList {
         return all;
     }
 
+    public int size() {
+        return tenantList.size();
+    }
 }
