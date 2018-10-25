@@ -37,11 +37,11 @@ public class TenantList {
     }
 
     public String getAllTenats() {
-        String al = "";
+        String all = "";
         for (int i = 0; i<tenantList.size(); i++) {
-            al+= tenantList.get(i).toString() + "\n";
+            all+= tenantList.get(i).toString() + "\n";
         }
-        return al;
+        return all;
     }
 
 }
