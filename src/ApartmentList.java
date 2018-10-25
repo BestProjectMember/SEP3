@@ -9,7 +9,7 @@ public class ApartmentList {
     }
     
         public void addApartment(Apartment apartment) throws Exception {
-            // checking if there is no apartment with same number
+            // checking if there is apartment with same number
             for(int i = 0; i < list.size(); i++)
             {
                 if(list.get(i).getNumber() == apartment.getNumber())
