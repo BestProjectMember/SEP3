@@ -42,7 +42,7 @@ public class Apartment {
         this.size = size;
     }
 
-    public boolean isStatus() {
+    public boolean getStatus() {
         return status;
     }
 

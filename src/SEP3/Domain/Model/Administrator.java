@@ -65,4 +65,8 @@ public class Administrator {
         apartmentList.removeApartmentByNumber(number);
     }
 
+    public void changeApartmentStatusByNumber(int number, boolean status){
+        apartmentList.changeStatusOfApartmentByNumber(number,status);
+    }
+
 }
