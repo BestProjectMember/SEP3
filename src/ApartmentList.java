@@ -43,6 +43,25 @@ public class ApartmentList {
         return a;
     }
 
+    public Apartment getApartmentByNumber(int number){
+        for (int i=0; i<list.size();i++){
+            if (list.get(i).getNumber() == number){
+                return list.get(i);
+            }
+
+        }
+        return null;
+    }
+
+    public void changeStatusOfApartmentByNumber(int number, boolean status){
+        for (int i=0; i < list.size();i++)
+        {
+            if (list.get(i).getNumber() == number){
+                list.get(i).setStatus(status);
+            }
+        }
+    }
+
 
 
 
