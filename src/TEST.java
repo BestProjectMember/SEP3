@@ -52,14 +52,14 @@ public class TEST {
     // One
     @Test
     public void testOneApartmentCanBeAdded() throws Exception {
-        apartmentList.addApartment(new Apartment(11, "1233", 23.3, true, 10.2, 1 ));
+        apartmentList.addApartment(new Apartment(11, "1233", 2, true, 10.2, 1 ));
         assertFalse(apartmentListIsEmpty());
     }
 
     @Test
     public void testApartmentCanBeAddedAndRemoved() throws Exception {
-        apartmentList.addApartment(new Apartment(11, "1233", 23.3, true, 10.2, 1 ));
-        apartmentList.removeApartment(11);
+        apartmentList.addApartment(new Apartment(11, "1233", 1, true, 10.2, 1 ));
+        apartmentList.removeApartmentByNumber(11);
         assertTrue(apartmentListIsEmpty());
     }
 
@@ -79,17 +79,17 @@ public class TEST {
 //    MORE OR MANY
         @Test
         public void testTwoApartmentsCanBeAdded() throws Exception {
-            apartmentList.addApartment(new Apartment(11, "1233", 23.3, true, 10.2, 1 ));
-            apartmentList.addApartment(new Apartment(12, "1233", 23.3, true, 10.2, 1 ));
+            apartmentList.addApartment(new Apartment(11, "1233", 3, true, 10.2, 1 ));
+            apartmentList.addApartment(new Apartment(12, "1233", 3, true, 10.2, 1 ));
             assertFalse(apartmentListIsEmpty());
         }
 
         @Test
         public void testTwoApartmentsCanBeAddedAndRemoved() throws Exception {
-            apartmentList.addApartment(new Apartment(11, "1233", 23.3, true, 10.2, 1 ));
-            apartmentList.addApartment(new Apartment(12, "1233", 23.3, true, 10.2, 1 ));
-            apartmentList.removeApartment(11);
-            apartmentList.removeApartment(12);
+            apartmentList.addApartment(new Apartment(11, "1233", 3, true, 10.2, 1 ));
+            apartmentList.addApartment(new Apartment(12, "1233", 3, true, 10.2, 1 ));
+            apartmentList.removeApartmentByNumber(11);
+            apartmentList.removeApartmentByNumber(12);
             assertTrue(apartmentListIsEmpty());
         }
 
@@ -104,8 +104,8 @@ public class TEST {
     public void testTwoTenantsCanBeAddedAndRemoved() throws Exception {
         tenantList.addTenant(new Tenant("test", "test", "11", new Date(11/1/1998), "test", "123", "M"));
         tenantList.addTenant(new Tenant("test", "test", "13", new Date(11/1/1998), "test", "123", "M"));
-        apartmentList.removeApartment(11);
-        apartmentList.removeApartment(13);
+        apartmentList.removeApartmentByNumber(11);
+        apartmentList.removeApartmentByNumber(13);
         assertTrue(apartmentListIsEmpty());
     }
 
@@ -122,8 +122,8 @@ public class TEST {
 
     @Test (expected = Exception.class)
     public void testExceptionAddingApartmentWhichExists() throws Exception {
-        apartmentList.addApartment(new Apartment(11, "1233", 23.3, true, 10.2, 1 ));
-        apartmentList.addApartment(new Apartment(12, "1233", 23.3, true, 10.2, 1 ));
+        apartmentList.addApartment(new Apartment(11, "1233", 3, true, 10.2, 1 ));
+        apartmentList.addApartment(new Apartment(12, "1233", 3, true, 10.2, 1 ));
     }
 
 
