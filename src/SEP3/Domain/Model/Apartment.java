@@ -1,3 +1,5 @@
+package SEP3.Domain.Model;
+
 public class Apartment {
 
     private int number;

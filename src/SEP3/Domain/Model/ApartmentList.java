@@ -1,3 +1,5 @@
+package SEP3.Domain.Model;
+
 import java.util.ArrayList;
 
 public class ApartmentList {
@@ -13,7 +15,7 @@ public class ApartmentList {
             for(int i = 0; i < list.size(); i++)
             {
                 if(list.get(i).getNumber() == apartment.getNumber())
-                    throw new Exception("Apartment with this number is already in the system");
+                    throw new Exception("SEP3.Domain.Model.Apartment with this number is already in the system");
             }
 
             // checking if all fields are filled

@@ -12,7 +12,7 @@
       <TextField layoutX="37.0" layoutY="73.0" />
       <Text layoutX="38.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name" />
       <TextField layoutX="37.0" layoutY="130.0" />
-      <Text layoutX="38.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tenant ID" />
+      <Text layoutX="38.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SEP3.Domain.Model.Tenant ID" />
       <TextField layoutX="37.0" layoutY="182.0" />
       <Text layoutX="38.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date of birth" />
       <TextField layoutX="37.0" layoutY="239.0" />
@@ -22,7 +22,7 @@
       <TextField layoutX="38.0" layoutY="349.0" />
       <Text layoutX="43.0" layoutY="399.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sex" />
       <TextField layoutX="38.0" layoutY="403.0" />
-      <Text layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Tenant" textAlignment="CENTER" wrappingWidth="384.0">
+      <Text layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add SEP3.Domain.Model.Tenant" textAlignment="CENTER" wrappingWidth="384.0">
          <font>
             <Font size="22.0" />
          </font>
