@@ -140,6 +140,12 @@ public class TEST {
 //
 //    }
 
+//    @Test
+//    public void testStatusOfApartmentCanByChanged() throws Exception{
+//        apartmentList.addApartment(new Apartment(11, "1233", 3, true, 10.2, 1 ));
+//        apartmentList.changeStatusOfApartmentByNumber(11,false);
+//        assertFalse(apartmentList.getApartmentByNumber(11).isStatus());
+//    }
 
 
 }

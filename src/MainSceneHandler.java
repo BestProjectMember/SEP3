@@ -1,3 +1,4 @@
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -5,29 +6,25 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
-import java.awt.event.ActionEvent;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class mainSceneHandler implements Initializable {
+public class MainSceneHandler implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
     }
 
-    public mainSceneHandler() {
+    public MainSceneHandler() {
 
     }
 
-    @FXML
-    public void toApartments(ActionEvent event) {
+    public void toApartments(ActionEvent actionEvent) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("apartmentScene.fxml"));
-            Parent mainWindow = loader.load();
+            Parent mainWindow = FXMLLoader.load(getClass().getResource("apartmentScene.fxml"));
             Scene mainScene = new Scene(mainWindow, 500, 500);
-            Stage mainStage  = (Stage)((Node) event.getSource()).getScene().getWindow();
+            Stage mainStage  = (Stage)((Node) actionEvent.getSource()).getScene().getWindow();
             mainStage.setScene(mainScene);
             mainStage.show();
 
@@ -35,5 +32,4 @@ public class mainSceneHandler implements Initializable {
             e.printStackTrace();
         }
     }
-
 }
