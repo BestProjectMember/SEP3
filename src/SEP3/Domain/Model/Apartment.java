@@ -1,3 +1,5 @@
+package SEP3.Domain.Model;
+
 public class Apartment {
 
     private int number;
@@ -40,7 +42,7 @@ public class Apartment {
         this.size = size;
     }
 
-    public boolean isStatus() {
+    public boolean getStatus() {
         return status;
     }
 

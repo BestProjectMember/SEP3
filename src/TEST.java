@@ -1,3 +1,7 @@
+import SEP3.Domain.Model.Apartment;
+import SEP3.Domain.Model.ApartmentList;
+import SEP3.Domain.Model.Tenant;
+import SEP3.Domain.Model.TenantList;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -136,14 +140,12 @@ public class TEST {
 //
 //    }
 
-    @Test
-    public void testChangeStatusOfApartment() throws Exception{
-        apartmentList.addApartment(new Apartment(11, "1233", 3, true, 10.2, 1 ));
-        apartmentList.changeStatusOfApartmentByNumber(11,false);
-        assertFalse(apartmentList.getApartmentByNumber(11).isStatus());
-    }
-
-
+//    @Test
+//    public void testStatusOfApartmentCanByChanged() throws Exception{
+//        apartmentList.addApartment(new Apartment(11, "1233", 3, true, 10.2, 1 ));
+//        apartmentList.changeStatusOfApartmentByNumber(11,false);
+//        assertFalse(apartmentList.getApartmentByNumber(11).isStatus());
+//    }
 
 
 }

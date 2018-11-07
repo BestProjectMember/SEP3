@@ -1,0 +1,29 @@
+create schema "lald";
+set search_path = 'lald';
+
+create domain firstName varchar(20);
+create domain lastName varchar(20);
+create domain administratorID varchar(30);
+create domain email varchar(30);
+create domain telephoneNumber varchar(30);
+
+create table administrator(firstname firstName, lastName lastName, administratorID administratorID, email email, telephoneNumber telephoneNumber);
+
+create domain number Integer;
+create domain location varchar(40);
+create domain size Integer;
+create domain status boolean;
+create domain price Decimal(4,2);
+create domain floor Integer;
+
+create table apartment(number number, location location, size size, status status, price price, floor floor);
+
+create domain tenantID varchar(30);
+create domain DOB date;
+create domain sex varchar(10);
+
+create table tenant(firstName firstName, lastName lastName, tenantID tenantID, DOB DOB, email email, telephoneNumber telephoneNumber, sex sex);
+
+select * from apartment;
+select * from administrator;
+select * from tenant;
