@@ -69,4 +69,9 @@ public class Administrator {
         apartmentList.changeStatusOfApartmentByNumber(number,status);
     }
 
+    public String getAllTentantsInformation(){
+        System.out.println("qweqw");
+        return tenantList.getAllTenats();
+    }
+
 }
