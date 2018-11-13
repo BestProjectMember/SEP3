@@ -4,14 +4,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="368.0" prefWidth="444.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainSceneHandler">
+<AnchorPane prefHeight="368.0" prefWidth="444.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button layoutX="84.0" layoutY="57.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="258.0" style="-fx-background-color: black;" text="Tenants" textFill="WHITE">
+      <Button layoutX="84.0" layoutY="57.0" mnemonicParsing="false" onAction="#toTenants" prefHeight="90.0" prefWidth="275.0" style="-fx-background-color: black;" text="Tenants" textFill="WHITE">
          <font>
             <Font size="27.0" />
          </font>
       </Button>
-      <Button layoutX="84.0" layoutY="193.0" mnemonicParsing="false" onAction="#toApartments" prefHeight="89.0" prefWidth="275.0" style="-fx-background-color: black;" text="Apartments" textFill="WHITE">
+      <Button layoutX="84.0" layoutY="193.0" mnemonicParsing="false" prefHeight="89.0" prefWidth="275.0" style="-fx-background-color: black;" text="Apartments" textFill="WHITE">
          <font>
             <Font size="20.0" />
          </font>

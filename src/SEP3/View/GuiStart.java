@@ -1,23 +1,16 @@
 package SEP3.View;
 
-import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
+import SEP3.Controller.Controller;
+import SEP3.Domain.Mediator.Model;
+import SEP3.Domain.Mediator.ModelManager;
 
-public class GuiStart extends Application {
+public class GuiStart {
 
-    @Override
-    public void start(Stage primaryStage) throws Exception {
-        Parent mainWindow = FXMLLoader.load(getClass().getResource("mainScene.fxml"));
-        primaryStage.setTitle("sep3");
-        Scene scene = new Scene(mainWindow, 500, 500);
-        primaryStage.setScene(scene);
-        primaryStage.show();
-    }
 
     public static void main(String[] args) {
-        launch(args);
+        Model model = new ModelManager();
+        View view = new GUI();
+        Controller controller = new Controller(model, view);
+        view.startView(controller);
     }
 }

@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Text?>
 
 
-<AnchorPane prefHeight="403.0" prefWidth="370.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AddApartmentScene">
+<AnchorPane prefHeight="403.0" prefWidth="370.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Text layoutX="46.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SEP3.Domain.Model.Apartment Number" />
       <TextField layoutX="49.0" layoutY="63.0" />

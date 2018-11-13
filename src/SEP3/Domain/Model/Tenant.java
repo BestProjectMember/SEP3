@@ -1,17 +1,17 @@
 package SEP3.Domain.Model;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Tenant {
     private String firstName;
     private String lastName;
     private String tenantID;
-    private Date DOB;
+    private LocalDate DOB;
     private String email;
     private String telephoneNumber;
     private String sex;
 
-    public Tenant(String firstName, String lastName, String tenantID,Date DOB, String email, String telephoneNumber, String sex){
+    public Tenant(String firstName, String lastName, String tenantID, LocalDate DOB, String email, String telephoneNumber, String sex){
         this.firstName = firstName;
         this.lastName = lastName;
         this.tenantID = tenantID;
@@ -45,11 +45,11 @@ public class Tenant {
         this.tenantID = tenantID;
     }
 
-    public Date getDOB() {
+    public LocalDate getDOB() {
         return DOB;
     }
 
-    public void setDOB(Date DOB) {
+    public void setDOB(LocalDate DOB) {
         this.DOB = DOB;
     }
 

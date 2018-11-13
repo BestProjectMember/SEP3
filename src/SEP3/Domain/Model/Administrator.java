@@ -1,6 +1,7 @@
 package SEP3.Domain.Model;
 
 public class Administrator {
+
     private String firstName;
     private String lastName;
     private String administratorID;

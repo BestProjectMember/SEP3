@@ -1,13 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="552.0" prefWidth="905.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <BorderPane prefHeight="588.0" prefWidth="824.0" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="30.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="39.0" prefWidth="879.0" style="-fx-background-color: lightblue; -fx-border-color: black;" text="Tenant" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-12.0" AnchorPane.topAnchor="0.0">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </top>
+         <left>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <children>
+                  <TextField fx:id="tenantFNameInput" layoutX="26.0" layoutY="73.0" promptText="first name..." />
+                  <TextField fx:id="tenantLNameInput" layoutX="25.0" layoutY="126.0" promptText="last name..." />
+                  <TextField fx:id="tenantIDInput" layoutX="25.0" layoutY="181.0" promptText="id..." />
+                  <TextField fx:id="tenantEmailInput" layoutX="26.0" layoutY="285.0" promptText="email..." />
+                  <TextField fx:id="tenantPhoneNumberInput" layoutX="26.0" layoutY="340.0" promptText="phone number...." />
+                  <Label layoutX="25.0" layoutY="108.0" text="Last Name" />
+                  <Label layoutX="25.0" layoutY="55.0" text="First Name" />
+                  <Label layoutX="27.0" layoutY="214.0" text="Date of birth" />
+                  <Label layoutX="25.0" layoutY="163.0" text="Tenant ID" />
+                  <Label layoutX="23.0" layoutY="267.0" text="Email" />
+                  <Label layoutX="25.0" layoutY="322.0" text="Phone number" />
+                  <Button layoutX="25.0" layoutY="454.0" mnemonicParsing="false" onAction="#addTenant" prefHeight="36.0" prefWidth="150.0" text="Add">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="27.0" layoutY="384.0" text="Gender" />
+                  <DatePicker fx:id="tenantDOBInput" layoutX="25.0" layoutY="232.0" prefHeight="24.0" prefWidth="150.0" />
+                  <RadioButton fx:id="maleButton" layoutX="27.0" layoutY="411.0" mnemonicParsing="false" text="Male" />
+                  <RadioButton fx:id="femaleButton" layoutX="95.0" layoutY="411.0" mnemonicParsing="false" text="Female" />
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane prefHeight="566.0" prefWidth="647.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TableView fx:id="tenantsTable" fixedCellSize="0.0" layoutX="-2.0" layoutY="48.0" prefHeight="494.0" prefWidth="643.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+                     <columns>
+                        <TableColumn fx:id="tenantFNameColumn" prefWidth="100.0" text="First Name" />
+                        <TableColumn fx:id="tenantLNameColumn" prefWidth="137.5999755859375" text="Last Name" />
+                        <TableColumn fx:id="tenantIDColumn" editable="false" prefWidth="64.79998779296875" text="Tenant ID" />
+                        <TableColumn fx:id="tenantDOBColumn" prefWidth="80.00003051757812" text="DOB" />
+                        <TableColumn fx:id="tenantEmailColumn" maxWidth="100.0" prefWidth="97.5999755859375" text="Email" />
+                        <TableColumn fx:id="tenantPhoneNumberColumn" maxWidth="100.0" prefWidth="293.60009765625" text="Phone Number" />
+                        <TableColumn fx:id="tenantGenderColumn" maxWidth="105.5999755859375" prefWidth="105.5999755859375" text="Gender" />
+                     </columns>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </TableView>
+                  <Label layoutX="279.0" layoutY="15.0" text="Tenants">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="tenantsCountLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="239.0" layoutY="14.0" prefHeight="26.0" prefWidth="33.0" style="-fx-border-color: grey;">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="14.0" layoutY="14.0" prefHeight="27.0" prefWidth="217.0" promptText="search tenant..." style="-fx-border-color: black;" AnchorPane.leftAnchor="14.0">
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </TextField>
+                  <Button alignment="CENTER" contentDisplay="RIGHT" defaultButton="true" layoutX="408.0" layoutY="7.0" mnemonicParsing="false" onAction="#showTenantList" prefHeight="40.0" prefWidth="271.0" text="Load / Refresh" textAlignment="CENTER" />
+                  <AnchorPane fx:id="searchIcon" layoutX="204.0" layoutY="15.0" prefHeight="24.0" prefWidth="26.0" styleClass="searchIcon" />
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
 </AnchorPane>

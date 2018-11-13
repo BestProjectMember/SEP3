@@ -26,6 +26,10 @@ public class TenantList {
         tenantList.add(tenant);
     }
 
+    public Tenant get(int index) {
+        return tenantList.get(index);
+    }
+
     public void removeTenantByID(String ID){
         for(int i = 0; i < tenantList.size(); i++){
             if (tenantList.get(i).getTenantID().equals(ID)){

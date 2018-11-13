@@ -6,6 +6,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 import static org.junit.Assert.*;
@@ -69,13 +70,13 @@ public class TEST {
 
     @Test
     public void testOneTenantCanBeAdded() throws Exception {
-        tenantList.addTenant(new Tenant("test", "test", "11", new Date(11/1/1998), "test", "123", "M"));
+        tenantList.addTenant(new Tenant("test", "test", "11", LocalDate.now(), "test", "123", "M"));
         assertFalse(tenantListIsEmpty());
     }
 
     @Test
     public void testTenantCanBeAddedAndRemoved() throws Exception {
-        tenantList.addTenant(new Tenant("test", "test", "11", new Date(11/1/1998), "test", "123", "M"));
+        tenantList.addTenant(new Tenant("test", "test", "11", LocalDate.now(), "test", "123", "M"));
         tenantList.removeTenantByID("11");
         assertTrue(apartmentListIsEmpty());
     }
@@ -99,15 +100,15 @@ public class TEST {
 
     @Test
     public void testTwoTenantsCanBeAdded() throws Exception {
-        tenantList.addTenant(new Tenant("test", "test", "11", new Date(11/1/1998), "test", "123", "M"));
-        tenantList.addTenant(new Tenant("test", "test", "13", new Date(11/1/1998), "test", "123", "M"));
+        tenantList.addTenant(new Tenant("test", "test", "11", LocalDate.now(), "test", "123", "M"));
+        tenantList.addTenant(new Tenant("test", "test", "13", LocalDate.now(), "test", "123", "M"));
         assertFalse(tenantListIsEmpty());
     }
 
     @Test
     public void testTwoTenantsCanBeAddedAndRemoved() throws Exception {
-        tenantList.addTenant(new Tenant("test", "test", "11", new Date(11/1/1998), "test", "123", "M"));
-        tenantList.addTenant(new Tenant("test", "test", "13", new Date(11/1/1998), "test", "123", "M"));
+        tenantList.addTenant(new Tenant("test", "test", "11", LocalDate.now(), "test", "123", "M"));
+        tenantList.addTenant(new Tenant("test", "test", "13", LocalDate.now(), "test", "123", "M"));
         apartmentList.removeApartmentByNumber(11);
         apartmentList.removeApartmentByNumber(13);
         assertTrue(apartmentListIsEmpty());

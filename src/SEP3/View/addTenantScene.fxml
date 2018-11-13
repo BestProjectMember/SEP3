@@ -6,7 +6,7 @@
 <?import javafx.scene.text.Text?>
 
 
-<AnchorPane prefHeight="495.0" prefWidth="384.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AddTenantScene">
+<AnchorPane prefHeight="495.0" prefWidth="384.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Text layoutX="37.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First Name" />
       <TextField layoutX="37.0" layoutY="73.0" />
