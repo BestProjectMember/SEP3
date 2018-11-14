@@ -29,7 +29,7 @@ public class MainSceneHandler implements Initializable {
     public void toTenants(ActionEvent event) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("tenantsScene.fxml"));
-            loader.setController(new TenantSceneHandler());
+            loader.setController(new TenantSceneHandler(controller));
             Parent mainWindow = loader.load();
             Scene mainScene = new Scene(mainWindow, 1000, 600);
             Stage mainStage  = (Stage)((Node) event.getSource()).getScene().getWindow();
@@ -41,3 +41,4 @@ public class MainSceneHandler implements Initializable {
         }
     }
 }
+
