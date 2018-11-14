@@ -1,5 +1,6 @@
 package SEP3.View;
 
+import SEP3.Client.Client;
 import SEP3.Controller.Controller;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

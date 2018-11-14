@@ -26,12 +26,12 @@ public class TenantSceneHandler implements Initializable {
     @FXML private TableColumn<Tenant, String> tenantFNameColumn;
     @FXML private TableColumn<Tenant, String>  tenantLNameColumn;
     @FXML private TableColumn<Tenant, String>  tenantIDColumn;
-    @FXML private TableColumn<Tenant, LocalDate>    tenantDOBColumn;
+    @FXML private TableColumn<Tenant, LocalDate> tenantDOBColumn;
     @FXML private TableColumn<Tenant, String>  tenantEmailColumn;
     @FXML private TableColumn<Tenant, String>  tenantPhoneNumberColumn;
     @FXML private TableColumn<Tenant, String>  tenantGenderColumn;
     // Items list
-    private ObservableList<Tenant> tenantData = FXCollections.observableArrayList();
+    private ObservableList<Tenant> tenantData;
     //-------------- Items fields -------------------
     @FXML TextField tenantFNameInput;
     @FXML TextField tenantLNameInput;
@@ -45,8 +45,15 @@ public class TenantSceneHandler implements Initializable {
     //-----------------------------------------------------
     @FXML Label tenantsCountLabel;
 
+
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        try {
+            showTenantList();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         radioGroup = new ToggleGroup();
         maleButton.setToggleGroup(radioGroup);
         femaleButton.setToggleGroup(radioGroup);
@@ -55,11 +62,12 @@ public class TenantSceneHandler implements Initializable {
 
     public TenantSceneHandler() {
         list = new TenantList();
-
+        tenantData = FXCollections.observableArrayList();
     }
 
     private void refreshTenantsTable() {
         tenantData.clear();
+        list = controller.executeGetAllTenants();
         try {
             for (int i = 0; i<list.size(); i++) {
                 tenantData.add(new Tenant(list.get(i).getFirstName(),
@@ -132,26 +140,26 @@ public class TenantSceneHandler implements Initializable {
     }
 
     @FXML
-    private void addTenant() throws Exception {
+            private void addTenant() throws Exception {
 
-        if (checkTenantFields()) {
-            Tenant tenant = getTenantInput();
-            list.addTenant(tenant);
-            tenantFNameInput.clear();
-            tenantLNameInput.clear();
-            tenantIDInput.clear();
-            tenantEmailInput.clear();
-            tenantPhoneNumberInput.clear();
-            refreshTenantsTable();
+                if (checkTenantFields()) {
+                    Tenant tenant = getTenantInput();
+                    list.addTenant(tenant);
+                    tenantFNameInput.clear();
+                    tenantLNameInput.clear();
+                    tenantIDInput.clear();
+                    tenantEmailInput.clear();
+                    tenantPhoneNumberInput.clear();
+                    refreshTenantsTable();
 
-            //Alert
-            Alert tenantAddedAlert = new Alert(Alert.AlertType.INFORMATION);
-            tenantAddedAlert.setTitle("Tenant added");
-            tenantAddedAlert.setHeaderText("Tenant added");
-            tenantAddedAlert.showAndWait();
-            countTenants();
+                    //Alert
+                    Alert tenantAddedAlert = new Alert(Alert.AlertType.INFORMATION);
+                    tenantAddedAlert.setTitle("Tenant added");
+                    tenantAddedAlert.setHeaderText("Tenant added");
+                    tenantAddedAlert.showAndWait();
+                    countTenants();
 
-            System.out.println("Added tenant: " + tenant.toString());
+                    System.out.println("Added tenant: " + tenant.toString());
 
         }
     }

@@ -1,34 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="493.0" prefWidth="837.0" style="-fx-border-color: black; -fx-background-color: #a5a5a5;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <GridPane layoutY="7.0" prefHeight="321.0" prefWidth="600.0">
-        <columnConstraints>
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="102.59998779296876" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="255.20001220703125" minWidth="0.0" prefWidth="255.20001220703125" />
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-        </columnConstraints>
-        <rowConstraints>
-            <RowConstraints maxHeight="133.59998779296876" minHeight="10.0" prefHeight="122.40000610351562" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="117.60002441406249" minHeight="10.0" prefHeight="82.39999389648439" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="128.60001220703126" minHeight="10.0" prefHeight="59.19999999999999" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="150.20000305175785" minHeight="10.0" prefHeight="98.40000000000003" vgrow="SOMETIMES" />
-        </rowConstraints>
+      <ImageView fitHeight="89.0" fitWidth="94.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../../../apartment.jpg" />
+         </image>
+      </ImageView>
+      <Line endX="-1.9999847412109375" layoutX="94.0" layoutY="90.0" startX="-100.0" strokeWidth="3.0" />
+      <Line endX="-101.0" endY="-140.0" layoutX="195.0" layoutY="140.0" startX="-98.99998474121094" startY="343.4000244140625" strokeType="OUTSIDE" strokeWidth="5.0">
+         <fill>
+            <LinearGradient cycleMethod="REPEAT" endX="0.4541985024022692" endY="0.7786259614215553" startX="0.316793886759809" startY="0.6908397092164018">
+               <stops>
+                  <Stop color="#452d2f" />
+                  <Stop color="#452d2f" offset="0.15273972602739724" />
+                  <Stop color="#452d2f" offset="0.19109589041095887" />
+                  <Stop color="#452d2f" offset="0.3006849315068493" />
+                  <Stop color="#452d2f" offset="0.4404109589041096" />
+                  <Stop color="#452d2f" offset="0.5217452682212694" />
+                  <Stop color="#452d2f" offset="0.6033932866255358" />
+                  <Stop color="#452d2f" offset="0.6869863013698629" />
+                  <Stop color="#452d2f" offset="0.7335616438356163" />
+                  <Stop color="#452d2f" offset="0.7691780821917807" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+         <stroke>
+            <LinearGradient cycleMethod="REPEAT" endX="0.4541985024022692" endY="0.7786259614215553" startX="0.3129771147065491" startY="0.6908397092164018">
+               <stops>
+                  <Stop color="#452d2f" />
+                  <Stop color="#452d2f" offset="0.15273972602739724" />
+                  <Stop color="#452d2f" offset="0.19109589041095887" />
+                  <Stop color="#452d2f" offset="0.3006849315068493" />
+                  <Stop color="#452d2f" offset="0.4404109589041096" />
+                  <Stop color="#452d2f" offset="0.5217452682212694" />
+                  <Stop color="#452d2f" offset="0.6033932866255358" />
+                  <Stop color="#452d2f" offset="0.6869863013698629" />
+                  <Stop color="#452d2f" offset="0.7335616438356163" />
+                  <Stop color="#452d2f" offset="0.8516208302833838" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </stroke>
+      </Line>
+      <AnchorPane layoutX="96.0" layoutY="-3.0" prefHeight="494.0" prefWidth="678.0" style="-fx-background-color: lightgrey;">
          <children>
-            <ImageView fitHeight="120.0" fitWidth="120.0" layoutY="10.0" pickOnBounds="true" smooth="false" y="100.0">
+            <ImageView cache="true" fitHeight="26.0" fitWidth="28.0" layoutX="177.0" layoutY="44.0" preserveRatio="true">
                <image>
-                  <Image url="@../../../apartment.jpg" />
+                  <Image url="@../../../../../../AppData/Local/Temp/icons8_Search_48px_1.png" />
                </image>
             </ImageView>
-         </children>
-      </GridPane>
+            <TextField focusTraversable="false" layoutX="25.0" layoutY="44.0" style="-fx-border-color: black;" />
+            <ImageView fitHeight="42.0" fitWidth="37.0" layoutX="606.0" layoutY="38.0" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../AppData/Local/Temp/icons8_User_48px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="37.0" fitWidth="37.0" layoutX="745.0" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../AppData/Local/Temp/icons8_Close_Window_48px.png" />
+               </image>
+            </ImageView>
+            <Line endX="108.0" endY="-3.814697265625E-6" layoutX="674.0" layoutY="37.0" startX="-674.0" startY="-1.9073486328125E-5" />
+            <Text layoutX="201.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Apartments Campus Horsens">
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </Text>
+            <Label layoutX="643.0" layoutY="38.0" prefHeight="37.0" prefWidth="101.0" text="Name">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="-1.0" layoutY="87.0" prefHeight="408.0" prefWidth="784.0" style="-fx-background-color: #e1e1e1;">
+               <children>
+                  <TableView layoutX="14.0" layoutY="14.0" prefHeight="371.0" prefWidth="762.0" style="-fx-background-color: #d2d6db;">
+                    <columns>
+                      <TableColumn prefWidth="75.0" text="C1" />
+                      <TableColumn prefWidth="75.0" text="C2" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </children></AnchorPane>
+      <ImageView fitHeight="72.0" fitWidth="72.0" layoutX="11.0" layoutY="206.0">
+         <image>
+            <Image url="@../../../../../../AppData/Local/Temp/icons8_Edit_Property_48px.png" />
+         </image>
+      </ImageView>
+      <Line endX="-613.0" endY="-1.52587890625E-5" layoutX="705.0" layoutY="188.0" startX="-703.0" startY="-1.52587890625E-5" />
+      <Line endX="-613.0" endY="-1.52587890625E-5" layoutX="705.0" layoutY="290.0" startX="-703.0" startY="-1.52587890625E-5" />
+      <ImageView fitHeight="61.0" fitWidth="61.0" layoutX="13.0" layoutY="411.0">
+         <image>
+            <Image url="@../../../../../../AppData/Local/Temp/icons8_Back_26px_7.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="72.0" fitWidth="72.0" layoutX="11.0" layoutY="105.0">
+         <image>
+            <Image url="@../../../../../../AppData/Local/Temp/icons8_Plus_Math_52px.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

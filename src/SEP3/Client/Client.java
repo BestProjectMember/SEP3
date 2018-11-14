@@ -1,13 +1,14 @@
 package SEP3.Client;
 
+import SEP3.Domain.Model.Tenant;
+import SEP3.Domain.Model.TenantList;
+import com.google.gson.Gson;
 import java.io.*;
 import java.net.Socket;
-import java.util.Scanner;
 
 public class Client {
 
     private Socket clientSocket;
-    private Scanner input;
     private DataInputStream in;
     private DataOutputStream out;
 
@@ -16,24 +17,28 @@ public class Client {
         clientSocket = new Socket(host, port);
         this.in = new DataInputStream(clientSocket.getInputStream());
         this.out = new DataOutputStream(clientSocket.getOutputStream());
-        input = new Scanner(System.in);
     }
 
-    public void execute() {
-        System.out.println("client running");
-        try {
-            while (true) {
+    public void execute() throws IOException {
+        Gson gson = new Gson();
 
-                String smth = input.nextLine();
-                    out.writeUTF(smth);
-            }
+        String input;
+        System.out.println("Client running...");
+        out.writeUTF("1");
 
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
+        System.out.println("Client running...");
+
+        input = in.readUTF();
+
+        TenantList list = gson.fromJson(input, TenantList.class);
+        
+        System.out.println("Client running...");
+
+        System.out.println("end");
+
     }
 
-
-
+    public Socket getClientSocket() {
+        return clientSocket;
+    }
 }
