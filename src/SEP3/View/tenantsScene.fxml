@@ -19,7 +19,7 @@
          <top>
             <AnchorPane prefHeight="30.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                <children>
-                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="39.0" prefWidth="879.0" style="-fx-background-color: lightblue; -fx-border-color: black;" text="Tenant" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-12.0" AnchorPane.topAnchor="0.0">
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutY="-6.0" prefHeight="39.0" prefWidth="905.0" style="-fx-background-color: lightblue; -fx-border-color: black;" text="Tenant" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-11.0" AnchorPane.topAnchor="-6.0">
                      <padding>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </padding>
@@ -50,7 +50,7 @@
                   <Label layoutX="25.0" layoutY="163.0" text="Tenant ID" />
                   <Label layoutX="23.0" layoutY="267.0" text="Email" />
                   <Label layoutX="25.0" layoutY="322.0" text="Phone number" />
-                  <Button layoutX="25.0" layoutY="454.0" mnemonicParsing="false" onAction="#addTenant" prefHeight="36.0" prefWidth="150.0" text="Add">
+                  <Button layoutX="25.0" layoutY="443.0" mnemonicParsing="false" onAction="#addTenant" prefHeight="36.0" prefWidth="150.0" text="Add">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -94,7 +94,6 @@
                         <Cursor fx:constant="DEFAULT" />
                      </cursor>
                   </TextField>
-                  <Button alignment="CENTER" contentDisplay="RIGHT" defaultButton="true" layoutX="408.0" layoutY="7.0" mnemonicParsing="false" onAction="#showTenantList" prefHeight="40.0" prefWidth="271.0" text="Load / Refresh" textAlignment="CENTER" />
                   <AnchorPane fx:id="searchIcon" layoutX="204.0" layoutY="15.0" prefHeight="24.0" prefWidth="26.0" styleClass="searchIcon" />
                </children>
             </AnchorPane>

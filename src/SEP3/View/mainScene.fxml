@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="368.0" prefWidth="444.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="368.0" prefWidth="444.0" style="-fx-background-color: Grey;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Button layoutX="84.0" layoutY="57.0" mnemonicParsing="false" onAction="#toTenants" prefHeight="90.0" prefWidth="275.0" style="-fx-background-color: black;" text="Tenants" textFill="WHITE">
          <font>
