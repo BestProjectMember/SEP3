@@ -1,3 +1,6 @@
+package SEP3.View;
+
+import SEP3.Controller.Controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,20 +14,25 @@ import java.util.ResourceBundle;
 
 public class MainSceneHandler implements Initializable {
 
+    private Controller controller;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
     }
 
-    public MainSceneHandler() {
-
+    public MainSceneHandler(Controller controller) {
+        this.controller = controller;
     }
 
-    public void toApartments(ActionEvent actionEvent) {
+    @FXML
+    public void toTenants(ActionEvent event) {
         try {
-            Parent mainWindow = FXMLLoader.load(getClass().getResource("apartmentScene.fxml"));
-            Scene mainScene = new Scene(mainWindow, 500, 500);
-            Stage mainStage  = (Stage)((Node) actionEvent.getSource()).getScene().getWindow();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("tenantsScene.fxml"));
+            loader.setController(new TenantSceneHandler(controller));
+            Parent mainWindow = loader.load();
+            Scene mainScene = new Scene(mainWindow, 1000, 600);
+            Stage mainStage  = (Stage)((Node) event.getSource()).getScene().getWindow();
             mainStage.setScene(mainScene);
             mainStage.show();
 
@@ -33,3 +41,4 @@ public class MainSceneHandler implements Initializable {
         }
     }
 }
+
