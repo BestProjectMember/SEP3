@@ -1,5 +1,9 @@
 package SEP3.Server;
 
+import SEP3.Domain.Model.RqApartment;
+import com.google.gson.Gson;
+
+import java.io.DataInputStream;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -9,10 +13,11 @@ public class HorsensServer implements Runnable {
     private ServerSocket welcomeSocket;
     private DatabaseConnection connection;
 
+
     public HorsensServer(int port) throws IOException {
         this.welcomeSocket = new ServerSocket(port);
         connection = new DatabaseConnection();
-        connection.connect();
+        //connection.connect();
     }
 
     @Override
@@ -24,12 +29,14 @@ public class HorsensServer implements Runnable {
                 Socket socket = welcomeSocket.accept();
                 System.out.println("Client connected at port" + socket.getPort());
                 CommunicatonThreadHandler handler = new CommunicatonThreadHandler(socket);
-                Thread t = new Thread(handler);
-                t.start();
+                handler.ReadFromCsharp();
+                //Thread t = new Thread(handler);
+                //t.start();
             } catch (IOException e) {
                 e.printStackTrace();
             }
 
         }
     }
+
 }

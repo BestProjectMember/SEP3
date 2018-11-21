@@ -17,8 +17,11 @@ public class CommunicatonThreadHandler implements Runnable {
         this.socket = socket;
         model = new HorsensServerModelManager();
         try {
+
+
             inputStream = new DataInputStream(socket.getInputStream());
             outputStream = new DataOutputStream(socket.getOutputStream());
+
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -50,5 +53,9 @@ public class CommunicatonThreadHandler implements Runnable {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public void ReadFromCsharp() throws IOException {
+        model.receiveApartmentRequest(socket);
     }
 }

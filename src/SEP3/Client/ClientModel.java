@@ -7,4 +7,5 @@ import java.io.IOException;
 public interface ClientModel {
 
     TenantList receiveTenantList() throws IOException;
+
 }
