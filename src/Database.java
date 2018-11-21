@@ -53,4 +53,18 @@ public class Database {
         }
     }
 
+    public synchronized void removeApartmentById(Apartment apartment)
+    {
+        String sql = "delete from lald.apartment where number="+ apartment.getNumber();
+        try {
+            this.db.update(sql);
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+
+
+
+
 }

@@ -1,9 +1,12 @@
 package SEP3.Server;
 
-import SEP3.Domain.Model.Apartment;
-import SEP3.Domain.Model.ApartmentList;
-import SEP3.Domain.Model.Tenant;
-import SEP3.Domain.Model.TenantList;
+import SEP3.Domain.Model.*;
+import com.google.gson.Gson;
+
+import java.io.DataInputStream;
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -11,6 +14,7 @@ import java.sql.SQLException;
 public class HorsensServerModelManager implements HorsensServerModel {
 
     private DatabaseConnection databaseConnection;
+    private Gson gson = new Gson();
 
 
     public HorsensServerModelManager() {
@@ -66,5 +70,16 @@ public class HorsensServerModelManager implements HorsensServerModel {
         }
         return apartmentList;
     }
+    @Override
+    public RqApartment receiveApartmentRequest(Socket socket) throws IOException {
+        DataInputStream inputStream = new DataInputStream(socket.getInputStream());
+        byte[] jsonBytes=new byte[1024];
+        inputStream.read(jsonBytes);
+        RqApartment a = gson.fromJson(new String(jsonBytes).trim(), RqApartment.class);
+        System.out.println(a);
+        return a;
+    }
+
+
 
 }
