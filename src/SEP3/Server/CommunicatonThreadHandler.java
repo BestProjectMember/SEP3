@@ -1,7 +1,6 @@
 package SEP3.Server;
 
 import com.google.gson.Gson;
-
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -18,8 +17,6 @@ public class CommunicatonThreadHandler implements Runnable {
         this.socket = socket;
         model = new HorsensServerModelManager();
         try {
-
-
             inputStream = new DataInputStream(socket.getInputStream());
             outputStream = new DataOutputStream(socket.getOutputStream());
 
@@ -30,24 +27,24 @@ public class CommunicatonThreadHandler implements Runnable {
 
     @Override
     public void run() {
+
+        boolean continueCommuticating = true;
         try {
-            while (true) {
+            while (continueCommuticating) {
                 Gson gson = new Gson();
                 int selection = inputStream.readInt();
                 System.out.println(selection);
 
                 switch (selection) {
-                    case 1 : String tenantList = gson.toJson(model.getTenantList());
-                    outputStream.writeUTF("test");
-                    outputStream.writeUTF(tenantList);
-                    break;
+                    case 1 :
+                        String tenantList = gson.toJson(model.getTenantList());
+                        outputStream.writeUTF(tenantList);
+                        break;
 
                     case 2 : String apartmentList = gson.toJson(model.getApartmentList());
-                    outputStream.writeUTF(apartmentList);
-                    break;
+                        outputStream.writeUTF(apartmentList);
+                        break;
 
-                    default :
-                        System.out.println("Wrong input");
                 }
             }
 

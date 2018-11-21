@@ -1,14 +1,10 @@
 package SEP3.Server;
 
-import SEP3.Domain.Model.RqApartment;
-import com.google.gson.Gson;
-
-import java.io.DataInputStream;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class HorsensServer {
+public class HorsensServer implements Runnable {
 
     private ServerSocket welcomeSocket;
     private DatabaseConnection connection;
@@ -17,35 +13,25 @@ public class HorsensServer {
     public HorsensServer(int port) throws IOException {
         this.welcomeSocket = new ServerSocket(port);
         connection = new DatabaseConnection();
-<<<<<<< HEAD
-        //connection.connect();
-=======
->>>>>>> parent of 0d97a1e... sockets connection fix
+        connection.connect();
     }
 
-    public void execute() {
-        System.out.println("Server running...");
-        connection.connect();
-        System.out.println("Database: " + connection.toString());
-        try {
-            while (true) {
+    @Override
+    public void run() {
+
+        while(true) {
+            try {
+                System.out.println("Waiting for clients...");
                 Socket socket = welcomeSocket.accept();
-                System.out.println("Client connected at port" + socket.getPort());
+                System.out.println("Client connected at port " + socket.getPort());
                 CommunicatonThreadHandler handler = new CommunicatonThreadHandler(socket);
-<<<<<<< HEAD
                 handler.ReadFromCsharp();
-                //Thread t = new Thread(handler);
-                //t.start();
-            } catch (IOException e) {
-                e.printStackTrace();
-=======
                 Thread t = new Thread(handler);
                 t.start();
->>>>>>> parent of 0d97a1e... sockets connection fix
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-        }
-        catch (Exception e) {
-            e.printStackTrace();
+
         }
     }
 

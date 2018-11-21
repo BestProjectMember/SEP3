@@ -10,6 +10,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
+import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
@@ -60,13 +61,15 @@ public class TenantSceneHandler implements Initializable {
         maleButton.setSelected(true);
     }
 
-    public TenantSceneHandler() {
+    public TenantSceneHandler(Controller controller) {
+        this.controller = controller;
         list = new TenantList();
         tenantData = FXCollections.observableArrayList();
     }
 
-    private void refreshTenantsTable() {
+    private void refreshTenantsTable() throws IOException {
         tenantData.clear();
+        System.out.println(list.toString());
         list = controller.executeGetAllTenants();
         try {
             for (int i = 0; i<list.size(); i++) {
