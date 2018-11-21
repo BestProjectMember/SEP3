@@ -1,14 +1,12 @@
 package SEP3.Controller;
 
 import SEP3.Client.ClientModel;
-import SEP3.Domain.Mediator.Model;
-import SEP3.Domain.Model.Tenant;
 import SEP3.Domain.Model.TenantList;
 import SEP3.View.View;
+import java.io.IOException;
 
 public class Controller {
 
-    private Model model;
     private View view;
     private ClientModel clientModel;
 
@@ -17,14 +15,14 @@ public class Controller {
      * @param //clientModel clientModel interface
      * @param GUI View interface
      */
-    public Controller(Model model, View GUI) {
-        this.model = model;
+    public Controller(ClientModel clientModel, View GUI) {
+        this.clientModel = clientModel;
         this.view = GUI;
     }
 
     // methods
 
-    public TenantList executeGetAllTenants() {
+    public TenantList executeGetAllTenants() throws IOException {
         return clientModel.receiveTenantList();
     }
 }
