@@ -9,7 +9,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import java.io.IOException;
+
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
@@ -45,6 +45,8 @@ public class TenantSceneHandler implements Initializable {
     //-----------------------------------------------------
     @FXML Label tenantsCountLabel;
 
+
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         try {
@@ -58,12 +60,12 @@ public class TenantSceneHandler implements Initializable {
         maleButton.setSelected(true);
     }
 
-    public TenantSceneHandler(Controller controller) {
-        this.controller = controller;
+    public TenantSceneHandler() {
+        list = new TenantList();
         tenantData = FXCollections.observableArrayList();
     }
 
-    private void refreshTenantsTable() throws IOException {
+    private void refreshTenantsTable() {
         tenantData.clear();
         list = controller.executeGetAllTenants();
         try {
@@ -85,7 +87,6 @@ public class TenantSceneHandler implements Initializable {
             tenantEmailColumn.setCellValueFactory(new PropertyValueFactory<>("email"));
             tenantGenderColumn.setCellValueFactory(new PropertyValueFactory<>("sex"));
             tenantsTable.setItems(tenantData);
-            countTenants();
         }
         catch (Exception e) {
             e.printStackTrace();
@@ -139,26 +140,26 @@ public class TenantSceneHandler implements Initializable {
     }
 
     @FXML
-    private void addTenant() throws Exception {
+            private void addTenant() throws Exception {
 
-        if (checkTenantFields()) {
-            Tenant tenant = getTenantInput();
-            list.addTenant(tenant);
-            tenantFNameInput.clear();
-            tenantLNameInput.clear();
-            tenantIDInput.clear();
-            tenantEmailInput.clear();
-            tenantPhoneNumberInput.clear();
-            refreshTenantsTable();
+                if (checkTenantFields()) {
+                    Tenant tenant = getTenantInput();
+                    list.addTenant(tenant);
+                    tenantFNameInput.clear();
+                    tenantLNameInput.clear();
+                    tenantIDInput.clear();
+                    tenantEmailInput.clear();
+                    tenantPhoneNumberInput.clear();
+                    refreshTenantsTable();
 
-            //Alert
-            Alert tenantAddedAlert = new Alert(Alert.AlertType.INFORMATION);
-            tenantAddedAlert.setTitle("Tenant added");
-            tenantAddedAlert.setHeaderText("Tenant added");
-            tenantAddedAlert.showAndWait();
-            countTenants();
+                    //Alert
+                    Alert tenantAddedAlert = new Alert(Alert.AlertType.INFORMATION);
+                    tenantAddedAlert.setTitle("Tenant added");
+                    tenantAddedAlert.setHeaderText("Tenant added");
+                    tenantAddedAlert.showAndWait();
+                    countTenants();
 
-            System.out.println("Added tenant: " + tenant.toString());
+                    System.out.println("Added tenant: " + tenant.toString());
 
         }
     }
