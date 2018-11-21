@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -15,6 +16,7 @@ public class HorsensServerModelManager implements HorsensServerModel {
 
     private DatabaseConnection databaseConnection;
     private Gson gson = new Gson();
+    private Socket socket;
 
 
     public HorsensServerModelManager() {
@@ -37,6 +39,7 @@ public class HorsensServerModelManager implements HorsensServerModel {
                         rs.getString(6),
                         rs.getString(7));
                 tenantList.addTenant(tenant);
+                System.out.println(tenantList.toString());
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -80,6 +83,28 @@ public class HorsensServerModelManager implements HorsensServerModel {
         return a;
     }
 
+    @Override
+    public void addApartmentRequest() {
+        try {
+                RqApartment rqApartment = receiveApartmentRequest(socket);
+                PreparedStatement preparedStatement;
+                DatabaseConnection dc = new DatabaseConnection();
+                Connection conn = dc.connect();
+                // database statement
+                String query = "insert into sep3db.rqapartments(firstName, lastName , id, email, campus, roomNumber) values(?,?,?,?,?,?)";
+                preparedStatement = conn.prepareStatement(query);
+                preparedStatement.setString(1, rqApartment.getFirstName());
+                preparedStatement.setString(2, rqApartment.getLastName());
+                preparedStatement.setString(3, rqApartment.getId());
+                preparedStatement.setString(4, rqApartment.getEmail());
+                preparedStatement.setString(5, rqApartment.getCampus());
+                preparedStatement.setString(6, rqApartment.getRoomNumber());
+                preparedStatement.execute();
+                preparedStatement.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+    }
 
 
 }
