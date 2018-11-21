@@ -9,7 +9,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-
+import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
@@ -26,12 +26,12 @@ public class TenantSceneHandler implements Initializable {
     @FXML private TableColumn<Tenant, String> tenantFNameColumn;
     @FXML private TableColumn<Tenant, String>  tenantLNameColumn;
     @FXML private TableColumn<Tenant, String>  tenantIDColumn;
-    @FXML private TableColumn<Tenant, LocalDate>    tenantDOBColumn;
+    @FXML private TableColumn<Tenant, LocalDate> tenantDOBColumn;
     @FXML private TableColumn<Tenant, String>  tenantEmailColumn;
     @FXML private TableColumn<Tenant, String>  tenantPhoneNumberColumn;
     @FXML private TableColumn<Tenant, String>  tenantGenderColumn;
     // Items list
-    private ObservableList<Tenant> tenantData = FXCollections.observableArrayList();
+    private ObservableList<Tenant> tenantData;
     //-------------- Items fields -------------------
     @FXML TextField tenantFNameInput;
     @FXML TextField tenantLNameInput;
@@ -47,19 +47,25 @@ public class TenantSceneHandler implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        try {
+            showTenantList();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         radioGroup = new ToggleGroup();
         maleButton.setToggleGroup(radioGroup);
         femaleButton.setToggleGroup(radioGroup);
         maleButton.setSelected(true);
     }
 
-    public TenantSceneHandler() {
-        list = new TenantList();
-
+    public TenantSceneHandler(Controller controller) {
+        this.controller = controller;
+        tenantData = FXCollections.observableArrayList();
     }
 
-    private void refreshTenantsTable() {
+    private void refreshTenantsTable() throws IOException {
         tenantData.clear();
+        list = controller.executeGetAllTenants();
         try {
             for (int i = 0; i<list.size(); i++) {
                 tenantData.add(new Tenant(list.get(i).getFirstName(),
@@ -79,6 +85,7 @@ public class TenantSceneHandler implements Initializable {
             tenantEmailColumn.setCellValueFactory(new PropertyValueFactory<>("email"));
             tenantGenderColumn.setCellValueFactory(new PropertyValueFactory<>("sex"));
             tenantsTable.setItems(tenantData);
+            countTenants();
         }
         catch (Exception e) {
             e.printStackTrace();

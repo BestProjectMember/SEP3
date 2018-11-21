@@ -21,7 +21,6 @@ public class Database {
         try {
             this.db = new MyDatabase("org.postgresql.Driver", "jdbc:postgresql://localhost:5432/postgres","postgres", "lukaso");
         } catch (ClassNotFoundException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }

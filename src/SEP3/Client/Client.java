@@ -2,38 +2,23 @@ package SEP3.Client;
 
 import java.io.*;
 import java.net.Socket;
-import java.util.Scanner;
 
 public class Client {
 
     private Socket clientSocket;
-    private Scanner input;
     private DataInputStream in;
     private DataOutputStream out;
 
-    public Client(String host, int port) throws Exception {
+    final int PORT = 6969;
+    final String HOST = "localhost";
 
-        clientSocket = new Socket(host, port);
+    public Client() throws IOException {
+        clientSocket = new Socket(HOST, PORT);
         this.in = new DataInputStream(clientSocket.getInputStream());
         this.out = new DataOutputStream(clientSocket.getOutputStream());
-        input = new Scanner(System.in);
     }
 
-    public void execute() {
-        System.out.println("client running");
-        try {
-            while (true) {
-
-                String smth = input.nextLine();
-                    out.writeUTF(smth);
-            }
-
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
+    public Socket getClientSocket() {
+        return clientSocket;
     }
-
-
-
 }

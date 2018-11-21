@@ -16,4 +16,5 @@ public class ModelManager implements Model {
     public void addTenant(Tenant tenant) throws Exception {
         admin.addTenant(tenant);
     }
+
 }
