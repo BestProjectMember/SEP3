@@ -11,6 +11,7 @@ public class Tenant {
     private String telephoneNumber;
     private String sex;
     private String username;
+    private String password;
 
     public Tenant(String firstName, String lastName, String tenantID, LocalDate DOB, String email, String telephoneNumber, String sex){
         this.firstName = firstName;
