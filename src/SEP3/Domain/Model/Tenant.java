@@ -13,7 +13,7 @@ public class Tenant {
     private String username;
     private String password;
 
-    public Tenant(String firstName, String lastName, String tenantID, LocalDate DOB, String email, String telephoneNumber, String sex, String username){
+    public Tenant(String firstName, String lastName, String tenantID, LocalDate DOB, String email, String telephoneNumber, String sex, String username, String password){
         this.firstName = firstName;
         this.lastName = lastName;
         this.tenantID = tenantID;
@@ -22,7 +22,19 @@ public class Tenant {
         this.telephoneNumber = telephoneNumber;
         this.sex = sex;
         this.username = username;
-        //comment
+        this.password = password;
+
+
+    }
+    public Tenant(String firstName, String lastName, String tenantID, LocalDate DOB, String email, String telephoneNumber, String sex){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.tenantID = tenantID;
+        this.DOB = DOB;
+        this.email = email;
+        this.telephoneNumber = telephoneNumber;
+        this.sex = sex;
+
 
     }
 
@@ -81,6 +93,14 @@ public class Tenant {
     public void setSex(String sex) {
         this.sex = sex;
     }
+
+    public String getPassword(){return password;}
+
+    public void setPassword(String password){this.password = password;}
+
+    public String getUsername(){return username;}
+
+    public void setUsername(String username){this.username = username;}
 
     public String toString(){
         String all = firstName + " " + lastName + " " + tenantID + " " + DOB + " " + email + " " + telephoneNumber + " " + sex;

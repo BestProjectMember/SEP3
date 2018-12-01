@@ -26,7 +26,7 @@ public class ModelManager implements Model {
         return admin.getAllTentantsInformation();
     }
 
-    public void addApartment(Apartment apartment) throws Exception{
+    public void addApartment(Apartment apartment) throws Exception {
         admin.addApartment(apartment);
     }
 

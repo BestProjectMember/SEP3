@@ -12,7 +12,7 @@ public interface Model {
     public void removeTenantByID(String ID);
 
     public String getAllTentantsInformation();
-    public void addApartment(Apartment apartment);
+    public void addApartment(Apartment apartment) throws Exception;
 
     public void removeApartmentByNumber(int number);
 

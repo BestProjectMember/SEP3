@@ -26,7 +26,7 @@ public class TenantList {
         tenantList.add(tenant);
     }
 
-    public Tenant getTenant(int index) {
+    public Tenant get(int index) {
         return tenantList.get(index);
     }
 

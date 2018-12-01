@@ -13,7 +13,7 @@ public class CommunicatonThreadHandler implements Runnable {
     private Socket socket;
     private HorsensServerModel model;
 
-    public CommunicatonThreadHandler(Socket socket) {
+    public CommunicatonThreadHandler(Socket socket) throws IOException {
         this.socket = socket;
         model = new HorsensServerModelManager();
         try {
@@ -55,5 +55,9 @@ public class CommunicatonThreadHandler implements Runnable {
 
     public void ReadFromCsharp() throws IOException {
         model.receiveApartmentRequest(socket);
+    }
+    public void readRegistration()throws IOException
+    {
+        model.receiveTenantRegistration(socket);
     }
 }

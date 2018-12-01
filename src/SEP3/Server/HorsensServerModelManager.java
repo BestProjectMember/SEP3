@@ -80,8 +80,22 @@ public class HorsensServerModelManager implements HorsensServerModel {
         inputStream.read(jsonBytes);
         RqApartment a = gson.fromJson(new String(jsonBytes).trim(), RqApartment.class);
         System.out.println(a);
+
         return a;
     }
+
+    @Override
+    public Tenant receiveTenantRegistration(Socket socket) throws IOException {
+        DataInputStream inputStream = new DataInputStream(socket.getInputStream());
+        byte[] jsonBytes=new byte[1024];
+        inputStream.read(jsonBytes);
+        Tenant a = gson.fromJson(new String(jsonBytes).trim(), Tenant.class);
+
+        System.out.println(new String(jsonBytes).trim());
+        return a;
+    }
+
+
 
     @Override
     public void addApartmentRequest() {

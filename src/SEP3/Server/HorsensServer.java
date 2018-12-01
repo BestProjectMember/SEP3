@@ -12,8 +12,8 @@ public class HorsensServer implements Runnable {
 
     public HorsensServer(int port) throws IOException {
         this.welcomeSocket = new ServerSocket(port);
-        connection = new DatabaseConnection();
-        connection.connect();
+        //connection = new DatabaseConnection();
+        //connection.connect();
     }
 
     @Override
@@ -25,7 +25,8 @@ public class HorsensServer implements Runnable {
                 Socket socket = welcomeSocket.accept();
                 System.out.println("Client connected at port " + socket.getPort());
                 CommunicatonThreadHandler handler = new CommunicatonThreadHandler(socket);
-                handler.ReadFromCsharp();
+                //handler.ReadFromCsharp();
+                handler.readRegistration();
                 Thread t = new Thread(handler);
                 t.start();
             } catch (IOException e) {
