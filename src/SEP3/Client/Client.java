@@ -9,7 +9,7 @@ public class Client {
     private DataInputStream in;
     private DataOutputStream out;
 
-    final int PORT = 6969;
+    final int PORT = 6970;
     final String HOST = "localhost";
 
     public Client() throws IOException {
