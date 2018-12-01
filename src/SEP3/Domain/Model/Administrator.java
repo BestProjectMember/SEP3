@@ -58,6 +58,11 @@ public class Administrator {
         tenantList.removeTenantByID(ID);
     }
 
+    public String getAllTentantsInformation(){
+
+        return tenantList.getAllTenats();
+    }
+
     public void addApartment(Apartment apartment) throws Exception{
         apartmentList.addApartment(apartment);
     }
@@ -70,9 +75,10 @@ public class Administrator {
         apartmentList.changeStatusOfApartmentByNumber(number,status);
     }
 
-    public String getAllTentantsInformation(){
-        System.out.println("qweqw");
-        return tenantList.getAllTenats();
+    public String getAllAparmtentsInformation(){
+        return apartmentList.getAllApartments();
     }
+
+
 
 }

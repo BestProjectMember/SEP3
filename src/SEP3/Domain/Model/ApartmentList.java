@@ -4,17 +4,17 @@ import java.util.ArrayList;
 
 public class ApartmentList {
 
-    private ArrayList<Apartment> list;
+    private ArrayList<Apartment> apartmentList;
 
     public ApartmentList() {
-        list = new ArrayList<Apartment>();
+        apartmentList = new ArrayList<Apartment>();
     }
     
         public void addApartment(Apartment apartment) throws Exception {
             // checking if there is apartment with same number
-            for(int i = 0; i < list.size(); i++)
+            for(int i = 0; i < apartmentList.size(); i++)
             {
-                if(list.get(i).getNumber() == apartment.getNumber())
+                if(apartmentList.get(i).getNumber() == apartment.getNumber())
                     throw new Exception("SEP3.Domain.Model.Apartment with this number is already in the system");
             }
 
@@ -22,44 +22,49 @@ public class ApartmentList {
             if(apartment.getLocation().equals(""))
                 throw new Exception("Make sure to enter the location");
 
-            list.add(apartment);
+            apartmentList.add(apartment);
         }
 
     public void removeApartmentByNumber(int number) {
-        for (int i = 0; i<list.size(); i++) {
-            if (number == list.get(i).getNumber()) {
-                list.remove(i);
+        for (int i = 0; i<apartmentList.size(); i++) {
+            if (number == apartmentList.get(i).getNumber()) {
+                apartmentList.remove(i);
             }
         }
     }
 
     public int size() {
-        return list.size();
+        return apartmentList.size();
     }
 
     public String getAllApartments() {
         String a = "";
-        for (int i = 0; i<list.size(); i++) {
-            a+= list.get(i).toString() + "\n";
+        for (int i = 0; i<apartmentList.size(); i++) {
+            a+= apartmentList.get(i).toString() + "\n";
         }
         return a;
     }
 
     public Apartment getApartmentByNumber(int number){
-        for (int i=0; i<list.size();i++){
-            if (list.get(i).getNumber() == number){
-                return list.get(i);
+        for (int i=0; i<apartmentList.size();i++){
+            if (apartmentList.get(i).getNumber() == number){
+                return apartmentList.get(i);
             }
 
         }
         return null;
     }
 
+    public Apartment getApartmnet(int index) {
+        return apartmentList.get(index);
+    }
+
+
     public void changeStatusOfApartmentByNumber(int number, boolean status){
-        for (int i=0; i < list.size();i++)
+        for (int i=0; i < apartmentList.size();i++)
         {
-            if (list.get(i).getNumber() == number){
-                list.get(i).setStatus(status);
+            if (apartmentList.get(i).getNumber() == number){
+                apartmentList.get(i).setStatus(status);
             }
         }
     }
