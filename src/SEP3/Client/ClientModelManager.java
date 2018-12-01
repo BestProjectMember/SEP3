@@ -21,7 +21,7 @@ public class ClientModelManager implements ClientModel {
 
     @Override
     public TenantList receiveTenantList() throws IOException {
-        Client client = new Client();
+        client = new Client();
         Socket clientSocket = client.getClientSocket();
         in = new DataInputStream(clientSocket.getInputStream());
         out = new DataOutputStream(clientSocket.getOutputStream());
@@ -30,6 +30,7 @@ public class ClientModelManager implements ClientModel {
             Gson gson = new Gson();
             int choice = 1;
             out.writeInt(choice);
+            System.out.println(choice);
             String input = in.readUTF();
             tenantList = gson.fromJson(input, TenantList.class);
         } catch (IOException e) {

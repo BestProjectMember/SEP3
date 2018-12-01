@@ -17,8 +17,6 @@ public class CommunicatonThreadHandler implements Runnable {
         this.socket = socket;
         model = new HorsensServerModelManager();
         try {
-
-
             inputStream = new DataInputStream(socket.getInputStream());
             outputStream = new DataOutputStream(socket.getOutputStream());
 
@@ -33,13 +31,13 @@ public class CommunicatonThreadHandler implements Runnable {
         boolean continueCommuticating = true;
         try {
             while (continueCommuticating) {
-
-                int selection = inputStream.readInt();
                 Gson gson = new Gson();
+                int selection = inputStream.readInt();
                 System.out.println(selection);
 
                 switch (selection) {
-                    case 1 : String tenantList = gson.toJson(model.getTenantList());
+                    case 1 :
+                        String tenantList = gson.toJson(model.getTenantList());
                         outputStream.writeUTF(tenantList);
                         break;
 

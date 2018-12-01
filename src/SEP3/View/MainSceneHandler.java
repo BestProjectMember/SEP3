@@ -41,4 +41,3 @@ public class MainSceneHandler implements Initializable {
         }
     }
 }
-

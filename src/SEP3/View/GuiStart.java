@@ -8,6 +8,7 @@ public class GuiStart {
 
 
     public static void main(String[] args) throws Exception {
+
         ClientModel model = new ClientModelManager();
         View view = new GUI();
         Controller controller = new Controller(model, view);

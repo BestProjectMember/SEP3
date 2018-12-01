@@ -49,4 +49,11 @@ public class TenantList {
     public int size() {
         return tenantList.size();
     }
+
+    @Override
+    public String toString() {
+        return "TenantList{" +
+                "tenantList=" + tenantList +
+                '}';
+    }
 }

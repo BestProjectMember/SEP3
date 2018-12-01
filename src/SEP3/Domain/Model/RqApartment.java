@@ -27,6 +27,30 @@ public class RqApartment {
 
     }
 
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getCampus() {
+        return campus;
+    }
+
+    public String getRoomNumber() {
+        return roomNumber;
+    }
+
     @Override
     public String toString() {
         return "RqApartment{" +
