@@ -13,7 +13,7 @@ public class Tenant {
     private String username;
     private String password;
 
-    public Tenant(String firstName, String lastName, String tenantID, LocalDate DOB, String email, String telephoneNumber, String sex){
+    public Tenant(String firstName, String lastName, String tenantID, LocalDate DOB, String email, String telephoneNumber, String sex, String username){
         this.firstName = firstName;
         this.lastName = lastName;
         this.tenantID = tenantID;
@@ -21,6 +21,8 @@ public class Tenant {
         this.email = email;
         this.telephoneNumber = telephoneNumber;
         this.sex = sex;
+        this.username = username;
+
     }
 
     public String getFirstName() {
