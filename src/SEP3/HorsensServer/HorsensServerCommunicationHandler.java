@@ -1,7 +1,8 @@
 package SEP3.HorsensServer;
 
+import SEP3.Domain.Mediator.SystemModel;
+import SEP3.Domain.Model.TenantList;
 import com.google.gson.Gson;
-
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -12,26 +13,18 @@ public class HorsensServerCommunicationHandler implements Runnable {
     private DataInputStream inputStreamFromClient;
     private DataOutputStream outputStreamToClient;
     private Socket clientSocket;
+    private SystemModel systemModel;
 
-    private Socket client_serverSocket;
-    final int PORT = 6969;
-    final String HOST = "localhost";
-    private DataInputStream inputStreamFromDatabaseServer;
-    private DataOutputStream outputStreamToDatabaseServer;
-
-
-    public HorsensServerCommunicationHandler(Socket socket) {
+    public HorsensServerCommunicationHandler(Socket socket, SystemModel systemModel) {
+        this.systemModel = systemModel;
         this.clientSocket = socket;
         try {
-            client_serverSocket = new Socket(HOST, PORT);
             inputStreamFromClient = new DataInputStream(clientSocket.getInputStream());
             outputStreamToClient = new DataOutputStream(clientSocket.getOutputStream());
-
-            inputStreamFromDatabaseServer = new DataInputStream(client_serverSocket.getInputStream());
-            outputStreamToDatabaseServer = new DataOutputStream(client_serverSocket.getOutputStream());
         } catch (IOException e) {
             e.printStackTrace();
         }
+
     }
 
     @Override
@@ -45,9 +38,9 @@ public class HorsensServerCommunicationHandler implements Runnable {
 
                 switch (selection) {
                     case 1 :
-                        outputStreamToDatabaseServer.writeInt(selection);
-                        String tenantListFromDatabase = inputStreamFromDatabaseServer.readUTF();
-                        outputStreamToClient.writeUTF(tenantListFromDatabase);
+                        TenantList tenantListFromModel = systemModel.getTenantListFromDatabase();
+                        String tenantListToClient = gson.toJson(tenantListFromModel);
+                        outputStreamToClient.writeUTF(tenantListToClient);
                         break;
 
                     case 2 :

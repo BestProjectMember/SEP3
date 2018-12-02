@@ -16,7 +16,7 @@ public class AdministratorList {
         for(int i = 0; i < administratorList.size(); i++)
         {
             if(administratorList.get(i).getAdministratorID().equals(administrator.getAdministratorID()))
-                throw new Exception("SEP3.Domain.Model.Administrator with this ID is already in the system");
+                throw new Exception("SEP3.Domain.SystemModel.Administrator with this ID is already in the system");
         }
 
         // checking if all fields are filled

@@ -1,15 +1,18 @@
 package SEP3.HorsensServer;
 
+import SEP3.Domain.Mediator.SystemModel;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
 public class HorsensServer implements Runnable {
 
-    private ServerSocket welcomeSocket;
+    private ServerSocket serverSocket;
+    private SystemModel systemModel;
 
-    public HorsensServer(int port) throws IOException {
-        this.welcomeSocket = new ServerSocket(port);
+    public HorsensServer(int port, SystemModel systemModel) throws IOException {
+        this.serverSocket = new ServerSocket(port);
+        this.systemModel = systemModel;
     }
 
     @Override
@@ -17,9 +20,9 @@ public class HorsensServer implements Runnable {
         System.out.println("Waiting for clients...");
         while(true) {
             try {
-                Socket socket = welcomeSocket.accept();
+                Socket socket = serverSocket.accept();
                 System.out.println("Client connected at port " + socket.getPort());
-                HorsensServerCommunicationHandler handler = new HorsensServerCommunicationHandler(socket);
+                HorsensServerCommunicationHandler handler = new HorsensServerCommunicationHandler(socket, systemModel);
                 //handler.ReadFromCsharp(); //todo readFromCsharp
                 Thread t = new Thread(handler);
                 t.start();

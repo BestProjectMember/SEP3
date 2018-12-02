@@ -16,7 +16,7 @@ public class TenantList {
         for(int i = 0; i < tenantList.size(); i++)
         {
             if(tenantList.get(i).getTenantID().equals(tenant.getTenantID()))
-                throw new Exception("SEP3.Domain.Model.Tenant with this ID is already in the system");
+                throw new Exception("SEP3.Domain.SystemModel.Tenant with this ID is already in the system");
         }
 
         // checking if all fields are filled

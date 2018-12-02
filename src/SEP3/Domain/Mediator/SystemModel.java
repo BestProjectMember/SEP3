@@ -2,8 +2,11 @@ package SEP3.Domain.Mediator;
 
 import SEP3.Domain.Model.Apartment;
 import SEP3.Domain.Model.Tenant;
+import SEP3.Domain.Model.TenantList;
 
-public interface Model {
+import java.io.IOException;
+
+public interface SystemModel {
 
 
     public void addTenant(Tenant tenant) throws Exception;
@@ -11,7 +14,8 @@ public interface Model {
 
     public void removeTenantByID(String ID);
 
-    public String getAllTentantsInformation();
+    public TenantList getTenantListFromDatabase() throws IOException;
+
     public void addApartment(Apartment apartment) throws Exception;
 
     public void removeApartmentByNumber(int number);

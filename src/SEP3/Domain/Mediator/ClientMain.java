@@ -1,4 +1,4 @@
-package SEP3.Client;
+package SEP3.Domain.Mediator;
 
 import SEP3.Domain.Model.TenantList;
 
@@ -6,9 +6,8 @@ public class ClientMain {
 
     public static void main(String[] args) throws Exception {
 
-        ClientModel model = new ClientModelManager();
-        TenantList list;
-        list = model.receiveTenantList();
+        SystemModel model = new SystemModelManager();
+        TenantList list = model.getTenantListFromDatabase();
         System.out.println(list.getAllTenats());
 
     }

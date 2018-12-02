@@ -1,5 +1,6 @@
 package SEP3.Client;
 
+import SEP3.Domain.Mediator.Client;
 import SEP3.Domain.Model.TenantList;
 import com.google.gson.Gson;
 
@@ -20,13 +21,13 @@ public class ClientModelManager implements ClientModel {
     }
 
     @Override
-    public TenantList receiveTenantList() throws IOException {
-        client = new Client();
-        Socket clientSocket = client.getClientSocket();
-        in = new DataInputStream(clientSocket.getInputStream());
-        out = new DataOutputStream(clientSocket.getOutputStream());
+            public TenantList receiveTenantList() throws IOException {
+                client = new Client();
+                Socket clientSocket = client.getClientSocket();
+                in = new DataInputStream(clientSocket.getInputStream());
+                out = new DataOutputStream(clientSocket.getOutputStream());
 
-        try {
+                try {
             Gson gson = new Gson();
             int choice = 1;
             out.writeInt(choice);

@@ -15,7 +15,7 @@ public class ApartmentList {
             for(int i = 0; i < apartmentList.size(); i++)
             {
                 if(apartmentList.get(i).getNumber() == apartment.getNumber())
-                    throw new Exception("SEP3.Domain.Model.Apartment with this number is already in the system");
+                    throw new Exception("SEP3.Domain.SystemModel.Apartment with this number is already in the system");
             }
 
             // checking if all fields are filled

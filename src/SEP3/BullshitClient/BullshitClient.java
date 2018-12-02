@@ -1,9 +1,11 @@
-package SEP3.Client;
+package SEP3.BullshitClient;
 
-import java.io.*;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
 import java.net.Socket;
 
-public class Client {
+public class BullshitClient {
 
     private Socket clientSocket;
     private DataInputStream in;
@@ -12,10 +14,11 @@ public class Client {
     final int PORT = 6970;
     final String HOST = "localhost";
 
-    public Client() throws IOException {
+    public BullshitClient() throws IOException {
         clientSocket = new Socket(HOST, PORT);
         this.in = new DataInputStream(clientSocket.getInputStream());
         this.out = new DataOutputStream(clientSocket.getOutputStream());
+
     }
 
     public Socket getClientSocket() {
