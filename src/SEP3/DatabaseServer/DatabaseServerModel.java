@@ -10,7 +10,7 @@ import java.net.Socket;
 public interface DatabaseServerModel {
 
     TenantList getTenantListFromDatabase();
-    ApartmentList getApartmentListFromDatabase();
+    ApartmentList getHorsensApartmentListFromDatabase();
     RqApartment receiveApartmentRequestFromWeb(Socket socket) throws IOException;
     void addApartmentRequest();
 }

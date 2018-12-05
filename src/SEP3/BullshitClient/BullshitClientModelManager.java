@@ -2,6 +2,7 @@ package SEP3.BullshitClient;
 
 import SEP3.Domain.Mediator.SystemModel;
 import SEP3.Domain.Model.Apartment;
+import SEP3.Domain.Model.ApartmentList;
 import SEP3.Domain.Model.Tenant;
 import SEP3.Domain.Model.TenantList;
 
@@ -35,12 +36,14 @@ public class BullshitClientModelManager implements SystemModel {
     }
 
     @Override
+    public ApartmentList getApartmentListFromDatabase() throws IOException {
+        return null;
+    }
+
+    @Override
     public void changeApartmentStatusByNumber(int number, boolean status) {
 
     }
 
-    @Override
-    public String getAllAparmtentsInformation() {
-        return null;
-    }
+
 }

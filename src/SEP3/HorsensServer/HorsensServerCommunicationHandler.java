@@ -1,6 +1,7 @@
 package SEP3.HorsensServer;
 
 import SEP3.Domain.Mediator.SystemModel;
+import SEP3.Domain.Model.ApartmentList;
 import SEP3.Domain.Model.TenantList;
 import com.google.gson.Gson;
 import java.io.DataInputStream;
@@ -36,17 +37,18 @@ public class HorsensServerCommunicationHandler implements Runnable {
                 int selection = inputStreamFromClient.readInt();
                 System.out.println("From client: " + selection);
 
-                switch (selection) {
+                switch (5) {
                     case 1 :
                         TenantList tenantListFromModel = systemModel.getTenantListFromDatabase();
                         String tenantListToClient = gson.toJson(tenantListFromModel);
                         outputStreamToClient.writeUTF(tenantListToClient);
                         break;
 
-                    case 2 :
-//                        String apartmentList = gson.toJson(horsensServerModel.getApartmentListFromDatabaseServer());
-//                        outputStreamToClient.writeUTF(apartmentList);
-//                        break;
+                    case 5 :
+                        ApartmentList apartmentListFromModel = systemModel.getApartmentListFromDatabase();
+                        String apartmentListToClient = gson.toJson(apartmentListFromModel);
+                        outputStreamToClient.writeUTF(apartmentListToClient);
+                        break;
 
                 }
             }

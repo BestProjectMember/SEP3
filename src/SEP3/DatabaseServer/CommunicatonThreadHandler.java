@@ -37,14 +37,24 @@ public class CommunicatonThreadHandler implements Runnable {
                 System.out.println("From Horsens server: " + selection);
 
                 switch (selection) {
-                    case 1 :
+                    case 1 : // get tenant list
                         String tenantList = gson.toJson(model.getTenantListFromDatabase());
                         outputStream.writeUTF(tenantList);
                         break;
+                    case 2 : // get tenant by ID
+                    case 3 : // add tenant
+                    case 4 : //remove tenant
 
-                    case 2 : String apartmentList = gson.toJson(model.getApartmentListFromDatabase());
+                    case 5 : // get apartment list
+                        String apartmentList = gson.toJson(model.getHorsensApartmentListFromDatabase());
                         outputStream.writeUTF(apartmentList);
                         break;
+                    case 6 : //  get apartment by ID
+                    case 7 : // change status of apartmnet
+                    case 8 : // get admin list
+                    case 9 : // get admin by ID
+                    case 10 : // add admin
+                    case 11 : // remove admin
 
                 }
             }

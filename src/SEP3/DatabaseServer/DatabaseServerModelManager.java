@@ -22,6 +22,7 @@ public class DatabaseServerModelManager implements DatabaseServerModel {
         this.databaseConnection = new DatabaseConnection();
     }
 
+    //-----------------------Tenant--------------------------
     @Override
     public TenantList getTenantListFromDatabase() {
         Connection connection = databaseConnection.connect();
@@ -48,12 +49,14 @@ public class DatabaseServerModelManager implements DatabaseServerModel {
         return tenantList;
     }
 
+    //-------------------Aparmtnet---------------------------------------
+
     @Override
-    public ApartmentList getApartmentListFromDatabase() {
+    public ApartmentList getHorsensApartmentListFromDatabase() {
         Connection connection = databaseConnection.connect();
         ApartmentList apartmentList = new ApartmentList();
         try {
-            ResultSet rs = connection.createStatement().executeQuery(""); //todo query
+            ResultSet rs = connection.createStatement().executeQuery("select * from sep3db.apartmentshorsens");
 
             while(rs.next()) {
                 Apartment apartment = new Apartment(
@@ -104,6 +107,8 @@ public class DatabaseServerModelManager implements DatabaseServerModel {
                 e.printStackTrace();
             }
     }
+
+    //--------------------Admin---------------------------
 
 
 }

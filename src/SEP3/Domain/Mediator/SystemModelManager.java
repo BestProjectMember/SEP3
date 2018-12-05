@@ -30,6 +30,8 @@ public class SystemModelManager implements SystemModel {
         startServer.start();
     }
 
+//-----------------------------Tenant--------------------------------------
+
     public void addTenant(Tenant tenant) throws Exception {
         tenantList.addTenant(tenant);
     }
@@ -51,11 +53,11 @@ public class SystemModelManager implements SystemModel {
             tenantList = gson.fromJson(input, TenantList.class);
         } catch (IOException e) {
             e.printStackTrace();
-        } catch (Exception e) {
-            e.printStackTrace();
         }
         return tenantList;
     }
+
+// -------------Apartment-----------------------------------------------
 
     public void addApartment(Apartment apartment) throws Exception {
         apartmentList.addApartment(apartment);
@@ -69,9 +71,26 @@ public class SystemModelManager implements SystemModel {
         apartmentList.changeStatusOfApartmentByNumber(number, status);
     }
 
-    public String getAllAparmtentsInformation(){
-        return apartmentList.getAllApartments();
+
+
+    public ApartmentList getApartmentListFromDatabase() throws IOException {
+        Socket clientSocket = client.getClientSocket();
+        in = new DataInputStream(clientSocket.getInputStream());
+        out = new DataOutputStream(clientSocket.getOutputStream());
+        try {
+            Gson gson = new Gson();
+            int choice = 5;
+            out.writeInt(choice);
+            System.out.println(choice);
+            String input = in.readUTF();
+            apartmentList = gson.fromJson(input, ApartmentList.class);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return apartmentList;
     }
+
+//------------------Admin----------------------------------------
 
 
 
