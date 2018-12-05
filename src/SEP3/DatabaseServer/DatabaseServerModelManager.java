@@ -67,6 +67,7 @@ public class DatabaseServerModelManager implements DatabaseServerModel {
                         rs.getDouble(5),
                         rs.getInt(6));
                 apartmentList.addApartment(apartment);
+                System.out.println(apartmentList.toString());
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -109,6 +110,27 @@ public class DatabaseServerModelManager implements DatabaseServerModel {
     }
 
     //--------------------Admin---------------------------
-
+    @Override
+    public AdministratorList getAdministratorListFromDatabase() {
+        Connection connection = databaseConnection.connect();
+        AdministratorList adminList = new AdministratorList();
+        try {
+            ResultSet rs = connection.createStatement().executeQuery("select * from sep3db.administrators");
+            while(rs.next()) {
+                Administrator administrator = new Administrator(
+                        rs.getString(1),
+                        rs.getString(2),
+                        rs.getString(3),
+                        rs.getString(4));
+                adminList.addAdministrator(administrator);
+                System.out.println(adminList.toString());
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return adminList;
+    }
 
 }

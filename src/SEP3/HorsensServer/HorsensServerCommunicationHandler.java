@@ -1,6 +1,8 @@
 package SEP3.HorsensServer;
 
 import SEP3.Domain.Mediator.SystemModel;
+import SEP3.Domain.Model.Administrator;
+import SEP3.Domain.Model.AdministratorList;
 import SEP3.Domain.Model.ApartmentList;
 import SEP3.Domain.Model.TenantList;
 import com.google.gson.Gson;
@@ -48,6 +50,11 @@ public class HorsensServerCommunicationHandler implements Runnable {
                         ApartmentList apartmentListFromModel = systemModel.getApartmentListFromDatabase();
                         String apartmentListToClient = gson.toJson(apartmentListFromModel);
                         outputStreamToClient.writeUTF(apartmentListToClient);
+                        break;
+                    case 8 :
+                        AdministratorList adminListFromModel = systemModel.getAdministratorListFromDatabase();
+                        String adminListToClient = gson.toJson(adminListFromModel);
+                        outputStreamToClient.writeUTF(adminListToClient);
                         break;
 
                 }

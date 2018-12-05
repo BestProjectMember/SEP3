@@ -92,7 +92,22 @@ public class SystemModelManager implements SystemModel {
 
 //------------------Admin----------------------------------------
 
-
+    public AdministratorList getAdministratorListFromDatabase() throws IOException {
+        Socket clientSocket = client.getClientSocket();
+        in = new DataInputStream(clientSocket.getInputStream());
+        out = new DataOutputStream(clientSocket.getOutputStream());
+        try {
+            Gson gson = new Gson();
+            int choice = 8;
+            out.writeInt(choice);
+            System.out.println(choice);
+            String input = in.readUTF();
+            adminList = gson.fromJson(input, AdministratorList.class);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return adminList;
+    }
 
 
 

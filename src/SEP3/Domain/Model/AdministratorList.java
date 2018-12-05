@@ -49,4 +49,11 @@ public class AdministratorList {
     public int size() {
         return administratorList.size();
     }
+
+    @Override
+    public String toString() {
+        return "AdminList{" +
+                "adminList=" + administratorList +
+                '}';
+    }
 }

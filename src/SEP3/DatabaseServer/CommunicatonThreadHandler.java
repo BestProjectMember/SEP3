@@ -52,6 +52,9 @@ public class CommunicatonThreadHandler implements Runnable {
                     case 6 : //  get apartment by ID
                     case 7 : // change status of apartmnet
                     case 8 : // get admin list
+                        String adminList = gson.toJson(model.getAdministratorListFromDatabase());
+                        outputStream.writeUTF(adminList);
+                        break;
                     case 9 : // get admin by ID
                     case 10 : // add admin
                     case 11 : // remove admin

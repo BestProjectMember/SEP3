@@ -69,6 +69,13 @@ public class ApartmentList {
         }
     }
 
+    @Override
+    public String toString() {
+        return "ApartmentList{" +
+                "apartmentList=" + apartmentList +
+                '}';
+    }
+
 
 
 

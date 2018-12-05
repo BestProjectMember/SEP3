@@ -1,5 +1,6 @@
 package SEP3.DatabaseServer;
 
+import SEP3.Domain.Model.AdministratorList;
 import SEP3.Domain.Model.ApartmentList;
 import SEP3.Domain.Model.RqApartment;
 import SEP3.Domain.Model.TenantList;
@@ -13,4 +14,5 @@ public interface DatabaseServerModel {
     ApartmentList getHorsensApartmentListFromDatabase();
     RqApartment receiveApartmentRequestFromWeb(Socket socket) throws IOException;
     void addApartmentRequest();
+    AdministratorList getAdministratorListFromDatabase();
 }

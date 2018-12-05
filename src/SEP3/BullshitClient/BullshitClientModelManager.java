@@ -1,10 +1,7 @@
 package SEP3.BullshitClient;
 
 import SEP3.Domain.Mediator.SystemModel;
-import SEP3.Domain.Model.Apartment;
-import SEP3.Domain.Model.ApartmentList;
-import SEP3.Domain.Model.Tenant;
-import SEP3.Domain.Model.TenantList;
+import SEP3.Domain.Model.*;
 
 import java.io.IOException;
 
@@ -43,6 +40,11 @@ public class BullshitClientModelManager implements SystemModel {
     @Override
     public void changeApartmentStatusByNumber(int number, boolean status) {
 
+    }
+
+    @Override
+    public AdministratorList getAdministratorListFromDatabase() throws IOException {
+        return null;
     }
 
 
