@@ -52,8 +52,11 @@ public class TenantList {
 
     @Override
     public String toString() {
-        return "TenantList{" +
-                "tenantList=" + tenantList +
-                '}';
+        String all = " ";
+        for(int i=0; i<tenantList.size();i++)
+        {
+            all += tenantList.get(i).toString() + ("\n");
+        }
+        return all;
     }
 }

@@ -39,8 +39,9 @@ public class DatabaseServerModelManager implements DatabaseServerModel {
                         rs.getString(6),
                         rs.getString(7));
                 tenantList.addTenant(tenant);
-                System.out.println(tenantList.toString());
+
             }
+            System.out.println(tenantList.toString());
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (Exception e) {
@@ -67,8 +68,9 @@ public class DatabaseServerModelManager implements DatabaseServerModel {
                         rs.getDouble(5),
                         rs.getInt(6));
                 apartmentList.addApartment(apartment);
-                System.out.println(apartmentList.toString());
+
             }
+            System.out.println(apartmentList.toString());
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (Exception e) {
@@ -123,8 +125,9 @@ public class DatabaseServerModelManager implements DatabaseServerModel {
                         rs.getString(3),
                         rs.getString(4));
                 adminList.addAdministrator(administrator);
-                System.out.println(adminList.toString());
+
             }
+            System.out.println(adminList.toString());
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (Exception e) {

@@ -71,9 +71,12 @@ public class ApartmentList {
 
     @Override
     public String toString() {
-        return "ApartmentList{" +
-                "apartmentList=" + apartmentList +
-                '}';
+        String all = " ";
+        for(int i=0; i<apartmentList.size();i++)
+        {
+            all += apartmentList.get(i).toString() + ("\n");
+        }
+        return all;
     }
 
 

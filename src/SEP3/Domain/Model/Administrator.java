@@ -50,35 +50,10 @@ public class Administrator {
         this.telephoneNumber = telephoneNumber;
     }
 
-    public void addTenant(Tenant tenant) throws Exception{
-        tenantList.addTenant(tenant);
+
+
+    @Override
+    public String toString() {
+        return  firstName + " " + lastName + " " + administratorID + " " + telephoneNumber;
     }
-
-    public void removeTenantByID(String ID){
-        tenantList.removeTenantByID(ID);
-    }
-
-    public String getAllTentantsInformation(){
-
-        return tenantList.getAllTenats();
-    }
-
-    public void addApartment(Apartment apartment) throws Exception{
-        apartmentList.addApartment(apartment);
-    }
-
-    public void removeApartmentByNumber(int number){
-        apartmentList.removeApartmentByNumber(number);
-    }
-
-    public void changeApartmentStatusByNumber(int number, boolean status){
-        apartmentList.changeStatusOfApartmentByNumber(number,status);
-    }
-
-    public String getAllAparmtentsInformation(){
-        return apartmentList.getAllApartments();
-    }
-
-
-
 }

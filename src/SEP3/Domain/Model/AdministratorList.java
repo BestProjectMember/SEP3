@@ -52,8 +52,11 @@ public class AdministratorList {
 
     @Override
     public String toString() {
-        return "AdminList{" +
-                "adminList=" + administratorList +
-                '}';
+        String all = " ";
+        for(int i=0; i<administratorList.size();i++)
+        {
+            all += administratorList.get(i).toString() + ("\n");
+        }
+        return all;
     }
 }
