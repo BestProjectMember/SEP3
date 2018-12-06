@@ -1,0 +1,4 @@
+.backIcon {
+    -fx-background-image: url("back_icon.png");
+    -fx-background-color: #eee590;
+}

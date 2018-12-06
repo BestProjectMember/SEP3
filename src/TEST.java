@@ -1,13 +1,12 @@
-import SEP3.Domain.Model.Apartment;
-import SEP3.Domain.Model.ApartmentList;
-import SEP3.Domain.Model.Tenant;
-import SEP3.Domain.Model.TenantList;
+import SEP3.ClientSide.Domain.Model.Apartment;
+import SEP3.ClientSide.Domain.Model.ApartmentList;
+import SEP3.ClientSide.Domain.Model.Tenant;
+import SEP3.ClientSide.Domain.Model.TenantList;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 import static org.junit.Assert.*;
 

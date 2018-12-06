@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d02726f8-4e24-4ffa-bd8d-ba120b80d9c5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/SEP3-GluonDesktop-MultipleViewProjectwithFXML.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gluonTest/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gluonTest/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gluonTest/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gluonTest/.idea/modules/SEP3-gluonTest.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gluonTest/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gluonTest/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gluonTest/gluonTest.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/SEP3/ClientSide/Domain/Mediator/SystemModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/SEP3/ClientSide/Domain/Mediator/SystemModelManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/SEP3/ClientSide/View/AddTenantSceneHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/SEP3/ClientSide/View/ApartmentsSceneHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/SEP3/Servers/DatabaseServer/Model/Administrator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/SEP3/Servers/DatabaseServer/Model/AdministratorList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/SEP3/Servers/DatabaseServer/Model/Apartment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/SEP3/Servers/DatabaseServer/Model/ApartmentList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/SEP3/Servers/DatabaseServer/Model/RqApartment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/SEP3/Servers/DatabaseServer/Model/Tenant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/SEP3/Servers/DatabaseServer/Model/TenantList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/SEP3/Servers/HorsensServer/HorsensServerMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../login.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/SEP3/SEP3/BullshitClient/BullshitClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/SEP3/SEP3/BullshitClient/BullshitClientModelManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/SEP3/SEP3/Client/ClientModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/SEP3/SEP3/Client/ClientModelManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/SEP3/SEP3/Controller/Controller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/SEP3/SEP3/DatabaseServer/CommunicatonThreadHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/SEP3/SEP3/DatabaseServer/DatabaseConnection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/SEP3/SEP3/DatabaseServer/DatabaseServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/SEP3/SEP3/DatabaseServer/DatabaseServerMain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/SEP3/SEP3/DatabaseServer/DatabaseServerModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/SEP3/SEP3/DatabaseServer/DatabaseServerModelManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/SEP3/SEP3/Domain/Mediator/Client.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/SEP3/SEP3/Domain/Mediator/ClientMain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/SEP3/SEP3/Domain/Mediator/SystemModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/SEP3/SEP3/Domain/Mediator/SystemModelManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/SEP3/SEP3/Domain/Model/Administrator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/SEP3/SEP3/Domain/Model/AdministratorList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/SEP3/SEP3/Domain/Model/Apartment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/SEP3/SEP3/Domain/Model/ApartmentList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/SEP3/SEP3/Domain/Model/RqApartment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/SEP3/SEP3/Domain/Model/Tenant.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/SEP3/SEP3/Domain/Model/TenantList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/SEP3/SEP3/HorsensServer/HorsensServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/SEP3/SEP3/HorsensServer/HorsensServerCommunicationHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/SEP3/SEP3/View/GUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/SEP3/SEP3/View/GuiStart.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/SEP3/SEP3/View/MainSceneHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/SEP3/SEP3/View/TenantSceneHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/SEP3/SEP3/View/View.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/SEP3/SEP3/View/ViewLauncher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/SEP3/SEP3/View/addApartmentScene.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/SEP3/SEP3/View/addTenantScene.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/SEP3/SEP3/View/apartmentScene.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/SEP3/SEP3/View/mainScene.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/SEP3/SEP3/View/tenantsScene.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/SEP3/TEST.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/SEP3/TEST.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/SEP3/BullshitClient/BullshitClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/SEP3/BullshitClient/BullshitClientModelManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/SEP3/Client/ClientModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/SEP3/ClientSide/Domain/Mediator/ClientModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/SEP3/Client/ClientModelManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/SEP3/ClientSide/Domain/Mediator/ClientModelManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/SEP3/Controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/SEP3/ClientSide/Controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/SEP3/DatabaseServer/CommunicatonThreadHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/SEP3/Servers/DatabaseServer/CommunicatonThreadHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/SEP3/DatabaseServer/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/SEP3/Servers/DatabaseServer/DatabaseConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/SEP3/DatabaseServer/DatabaseServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/SEP3/Servers/DatabaseServer/DatabaseServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/SEP3/DatabaseServer/DatabaseServerMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/SEP3/Servers/DatabaseServer/DatabaseServerMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/SEP3/DatabaseServer/DatabaseServerModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/SEP3/Servers/DatabaseServer/DatabaseServerModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/SEP3/DatabaseServer/DatabaseServerModelManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/SEP3/Servers/DatabaseServer/DatabaseServerModelManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/SEP3/Domain/Mediator/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/SEP3/ClientSide/Domain/Mediator/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/SEP3/Domain/Mediator/ClientMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/SEP3/ClientSide/Domain/Mediator/ClientMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/SEP3/Domain/Mediator/SystemModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/SEP3/Domain/Mediator/SystemModelManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/SEP3/Domain/Model/Administrator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/SEP3/ClientSide/Domain/Model/Administrator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/SEP3/Domain/Model/AdministratorList.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/SEP3/ClientSide/Domain/Model/AdministratorList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/SEP3/Domain/Model/Apartment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/SEP3/ClientSide/Domain/Model/Apartment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/SEP3/Domain/Model/ApartmentList.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/SEP3/ClientSide/Domain/Model/ApartmentList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/SEP3/Domain/Model/RqApartment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/SEP3/ClientSide/Domain/Model/RqApartment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/SEP3/Domain/Model/Tenant.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/SEP3/ClientSide/Domain/Model/Tenant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/SEP3/Domain/Model/TenantList.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/SEP3/ClientSide/Domain/Model/TenantList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/SEP3/HorsensServer/HorsensServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/SEP3/Servers/HorsensServer/HorsensServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/SEP3/HorsensServer/HorsensServerCommunicationHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/SEP3/Servers/HorsensServer/HorsensServerCommunicationHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/SEP3/View/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/SEP3/ClientSide/View/GUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/SEP3/View/GuiStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/SEP3/ClientSide/View/GuiStart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/SEP3/View/MainSceneHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/SEP3/ClientSide/View/MainSceneHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/SEP3/View/TenantSceneHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/SEP3/ClientSide/View/TenantSceneHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/SEP3/View/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/SEP3/ClientSide/View/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/SEP3/View/ViewLauncher.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/SEP3/ClientSide/View/ViewLauncher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/SEP3/View/addApartmentScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../src/SEP3/ClientSide/View/addApartmentScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/SEP3/View/addTenantScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../src/SEP3/ClientSide/View/addTenantScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/SEP3/View/apartmentScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../src/SEP3/ClientSide/View/apartmentScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/SEP3/View/mainScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../src/SEP3/ClientSide/View/mainScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/SEP3/View/tenantsScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../src/SEP3/ClientSide/View/tenantsScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/TEST.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/TEST.java" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view />
+      </state>
+    </system>
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-1604146229">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="gradle" value="1" />
+          <entry key="iml" value="1" />
+          <entry key="java" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Groovy" value="1" />
+          <entry key="IDEA_MODULE" value="1" />
+          <entry key="JAVA" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gluonapplication/GluonApplication.java">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.gradle">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/GluonDesktop-MultipleViewProjectwithFXML.iml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="availableProjects">
+      <map>
+        <entry>
+          <key>
+            <ExternalProjectPojo>
+              <option name="name" value="GluonDesktop-MultipleViewProjectwithFXML" />
+              <option name="path" value="$PROJECT_DIR$" />
+            </ExternalProjectPojo>
+          </key>
+          <value>
+            <list>
+              <ExternalProjectPojo>
+                <option name="name" value="GluonDesktop-MultipleViewProjectwithFXML" />
+                <option name="path" value="$PROJECT_DIR$" />
+              </ExternalProjectPojo>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="modificationStamps">
+      <map>
+        <entry key="$PROJECT_DIR$" value="3088107631942" />
+        <entry key="$PROJECT_DIR$/build.gradle" value="2894838618" />
+      </map>
+    </option>
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$" value="IMPORT" />
+      </map>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="2333" />
+    <option name="y" value="-15" />
+    <option name="width" value="1152" />
+    <option name="height" value="612" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="GluonDesktop-MultipleViewProjectwithFXML" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GluonDesktop-MultipleViewProjectwithFXML" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="GluonDesktop-MultipleViewProjectwithFXML" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GluonDesktop-MultipleViewProjectwithFXML" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GluonDesktop-MultipleViewProjectwithFXML" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GluonDesktop-MultipleViewProjectwithFXML" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GluonDesktop-MultipleViewProjectwithFXML" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GluonDesktop-MultipleViewProjectwithFXML" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GluonDesktop-MultipleViewProjectwithFXML" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GluonDesktop-MultipleViewProjectwithFXML" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GluonDesktop-MultipleViewProjectwithFXML" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GluonDesktop-MultipleViewProjectwithFXML" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="bundles" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d02726f8-4e24-4ffa-bd8d-ba120b80d9c5" name="Default Changelist" comment="" />
+      <created>1544053813960</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1544053813960</updated>
+      <workItem from="1544053815646" duration="97000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="97000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <layout>
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="UI Designer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Build" visible="true" weight="0.32925472" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Gradle" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Maven Projects" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gluonapplication/GluonApplication.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GluonDesktop-MultipleViewProjectwithFXML.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArquillianSettingsConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

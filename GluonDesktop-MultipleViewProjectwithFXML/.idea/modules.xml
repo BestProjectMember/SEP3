@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/GluonDesktop-MultipleViewProjectwithFXML.iml" filepath="$PROJECT_DIR$/GluonDesktop-MultipleViewProjectwithFXML.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SEP3-GluonDesktop-MultipleViewProjectwithFXML.iml" filepath="$PROJECT_DIR$/.idea/modules/SEP3-GluonDesktop-MultipleViewProjectwithFXML.iml" />
+    </modules>
+  </component>
+</project>
