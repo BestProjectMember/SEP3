@@ -1,30 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="550.0" prefWidth="800.0" style="-fx-background-color: #413539;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Pane layoutX="-3.0" prefHeight="550.0" prefWidth="100.0" style="-fx-background-color: #313131;">
+      <Pane layoutX="-3.0" prefHeight="550.0" prefWidth="114.0" style="-fx-background-color: #313131;">
          <children>
-            <Button layoutY="90.0" mnemonicParsing="false" onAction="#toTenants" prefHeight="90.0" prefWidth="100.0" style="-fx-background-color: #2196F3;" text="Tenants" textFill="WHITE">
+            <Button layoutX="-1.0" layoutY="53.0" mnemonicParsing="false" onAction="#toTenants" prefHeight="90.0" prefWidth="114.0" style="-fx-background-color: #2196F3;" text="Tenants" textFill="WHITE">
                <font>
                   <Font size="16.0" />
                </font>
             </Button>
-            <Button layoutX="1.0" layoutY="192.0" mnemonicParsing="false" onAction="#toApartments" prefHeight="90.0" prefWidth="100.0" style="-fx-background-color: #2196F3;" text="Apartments" textFill="WHITE">
+            <Button layoutY="157.0" mnemonicParsing="false" onAction="#toApartments" prefHeight="90.0" prefWidth="114.0" style="-fx-background-color: #2196F3;" text="Apartments" textFill="WHITE">
                <font>
                   <Font size="16.0" />
                </font>
             </Button>
-            <Button layoutY="293.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="100.0" text="Admin List">
+            <Button layoutX="-1.0" layoutY="265.0" mnemonicParsing="false" onAction="#toAdmins" prefHeight="90.0" prefWidth="114.0" style="-fx-background-color: #2196F3;" text="Admins" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="17.0" layoutY="494.0" mnemonicParsing="false" onAction="#exit" style="-fx-background-color: red;" text="*exit icon*" />
+            <Button contentDisplay="CENTER" layoutX="-1.0" layoutY="371.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="114.0" style="-fx-background-color: #2196F3;" text="Apartment Rq" textFill="WHITE">
                <font>
                   <Font size="16.0" />
                </font>
             </Button>
          </children>
       </Pane>
+      <Line endX="621.0929565429688" layoutX="197.0" layoutY="150.0" startX="-198.0" startY="7.62939453125E-6" stroke="WHITE" />
+      <Line endX="616.8928833007812" layoutX="200.0" layoutY="257.0" startX="-198.0" startY="7.62939453125E-6" stroke="WHITE" />
+      <Line endX="617.69287109375" endY="-3.0517578125E-5" layoutX="198.0" layoutY="363.0" startX="-198.0" startY="7.62939453125E-6" stroke="WHITE" />
+      <Line endX="614.5999755859375" endY="3.0517578125E-5" layoutX="200.0" layoutY="470.0" startX="-198.0" startY="7.62939453125E-6" stroke="WHITE" />
+      <Pane layoutX="-7.0" prefHeight="52.0" prefWidth="833.0" style="-fx-background-color: green;">
+         <children>
+            <Text layoutX="6.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LALD Horsens" textAlignment="CENTER" wrappingWidth="821.6000109116723">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Label fx:id="tenantCount" alignment="CENTER" layoutX="605.0" layoutY="76.0" prefHeight="38.0" prefWidth="77.0" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Line endX="-25.300048828125" layoutX="706.0" layoutY="114.0" startX="-100.0" stroke="WHITE" strokeWidth="2.0" />
+      <Text fill="WHITE" layoutX="451.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tenants in database:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="423.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Apartments in database:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="452.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admins in database:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Label fx:id="apartmentCount" alignment="CENTER" layoutX="604.0" layoutY="178.0" prefHeight="38.0" prefWidth="77.0" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Line endX="-25.300048828125" layoutX="705.0" layoutY="216.0" startX="-100.0" stroke="WHITE" strokeWidth="2.0" />
+      <Label fx:id="adminCount" alignment="CENTER" layoutX="603.0" layoutY="288.0" prefHeight="38.0" prefWidth="77.0" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Line endX="-25.300048828125" layoutX="706.0" layoutY="326.0" startX="-100.0" stroke="WHITE" strokeWidth="2.0" />
    </children>
 </AnchorPane>

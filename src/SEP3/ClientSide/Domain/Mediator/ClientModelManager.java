@@ -17,6 +17,9 @@ public class ClientModelManager implements ClientModel {
     private Client client;
     private Socket clientSocket;
     private Gson gson;
+    private int tenantCount;
+    private int apartmentCount;
+    private int adminCount;
 
     public ClientModelManager() throws IOException {
         tenantList = new TenantList();
@@ -30,8 +33,8 @@ public class ClientModelManager implements ClientModel {
     }
 
     @Override
-            public TenantList receiveTenantList() {
-                try {
+    public TenantList receiveTenantList() {
+        try {
             int choice = 1;
             out.writeInt(choice);
             System.out.println(choice);
@@ -46,6 +49,19 @@ public class ClientModelManager implements ClientModel {
     }
 
     @Override
+    public int countAllTenants() {
+        try {
+            int choice = 14;
+            out.writeInt(choice);
+            System.out.println(choice);
+            tenantCount = in.readInt();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return tenantCount;
+    }
+
+        @Override
     public ApartmentList receiveApartmentList() {
         try {
             int choice = 5;
@@ -59,6 +75,19 @@ public class ClientModelManager implements ClientModel {
             e.printStackTrace();
         }
         return apartmentList;
+    }
+
+    @Override
+    public int countAllApartments() {
+        try {
+            int choice = 15;
+            out.writeInt(choice);
+            System.out.println(choice);
+            apartmentCount = in.readInt();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return apartmentCount;
     }
 
     @Override
@@ -84,6 +113,35 @@ public class ClientModelManager implements ClientModel {
     }
 
     @Override
+    public AdministratorList receiveAdminList() {
+        try {
+            int choice = 8;
+            out.writeInt(choice);
+            System.out.println(choice);
+            String input = in.readUTF();
+            administratorList = gson.fromJson(input, AdministratorList.class);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return administratorList;
+    }
+
+    @Override
+    public int countAllAdmins() {
+        try {
+            int choice = 16;
+            out.writeInt(choice);
+            System.out.println(choice);
+            adminCount = in.readInt();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return adminCount;
+    }
+
+    @Override
     public void addApartment(Apartment apartment) {
         try {
             int choice = 12;
@@ -104,6 +162,8 @@ public class ClientModelManager implements ClientModel {
             e.printStackTrace();
         }
     }
+
+
 
 
 }

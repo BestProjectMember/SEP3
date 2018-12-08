@@ -31,7 +31,7 @@ public class ApartmentsSceneHandler implements Initializable {
     private Controller controller;
     private ApartmentList apartmentList;
 
-    //------------- Items Table ---------------------
+    //------------- Apartments Table ---------------------
     // Table view
     @FXML
     private TableView<Apartment> apartmentTable;
@@ -99,7 +99,7 @@ public class ApartmentsSceneHandler implements Initializable {
     }
 
     private int countApartments() {
-        int appCount = apartmentList.size();
+        int appCount = controller.executeCountAllApartments();
         apartmentCount.setText(String.valueOf(appCount));
         return appCount;
     }
@@ -169,5 +169,10 @@ public class ApartmentsSceneHandler implements Initializable {
         Apartment getApartment = apartmentTable.getSelectionModel().getSelectedItem();
         System.out.println(getApartment.toString());
         return getApartment;
+    }
+
+    @FXML
+    public void exit() {
+        System.exit(0);
     }
 }

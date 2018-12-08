@@ -17,7 +17,7 @@
          <top>
             <AnchorPane prefHeight="30.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                <children>
-                  <Label alignment="CENTER" contentDisplay="CENTER" layoutY="-6.0" prefHeight="39.0" prefWidth="905.0" style="-fx-background-color: grey; -fx-border-color: black;" text="Tenant" textFill="WHITE" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-11.0" AnchorPane.topAnchor="-6.0">
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutY="-6.0" prefHeight="39.0" prefWidth="905.0" style="-fx-background-color: grey; -fx-border-color: black;" text="Admins" textFill="WHITE" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-11.0" AnchorPane.topAnchor="-6.0">
                      <padding>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </padding>
@@ -37,9 +37,6 @@
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
                <children>
-                  <Button layoutX="8.0" layoutY="140.0" mnemonicParsing="false" onAction="#addTenantScene" prefHeight="42.0" prefWidth="132.0" style="-fx-background-color: #2196F3;" text="*add tenant icon*" textFill="WHITE" />
-                  <Button layoutX="7.0" layoutY="190.0" mnemonicParsing="false" onAction="#removeTenant" prefHeight="41.0" prefWidth="135.0" style="-fx-background-color: #2196F3;" text="*remove tennant icon*" textFill="WHITE" />
-                  <Button layoutX="7.0" layoutY="237.0" mnemonicParsing="false" onAction="#ediTenantScene" prefHeight="43.0" prefWidth="134.0" style="-fx-background-color: #2196F3;" text="*edit tenant icon*" textFill="WHITE" />
                   <Button layoutX="22.0" layoutY="483.0" mnemonicParsing="false" onAction="#exit" prefHeight="26.0" prefWidth="86.0" style="-fx-background-color: red;" text="*exit button*" />
                </children>
             </AnchorPane>
@@ -47,33 +44,30 @@
          <center>
             <AnchorPane prefHeight="566.0" prefWidth="647.0" style="-fx-background-color: #313131;" BorderPane.alignment="CENTER">
                <children>
-                  <TableView fx:id="tenantsTable" fixedCellSize="0.0" layoutX="-2.0" layoutY="48.0" onMouseClicked="#getSelectedTenant" prefHeight="494.0" prefWidth="643.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+                  <TableView fx:id="adminTable" fixedCellSize="0.0" layoutX="-2.0" layoutY="48.0" prefHeight="494.0" prefWidth="643.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
                      <columns>
-                        <TableColumn id="column-header-background" fx:id="tenantFNameColumn" prefWidth="100.0" text="First Name" />
-                        <TableColumn fx:id="tenantLNameColumn" prefWidth="137.5999755859375" text="Last Name" />
-                        <TableColumn fx:id="tenantIDColumn" editable="false" prefWidth="64.79998779296875" text="Tenant ID" />
-                        <TableColumn fx:id="tenantDOBColumn" prefWidth="80.00003051757812" text="DOB" />
-                        <TableColumn fx:id="tenantEmailColumn" maxWidth="100.0" prefWidth="97.5999755859375" text="Email" />
-                        <TableColumn fx:id="tenantPhoneNumberColumn" maxWidth="100.0" prefWidth="293.60009765625" text="Phone Number" />
-                        <TableColumn fx:id="tenantGenderColumn" maxWidth="105.5999755859375" prefWidth="105.5999755859375" text="Gender" />
+                        <TableColumn fx:id="adminFNameColumn" maxWidth="2000.0" minWidth="-1.0" prefWidth="206.39999675750732" text="First Name" />
+                        <TableColumn fx:id="adminLNameColumn" maxWidth="2000.0" minWidth="-1.0" prefWidth="144.7999725341797" text="Last Name" />
+                        <TableColumn fx:id="adminIdColumn" editable="false" maxWidth="1000.0" prefWidth="170.40005493164062" text="Admin ID" />
+                        <TableColumn fx:id="adminEmailColumn" maxWidth="357.5999755859375" prefWidth="295.20001220703125" text="Phone Number" />
                      </columns>
                      <padding>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </padding>
                   </TableView>
-                  <Label fx:id="tenantsCountLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="257.0" layoutY="14.0" prefHeight="26.0" prefWidth="33.0" style="-fx-border-color: grey;" textFill="WHITE">
+                  <Label fx:id="adminCount" alignment="CENTER" contentDisplay="CENTER" layoutX="257.0" layoutY="14.0" prefHeight="26.0" prefWidth="33.0" style="-fx-border-color: grey;" textFill="WHITE">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="tenantSearchTextField" layoutX="14.0" layoutY="14.0" onKeyTyped="#searchTenant" prefHeight="27.0" prefWidth="217.0" promptText="search tenant..." style="-fx-border-color: white; -fx-background-color: #313131; -fx-text-inner-color: white;" AnchorPane.leftAnchor="14.0">
+                  <TextField layoutX="14.0" layoutY="14.0" prefHeight="27.0" prefWidth="217.0" promptText="search admin..." style="-fx-border-color: white; -fx-background-color: #313131; -fx-text-inner-color: white;" AnchorPane.leftAnchor="14.0">
                      <cursor>
                         <Cursor fx:constant="TEXT" />
                      </cursor>
                   </TextField>
                   <AnchorPane fx:id="searchIcon" layoutX="204.0" layoutY="15.0" prefHeight="24.0" prefWidth="26.0" styleClass="searchIcon" />
                   <Button layoutX="608.0" layoutY="11.0" mnemonicParsing="false" onAction="#handleGoBack" prefHeight="27.0" prefWidth="121.0" style="-fx-background-color: #2196F3;" text="*back*" textFill="WHITE" />
-                  <Label layoutX="301.0" layoutY="15.0" style="-fx-text-fill: white;" text="Tenants" textFill="WHITE">
+                  <Label layoutX="301.0" layoutY="15.0" style="-fx-text-fill: white;" text="Admins" textFill="WHITE">
                      <font>
                         <Font size="16.0" />
                      </font>

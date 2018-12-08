@@ -93,6 +93,22 @@ public class DatabaseServerModelManager implements DatabaseServerModel {
         }
     }
 
+    @Override
+    public int countTenants() {
+        int tenantCount = 0;
+        Connection conn = databaseConnection.connect();
+
+        try {
+            ResultSet rs = conn.createStatement().executeQuery("select * from sep3db.tenants");
+            while(rs.next()) {
+                tenantCount++;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return tenantCount;
+    }
+
     //-------------------Apartment---------------------------------------
 
     @Override
@@ -113,7 +129,6 @@ public class DatabaseServerModelManager implements DatabaseServerModel {
                 apartmentList.addApartment(apartment);
 
             }
-            //System.out.println(apartmentList.toString());
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (Exception e) {
@@ -164,6 +179,24 @@ public class DatabaseServerModelManager implements DatabaseServerModel {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+
+
+    @Override
+    public int countApartments() {
+        int apartmentCount = 0;
+        Connection conn = databaseConnection.connect();
+
+        try {
+            ResultSet rs = conn.createStatement().executeQuery("select * from sep3db.apartmentshorsens");
+            while(rs.next()) {
+                apartmentCount++;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return apartmentCount;
     }
 
     ////////////////// c#
@@ -227,6 +260,20 @@ public class DatabaseServerModelManager implements DatabaseServerModel {
         return adminList;
     }
 
+    @Override
+    public int countAdmins() {
+        int adminCount = 0;
+        Connection conn = databaseConnection.connect();
 
+        try {
+            ResultSet rs = conn.createStatement().executeQuery("select * from sep3db.administrators");
+            while(rs.next()) {
+                adminCount++;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return adminCount;
+    }
 
 }

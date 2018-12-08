@@ -2,7 +2,9 @@ package SEP3.ClientSide.View;
 
 import SEP3.ClientSide.Controller.Controller;
 import javafx.application.Application;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;

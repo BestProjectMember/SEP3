@@ -92,7 +92,7 @@ public class TenantSceneHandler implements Initializable {
     }
 
     private int countTenants() {
-        int tenantsCount = list.size();
+        int tenantsCount = controller.executeCountAllTenants();
         tenantsCountLabel.setText(String.valueOf(tenantsCount));
         return tenantsCount;
     }
@@ -195,5 +195,10 @@ public class TenantSceneHandler implements Initializable {
         SortedList<Tenant> sortedList = new SortedList<>(filteredList);
         sortedList.comparatorProperty().bind(tenantsTable.comparatorProperty());
         tenantsTable.setItems(sortedList);
+    }
+
+    @FXML
+    public void exit() {
+        System.exit(0);
     }
 }

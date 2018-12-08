@@ -107,6 +107,10 @@
             <Text fill="WHITE" layoutX="380.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Apartment count" />
             <Button layoutX="680.0" layoutY="5.0" mnemonicParsing="false" onAction="#handleGoBack" style="-fx-background-color: #2196F3;" text="*back button*" />
          </children></AnchorPane>
-      <Button layoutX="3.0" layoutY="145.0" mnemonicParsing="false" onAction="#editApartmentScene" prefHeight="79.0" prefWidth="87.0" text="*edit button" />
+      <Button layoutX="3.0" layoutY="145.0" mnemonicParsing="false" onAction="#editApartmentScene" prefHeight="79.0" prefWidth="87.0" style="-fx-background-color: #2196F3;" text="*edit button" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
+      <Button layoutX="15.0" layoutY="441.0" mnemonicParsing="false" onAction="#exit" prefHeight="38.0" prefWidth="56.0" style="-fx-background-color: red;" text="*exit" />
    </children>
 </AnchorPane>

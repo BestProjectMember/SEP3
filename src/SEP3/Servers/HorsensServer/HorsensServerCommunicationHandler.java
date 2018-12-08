@@ -59,6 +59,11 @@ public class HorsensServerCommunicationHandler implements Runnable {
                         outputStreamToClient.writeUTF(apartmentListFromDatabase);
                         System.out.println(apartmentListFromDatabase);
                         break;
+                    case 8: // get admin list
+                        outputStreamToDatabaseServer.writeInt(selection);
+                        String adminListFromDatabase = inputStreamFromDatabaseServer.readUTF();
+                        outputStreamToClient.writeUTF(adminListFromDatabase);
+                        break;
 
                     case 12: // add apartment
                         outputStreamToDatabaseServer.writeInt(selection);
@@ -69,6 +74,18 @@ public class HorsensServerCommunicationHandler implements Runnable {
                         outputStreamToDatabaseServer.writeInt(selection);
                         String removeThisApartment = inputStreamFromClient.readUTF();
                         outputStreamToDatabaseServer.writeUTF(removeThisApartment);
+                        break;
+                    case 14: // count tenants
+                        outputStreamToDatabaseServer.writeInt(selection);
+                        outputStreamToClient.writeInt(inputStreamFromDatabaseServer.readInt());
+                        break;
+                    case 15: // count apartments
+                        outputStreamToDatabaseServer.writeInt(selection);
+                        outputStreamToClient.writeInt(inputStreamFromDatabaseServer.readInt());
+                        break;
+                    case 16: // count admins
+                        outputStreamToDatabaseServer.writeInt(selection);
+                        outputStreamToClient.writeInt(inputStreamFromDatabaseServer.readInt());
                         break;
 
                 }

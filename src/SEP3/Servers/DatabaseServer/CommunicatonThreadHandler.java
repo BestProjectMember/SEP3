@@ -57,7 +57,7 @@ public class CommunicatonThreadHandler implements Runnable {
                         outputStream.writeUTF(apartmentList);
                         break;
                     case 6: //  get apartment by ID
-                    case 7: // change status of apartmnet
+                    case 7: // change status of apartment
                     case 8: // get admin list
                         String adminList = gson.toJson(model.getAdministratorListFromDatabase());
                         outputStream.writeUTF(adminList);
@@ -72,6 +72,15 @@ public class CommunicatonThreadHandler implements Runnable {
                     case 13: // remove apartment
                         Apartment removeThisApartment = gson.fromJson(inputStream.readUTF(), Apartment.class);
                         model.removeApartment(removeThisApartment);
+                        break;
+                    case 14: // count tenants
+                        outputStream.writeInt(model.countTenants());
+                        break;
+                    case 15: // count apartments
+                        outputStream.writeInt(model.countApartments());
+                        break;
+                    case 16: // count admins
+                        outputStream.writeInt(model.countAdmins());
                         break;
 
                 }

@@ -50,8 +50,6 @@ public class Administrator {
         this.telephoneNumber = telephoneNumber;
     }
 
-
-
     @Override
     public String toString() {
         return  firstName + " " + lastName + " " + administratorID + " " + telephoneNumber;

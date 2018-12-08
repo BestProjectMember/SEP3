@@ -2,22 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a25aa3b1-1860-40ab-b8ba-915e3f114af6" name="Default Changelist" comment="added Apartment, ApartmentList (adding, removing) classes">
-      <change afterPath="$PROJECT_DIR$/src/SEP3/ClientSide/Style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SEP3/ClientSide/View/EditApartmentSceneHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SEP3/ClientSide/View/EditTenantSceneHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SEP3/ClientSide/View/editApartmentScene.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SEP3/ClientSide/View/editTenantScene.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SEP3/ClientSide/View/AdminSceneHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SEP3/ClientSide/View/adminsScene.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exit.png" beforeDir="false" afterPath="$PROJECT_DIR$/exit.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SEP3/SEP3/ClientSide/Controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SEP3/SEP3/ClientSide/Controller/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SEP3/SEP3/ClientSide/Domain/Mediator/ClientModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SEP3/SEP3/ClientSide/Domain/Mediator/ClientModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SEP3/SEP3/ClientSide/Domain/Mediator/ClientModelManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SEP3/SEP3/ClientSide/Domain/Mediator/ClientModelManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SEP3/SEP3/ClientSide/Domain/Mediator/SystemModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SEP3/SEP3/ClientSide/Style.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SEP3/SEP3/ClientSide/View/ApartmentsSceneHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SEP3/SEP3/ClientSide/View/ApartmentsSceneHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SEP3/SEP3/ClientSide/View/EditApartmentSceneHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SEP3/SEP3/ClientSide/View/EditApartmentSceneHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SEP3/SEP3/ClientSide/View/GUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SEP3/SEP3/ClientSide/View/GUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SEP3/SEP3/ClientSide/View/MainSceneHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SEP3/SEP3/ClientSide/View/MainSceneHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SEP3/SEP3/ClientSide/View/TenantSceneHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SEP3/SEP3/ClientSide/View/TenantSceneHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SEP3/SEP3/ClientSide/View/View.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SEP3/SEP3/ClientSide/View/View.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SEP3/SEP3/ClientSide/View/apartmentScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SEP3/SEP3/ClientSide/View/apartmentScene.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SEP3/SEP3/ClientSide/View/mainScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SEP3/SEP3/ClientSide/View/mainScene.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SEP3/SEP3/ClientSide/View/tenantsScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SEP3/SEP3/ClientSide/View/tenantsScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SEP3/SEP3/Servers/DatabaseServer/Model/Administrator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SEP3/SEP3/Servers/DatabaseServer/Model/Administrator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SEP3/SEP3/Servers/HorsensServer/HorsensServerCommunicationHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SEP3/SEP3/Servers/HorsensServer/HorsensServerCommunicationHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SEP3/ClientSide/Controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SEP3/ClientSide/Controller/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SEP3/ClientSide/Domain/Mediator/ClientModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SEP3/ClientSide/Domain/Mediator/ClientModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SEP3/ClientSide/Domain/Mediator/ClientModelManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SEP3/ClientSide/Domain/Mediator/ClientModelManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SEP3/ClientSide/Domain/Mediator/SystemModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SEP3/ClientSide/Domain/Mediator/SystemModelManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SEP3/ClientSide/Style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SEP3/ClientSide/View/ApartmentsSceneHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SEP3/ClientSide/View/ApartmentsSceneHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SEP3/ClientSide/View/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SEP3/ClientSide/View/GUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SEP3/ClientSide/View/MainSceneHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SEP3/ClientSide/View/MainSceneHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SEP3/ClientSide/View/TenantSceneHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SEP3/ClientSide/View/TenantSceneHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SEP3/ClientSide/View/apartmentScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/SEP3/ClientSide/View/apartmentScene.fxml" afterDir="false" />
@@ -26,7 +38,7 @@
       <change beforePath="$PROJECT_DIR$/src/SEP3/Servers/DatabaseServer/CommunicatonThreadHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SEP3/Servers/DatabaseServer/CommunicatonThreadHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SEP3/Servers/DatabaseServer/DatabaseServerModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SEP3/Servers/DatabaseServer/DatabaseServerModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SEP3/Servers/DatabaseServer/DatabaseServerModelManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SEP3/Servers/DatabaseServer/DatabaseServerModelManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SEP3/Servers/DatabaseServer/Model/Apartment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SEP3/Servers/DatabaseServer/Model/Apartment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SEP3/Servers/DatabaseServer/Model/Administrator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SEP3/Servers/DatabaseServer/Model/Administrator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SEP3/Servers/HorsensServer/HorsensServerCommunicationHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SEP3/Servers/HorsensServer/HorsensServerCommunicationHandler.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -101,17 +113,17 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="133" />
+          <entry key="css" value="139" />
           <entry key="dummy" value="52" />
           <entry key="fxml" value="16" />
-          <entry key="java" value="17652" />
+          <entry key="java" value="19397" />
           <entry key="txt" value="107" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="133" />
-          <entry key="JAVA" value="17651" />
+          <entry key="CSS" value="139" />
+          <entry key="JAVA" value="19396" />
           <entry key="PLAIN_TEXT" value="159" />
           <entry key="SQL" value="1" />
           <entry key="XML" value="16" />
@@ -119,22 +131,22 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="3" />
-          <entry key="fxml" value="35" />
+          <entry key="css" value="4" />
+          <entry key="fxml" value="42" />
           <entry key="gitattributes" value="1" />
-          <entry key="java" value="432" />
-          <entry key="jpg" value="2" />
-          <entry key="png" value="2" />
-          <entry key="txt" value="1" />
+          <entry key="java" value="477" />
+          <entry key="jpg" value="3" />
+          <entry key="png" value="5" />
+          <entry key="txt" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="3" />
-          <entry key="Image" value="4" />
-          <entry key="JAVA" value="432" />
-          <entry key="PLAIN_TEXT" value="2" />
-          <entry key="XML" value="35" />
+          <entry key="CSS" value="4" />
+          <entry key="Image" value="8" />
+          <entry key="JAVA" value="477" />
+          <entry key="PLAIN_TEXT" value="3" />
+          <entry key="XML" value="42" />
         </counts>
       </usages-collector>
     </session>
@@ -220,11 +232,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/SEP3/ClientSide/View/TenantSceneHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="147" column="5" lean-forward="true" selection-start-line="134" selection-start-column="3" selection-end-line="147" selection-end-column="5" />
+            <state relative-caret-position="198">
+              <caret line="95" column="39" selection-start-line="95" selection-start-column="39" selection-end-line="95" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#7931#7932#0" expanded="true" />
+                <element signature="e#7961#7962#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SEP3/ClientSide/View/MainSceneHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1867#1868#0" expanded="true" />
+                <element signature="e#1897#1898#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SEP3/ClientSide/View/ApartmentsSceneHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="101" column="62" selection-start-line="101" selection-start-column="62" selection-end-line="101" selection-end-column="62" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SEP3/Servers/HorsensServer/HorsensServerCommunicationHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="314">
+              <caret line="80" column="30" lean-forward="true" selection-start-line="80" selection-start-column="30" selection-end-line="80" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -235,88 +287,21 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SEP3/ClientSide/Controller/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+            <state relative-caret-position="338">
+              <caret line="55" column="1" lean-forward="true" selection-start-line="55" selection-start-column="1" selection-end-line="55" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1042#1043#0" expanded="true" />
-                <element signature="e#1087#1088#0" expanded="true" />
-                <element signature="e#1140#1141#0" expanded="true" />
-                <element signature="e#1188#1189#0" expanded="true" />
-                <element signature="e#1252#1253#0" expanded="true" />
-                <element signature="e#1272#1273#0" expanded="true" />
-                <element signature="e#1417#1418#0" expanded="true" />
-                <element signature="e#1443#1444#0" expanded="true" />
+                <element signature="method#executeGetAllTenants#0;class#Controller#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SEP3/ClientSide/View/ApartmentsSceneHandler.java">
+        <entry file="file://$PROJECT_DIR$/src/SEP3/Servers/DatabaseServer/DatabaseServerModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="126" selection-start-line="126" selection-end-line="126" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SEP3/ClientSide/View/EditTenantSceneHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="42" column="29" selection-start-line="42" selection-start-column="15" selection-end-line="42" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SEP3/ClientSide/Domain/Model/Tenant.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/SEP3/ClientSide/View/EditApartmentSceneHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="93">
-              <caret line="46" column="8" lean-forward="true" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SEP3/ClientSide/View/MainSceneHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="49" column="56" selection-start-line="49" selection-start-column="52" selection-end-line="49" selection-end-column="56" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SEP3/ClientSide/View/editApartmentScene.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SEP3/Servers/DatabaseServer/DatabaseServerModelManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-766">
-              <caret line="111" column="36" lean-forward="true" selection-start-line="111" selection-start-column="36" selection-end-line="111" selection-end-column="36" />
+            <state relative-caret-position="400">
+              <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -327,8 +312,46 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SEP3/Servers/DatabaseServer/CommunicatonThreadHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="67" column="27" selection-start-line="67" selection-start-column="27" selection-end-line="67" selection-end-column="27" />
+            <state relative-caret-position="320">
+              <caret line="82" column="63" selection-start-line="82" selection-start-column="63" selection-end-line="82" selection-end-column="63" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SEP3/Servers/DatabaseServer/DatabaseServerModelManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="177">
+              <caret line="96" column="31" lean-forward="true" selection-start-line="96" selection-start-column="31" selection-end-line="96" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SEP3/ClientSide/View/AdminSceneHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="293">
+              <caret line="86" column="27" lean-forward="true" selection-start-line="86" selection-start-column="27" selection-end-line="86" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3316#3317#0" expanded="true" />
+                <element signature="e#3346#3347#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SEP3/ClientSide/Domain/Mediator/ClientModelManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="139" column="9" lean-forward="true" selection-start-line="139" selection-start-column="9" selection-end-line="139" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -365,9 +388,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/SEP3/Client/Client.java" />
-        <option value="$PROJECT_DIR$/src/SEP3/Domain/Mediator/Client.java" />
-        <option value="$PROJECT_DIR$/src/SEP3/HorsensServer/HorsensServerMain.java" />
         <option value="$PROJECT_DIR$/src/SEP3/BullshitClient/BullshitModelManager.java" />
         <option value="$PROJECT_DIR$/src/SEP3/BullshitClient/BullshitClient.java" />
         <option value="$PROJECT_DIR$/src/SEP3/View/GUI.java" />
@@ -392,30 +412,33 @@
         <option value="$PROJECT_DIR$/src/SEP3/ClientSide/Domain/Mediator/ClientMain.java" />
         <option value="$PROJECT_DIR$/src/SEP3/ClientSide/Domain/Mediator/Client.java" />
         <option value="$PROJECT_DIR$/src/SEP3/ClientSide/Domain/Mediator/SystemModel.java" />
-        <option value="$PROJECT_DIR$/src/SEP3/ClientSide/Domain/Mediator/SystemModelManager.java" />
-        <option value="$PROJECT_DIR$/src/SEP3/ClientSide/Domain/Model/Apartment.java" />
         <option value="$PROJECT_DIR$/src/SEP3/Servers/DatabaseServer/DatabaseServerCommunicatonThreadHandler.java" />
         <option value="$PROJECT_DIR$/src/SEP3/ClientSide/Domain/Model/ApartmentList.java" />
         <option value="$PROJECT_DIR$/src/SEP3/Style.css" />
         <option value="$PROJECT_DIR$/src/SEP3/Servers/HorsensServer/HorsensServerMain.java" />
-        <option value="$PROJECT_DIR$/src/SEP3/ClientSide/View/GUI.java" />
         <option value="$PROJECT_DIR$/src/SEP3/ClientSide/Domain/Model/Tenant.java" />
         <option value="$PROJECT_DIR$/src/SEP3/ClientSide/View/AddTenantSceneHandler.java" />
-        <option value="$PROJECT_DIR$/src/SEP3/ClientSide/View/TenantSceneHandler.java" />
         <option value="$PROJECT_DIR$/src/SEP3/ClientSide/View/EditTenantSceneHandler.java" />
-        <option value="$PROJECT_DIR$/Style.css" />
+        <option value="$PROJECT_DIR$/src/SEP3/Servers/DatabaseServer/Model/Apartment.java" />
+        <option value="$PROJECT_DIR$/src/SEP3/ClientSide/View/EditApartmentSceneHandler.java" />
         <option value="$PROJECT_DIR$/src/SEP3/ClientSide/Style.css" />
+        <option value="$PROJECT_DIR$/Style.css" />
+        <option value="$PROJECT_DIR$/src/SEP3/Servers/DatabaseServer/Model/Administrator.java" />
+        <option value="$PROJECT_DIR$/src/SEP3/ClientSide/Domain/Model/Apartment.java" />
+        <option value="$PROJECT_DIR$/src/SEP3/ClientSide/Domain/Mediator/SystemModelManager.java" />
+        <option value="$PROJECT_DIR$/src/SEP3/ClientSide/View/View.java" />
+        <option value="$PROJECT_DIR$/src/SEP3/ClientSide/View/GUI.java" />
         <option value="$PROJECT_DIR$/src/SEP3/ClientSide/Controller/Controller.java" />
         <option value="$PROJECT_DIR$/src/SEP3/ClientSide/Domain/Mediator/ClientModel.java" />
-        <option value="$PROJECT_DIR$/src/SEP3/Servers/HorsensServer/HorsensServerCommunicationHandler.java" />
         <option value="$PROJECT_DIR$/src/SEP3/ClientSide/Domain/Mediator/ClientModelManager.java" />
-        <option value="$PROJECT_DIR$/src/SEP3/Servers/DatabaseServer/DatabaseServerModel.java" />
+        <option value="$PROJECT_DIR$/src/SEP3/Servers/HorsensServer/HorsensServerCommunicationHandler.java" />
         <option value="$PROJECT_DIR$/src/SEP3/Servers/DatabaseServer/CommunicatonThreadHandler.java" />
-        <option value="$PROJECT_DIR$/src/SEP3/Servers/DatabaseServer/Model/Apartment.java" />
-        <option value="$PROJECT_DIR$/src/SEP3/Servers/DatabaseServer/DatabaseServerModelManager.java" />
-        <option value="$PROJECT_DIR$/src/SEP3/ClientSide/View/ApartmentsSceneHandler.java" />
+        <option value="$PROJECT_DIR$/src/SEP3/Servers/DatabaseServer/DatabaseServerModel.java" />
         <option value="$PROJECT_DIR$/src/SEP3/ClientSide/View/MainSceneHandler.java" />
-        <option value="$PROJECT_DIR$/src/SEP3/ClientSide/View/EditApartmentSceneHandler.java" />
+        <option value="$PROJECT_DIR$/src/SEP3/Servers/DatabaseServer/DatabaseServerModelManager.java" />
+        <option value="$PROJECT_DIR$/src/SEP3/ClientSide/View/AdminSceneHandler.java" />
+        <option value="$PROJECT_DIR$/src/SEP3/ClientSide/View/ApartmentsSceneHandler.java" />
+        <option value="$PROJECT_DIR$/src/SEP3/ClientSide/View/TenantSceneHandler.java" />
       </list>
     </option>
   </component>
@@ -534,6 +557,15 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="SEP3" type="462c0819:PsiDirectoryNode" />
               <item name="Servers" type="462c0819:PsiDirectoryNode" />
+              <item name="DatabaseServer" type="462c0819:PsiDirectoryNode" />
+              <item name="Model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SEP3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SEP3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="SEP3" type="462c0819:PsiDirectoryNode" />
+              <item name="Servers" type="462c0819:PsiDirectoryNode" />
               <item name="HorsensServer" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -550,9 +582,9 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544287631299" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544295919235" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/Change SQL Dialect" value="MySQL&#10;GenericSQL&#10;PostgreSQL" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/ICT/1semester/SEP1/SEP1 reexam/SEPX Program" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/ICT/1semester/SEP1/SEP1 reexam" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -561,8 +593,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\RT\Documents\GitHub\SEP3\src\SEP3\ClientSide" />
       <recent name="C:\Users\RT\Documents\GitHub\SEP3" />
+      <recent name="C:\Users\RT\Documents\GitHub\SEP3\src\SEP3\ClientSide" />
       <recent name="C:\Users\RT\Documents\GitHub\SEP3\src" />
       <recent name="C:\Users\RT\Documents\GitHub\SEP3\src\SEP3\View" />
     </key>
@@ -708,7 +740,7 @@
       <workItem from="1544015353751" duration="20320000" />
       <workItem from="1544053161882" duration="2771000" />
       <workItem from="1544088343410" duration="10483000" />
-      <workItem from="1544278652048" duration="7738000" />
+      <workItem from="1544278652048" duration="15311000" />
     </task>
     <task id="LOCAL-00001" summary="more hello">
       <created>1540381030567</created>
@@ -767,7 +799,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="151627000" />
+    <option name="totallyTimeSpent" value="159200000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -791,7 +823,7 @@
       <window_info id="Favorites" order="6" sideWeight="0.5058651" side_tool="true" weight="0.21946308" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49932885" weight="0.32844576" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49395972" visible="true" weight="0.27419356" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49395972" visible="true" weight="0.2888563" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49597314" weight="0.5102639" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -869,72 +901,11 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/io/DataInputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3396">
-          <caret line="390" column="21" selection-start-line="390" selection-start-column="21" selection-end-line="390" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/gson-2.8.2.jar!/com/google/gson/Gson.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="566">
-          <caret line="112" selection-start-line="112" selection-end-line="112" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SEP3/ClientSide/Domain/Model/AdministratorList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1000">
-          <caret line="56" column="9" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SEP3/ClientSide/View/View.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SEP3/BullshitClient/BullshitClient.java" />
-    <entry file="file://$PROJECT_DIR$/src/SEP3/BullshitClient/BullshitClientModelManager.java" />
-    <entry file="file://$PROJECT_DIR$/src/SEP3/Servers/DatabaseServer/Model/AdministratorList.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SEP3/Servers/DatabaseServer/Model/TenantList.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/SEP3/Servers/DatabaseServer/Model/Tenant.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SEP3/Servers/DatabaseServer/Model/ApartmentList.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SEP3/Servers/DatabaseServer/Model/RqApartment.java">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SEP3/Servers/DatabaseServer/Model/Administrator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SEP3/ClientSide/Domain/Model/Administrator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="52" selection-start-line="52" selection-end-line="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SEP3/ClientSide/View/mainScene.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="160" selection-start-line="6" selection-start-column="160" selection-end-line="6" selection-end-column="160" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SEP3/ClientSide/Domain/Model/ApartmentList.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -946,12 +917,6 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/back_icon.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/add.png">
-      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SEP3/Servers/HorsensServer/HorsensServerMain.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -987,43 +952,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SEP3/ClientSide/View/GUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="800">
-          <caret line="46" column="13" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SEP3/ClientSide/Domain/Mediator/SystemModelManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-214">
-          <caret line="72" column="2" lean-forward="true" selection-start-line="72" selection-start-column="2" selection-end-line="72" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SEP3/ClientSide/Domain/Mediator/SystemModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SEP3/Servers/HorsensServer/HorsensServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/SEP3/ClientSide/Domain/Model/TenantList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="430">
@@ -1035,31 +963,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SEP3/ClientSide/View/tenantsScene.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="36" column="74" selection-start-line="36" selection-start-column="74" selection-end-line="36" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SEP3/ClientSide/View/GuiStart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SEP3/ClientSide/Style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -1091,57 +994,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SEP3/Servers/HorsensServer/HorsensServerCommunicationHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="71" column="30" selection-start-line="71" selection-start-column="30" selection-end-line="71" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SEP3/ClientSide/Domain/Mediator/ClientModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SEP3/ClientSide/Domain/Mediator/ClientModelManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="767">
-          <caret line="101" column="46" selection-start-line="101" selection-start-column="46" selection-end-line="101" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SEP3/Servers/DatabaseServer/DatabaseServerModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="17" column="46" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SEP3/ClientSide/Domain/Model/Apartment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="17" column="27" lean-forward="true" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SEP3/Servers/DatabaseServer/Model/Apartment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/SEP3/Servers/DatabaseServer/DatabaseConnection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -1152,38 +1004,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SEP3/Servers/DatabaseServer/CommunicatonThreadHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="67" column="27" selection-start-line="67" selection-start-column="27" selection-end-line="67" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SEP3/ClientSide/Controller/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1042#1043#0" expanded="true" />
-            <element signature="e#1087#1088#0" expanded="true" />
-            <element signature="e#1140#1141#0" expanded="true" />
-            <element signature="e#1188#1189#0" expanded="true" />
-            <element signature="e#1252#1253#0" expanded="true" />
-            <element signature="e#1272#1273#0" expanded="true" />
-            <element signature="e#1417#1418#0" expanded="true" />
-            <element signature="e#1443#1444#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SEP3/ClientSide/View/editApartmentScene.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/SEP3/ClientSide/Domain/Model/Tenant.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -1191,43 +1011,135 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SEP3/Servers/DatabaseServer/DatabaseServerModelManager.java">
+    <entry file="file://$PROJECT_DIR$/add.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apartment.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Database 11-1.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/back_icon.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exit.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-766">
-          <caret line="111" column="36" lean-forward="true" selection-start-line="111" selection-start-column="36" selection-end-line="111" selection-end-column="36" />
+        <state relative-caret-position="100">
+          <caret line="5" column="31" lean-forward="true" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SEP3/ClientSide/View/EditApartmentSceneHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="43" column="37" lean-forward="true" selection-start-line="43" selection-start-column="37" selection-end-line="43" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SEP3/ClientSide/View/TenantSceneHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/SEP3/ClientSide/Domain/Model/Administrator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="147" column="5" lean-forward="true" selection-start-line="134" selection-start-column="3" selection-end-line="147" selection-end-column="5" />
+        <state relative-caret-position="220">
+          <caret line="11" column="96" selection-start-line="11" selection-start-column="96" selection-end-line="11" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SEP3/ClientSide/Domain/Model/Apartment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="11" column="55" lean-forward="true" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
+          <folding>
+            <element signature="e#531#532#0" expanded="true" />
+            <element signature="e#560#561#0" expanded="true" />
+            <element signature="e#601#602#0" expanded="true" />
+            <element signature="e#637#638#0" expanded="true" />
+            <element signature="e#672#673#0" expanded="true" />
+            <element signature="e#703#704#0" expanded="true" />
+            <element signature="e#751#752#0" expanded="true" />
+            <element signature="e#791#792#0" expanded="true" />
+            <element signature="e#819#820#0" expanded="true" />
+            <element signature="e#846#847#0" expanded="true" />
+            <element signature="e#883#884#0" expanded="true" />
+            <element signature="e#915#916#0" expanded="true" />
+            <element signature="e#949#950#0" expanded="true" />
+            <element signature="e#978#979#0" expanded="true" />
+            <element signature="e#1023#1024#0" expanded="true" />
+            <element signature="e#1059#1060#0" expanded="true" />
+            <element signature="e#1091#1092#0" expanded="true" />
+            <element signature="e#1119#1120#0" expanded="true" />
+            <element signature="e#1161#1162#0" expanded="true" />
+            <element signature="e#1195#1196#0" expanded="true" />
+            <element signature="e#1224#1225#0" expanded="true" />
+            <element signature="e#1252#1253#0" expanded="true" />
+            <element signature="e#1291#1292#0" expanded="true" />
+            <element signature="e#1325#1326#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SEP3/Servers/DatabaseServer/Model/Apartment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SEP3/Servers/DatabaseServer/Model/ApartmentList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-400">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SEP3/Servers/DatabaseServer/Model/TenantList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-340">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SEP3/Servers/DatabaseServer/Model/AdministratorList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-162">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SEP3/Servers/DatabaseServer/Model/Administrator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="34" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SEP3/ClientSide/Domain/Mediator/SystemModelManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="27" column="45" selection-end-line="114" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SEP3/ClientSide/Domain/Mediator/SystemModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SEP3/ClientSide/View/ApartmentsSceneHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/SEP3/ClientSide/View/tenantsScene.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="126" selection-start-line="126" selection-end-line="126" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SEP3/ClientSide/View/MainSceneHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="49" column="56" selection-start-line="49" selection-start-column="52" selection-end-line="49" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="466">
+          <caret line="36" column="74" selection-start-line="36" selection-start-column="74" selection-end-line="36" selection-end-column="74" />
         </state>
       </provider>
     </entry>
@@ -1238,12 +1150,169 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SEP3/ClientSide/View/EditApartmentSceneHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/SEP3/ClientSide/View/editApartmentScene.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SEP3/ClientSide/View/adminsScene.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SEP3/ClientSide/View/View.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="46" column="8" lean-forward="true" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
+        <state relative-caret-position="40">
+          <caret line="2" column="45" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SEP3/ClientSide/View/GuiStart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SEP3/ClientSide/View/GUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="66" column="5" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SEP3/ClientSide/View/mainScene.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SEP3/ClientSide/Domain/Mediator/ClientModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SEP3/Servers/HorsensServer/HorsensServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SEP3/Servers/DatabaseServer/DatabaseServerModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SEP3/Servers/HorsensServer/HorsensServerCommunicationHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="80" column="30" lean-forward="true" selection-start-line="80" selection-start-column="30" selection-end-line="80" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SEP3/ClientSide/View/MainSceneHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1867#1868#0" expanded="true" />
+            <element signature="e#1897#1898#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SEP3/ClientSide/Controller/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="55" column="1" lean-forward="true" selection-start-line="55" selection-start-column="1" selection-end-line="55" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#executeGetAllTenants#0;class#Controller#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SEP3/ClientSide/Domain/Mediator/ClientModelManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="139" column="9" lean-forward="true" selection-start-line="139" selection-start-column="9" selection-end-line="139" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SEP3/Servers/DatabaseServer/CommunicatonThreadHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="82" column="63" selection-start-line="82" selection-start-column="63" selection-end-line="82" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SEP3/Servers/DatabaseServer/DatabaseServerModelManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="96" column="31" lean-forward="true" selection-start-line="96" selection-start-column="31" selection-end-line="96" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SEP3/ClientSide/View/AdminSceneHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="86" column="27" lean-forward="true" selection-start-line="86" selection-start-column="27" selection-end-line="86" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3316#3317#0" expanded="true" />
+            <element signature="e#3346#3347#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SEP3/ClientSide/View/ApartmentsSceneHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="101" column="62" selection-start-line="101" selection-start-column="62" selection-end-line="101" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SEP3/ClientSide/View/TenantSceneHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="95" column="39" selection-start-line="95" selection-start-column="39" selection-end-line="95" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#7931#7932#0" expanded="true" />
+            <element signature="e#7961#7962#0" expanded="true" />
           </folding>
         </state>
       </provider>

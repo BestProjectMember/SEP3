@@ -16,5 +16,8 @@ public interface DatabaseServerModel {
     void removeTenant(Tenant tenant);
     void addApartment(Apartment apartment);
     void removeApartment(Apartment apartment);
+    int countTenants();
+    int countApartments();
+    int countAdmins();
 
 }
