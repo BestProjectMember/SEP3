@@ -36,13 +36,13 @@ public class HorsensServerCommunicationHandler implements Runnable {
                 int selection = inputStreamFromClient.readInt();
                 System.out.println("From client: " + selection);
                 switch (selection) {
-                    case 1 : // get tenant list
+                    case 1: // get tenant list
                         outputStreamToDatabaseServer.writeInt(selection);
                         String tenantListFromDatabase = inputStreamFromDatabaseServer.readUTF();
                         outputStreamToClient.writeUTF(tenantListFromDatabase);
                         break;
 
-                    case 3 : // add tenant
+                    case 3: // add tenant
                         outputStreamToDatabaseServer.writeInt(selection);
                         String addThisTenant = inputStreamFromClient.readUTF();
                         outputStreamToDatabaseServer.writeUTF(addThisTenant);
@@ -53,14 +53,27 @@ public class HorsensServerCommunicationHandler implements Runnable {
                         String removeThisTenant = inputStreamFromClient.readUTF();
                         outputStreamToDatabaseServer.writeUTF(removeThisTenant);
                         break;
-                    case 5 : // get apartment list
+                    case 5: // get apartment list
                         outputStreamToDatabaseServer.writeInt(selection);
                         String apartmentListFromDatabase = inputStreamFromDatabaseServer.readUTF();
                         outputStreamToClient.writeUTF(apartmentListFromDatabase);
                         System.out.println(apartmentListFromDatabase);
                         break;
+
+                    case 12: // add apartment
+                        outputStreamToDatabaseServer.writeInt(selection);
+                        String addThisApartment = inputStreamFromClient.readUTF();
+                        outputStreamToDatabaseServer.writeUTF(addThisApartment);
+                        break;
+                    case 13: // remove apartment
+                        outputStreamToDatabaseServer.writeInt(selection);
+                        String removeThisApartment = inputStreamFromClient.readUTF();
+                        outputStreamToDatabaseServer.writeUTF(removeThisApartment);
+                        break;
+
                 }
             }
+
         } catch (IOException e) {
             e.printStackTrace();
         }

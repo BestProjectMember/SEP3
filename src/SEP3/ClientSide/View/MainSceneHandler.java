@@ -47,7 +47,7 @@ public class MainSceneHandler implements Initializable {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("apartmentScene.fxml"));
             loader.setController(new ApartmentsSceneHandler(controller));
             Parent mainWindow = loader.load();
-            Scene mainScene = new Scene(mainWindow, 837, 493);
+            Scene mainScene = new Scene(mainWindow, 1200, 493);
             Stage mainStage  = (Stage)((Node) event.getSource()).getScene().getWindow();
             mainStage.setScene(mainScene);
             mainStage.show();

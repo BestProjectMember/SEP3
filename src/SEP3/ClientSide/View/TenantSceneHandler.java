@@ -5,6 +5,8 @@ import SEP3.ClientSide.Domain.Model.Tenant;
 import SEP3.ClientSide.Domain.Model.TenantList;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -19,6 +21,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
+import java.util.function.Predicate;
 
 public class TenantSceneHandler implements Initializable {
 
@@ -38,6 +41,7 @@ public class TenantSceneHandler implements Initializable {
     @FXML private TableColumn<Tenant, String>  tenantGenderColumn;
     // Tenant list
     private ObservableList<Tenant> tenantData;
+    @FXML TextField tenantSearchTextField;
 
     //-----------------------------------------------------
     @FXML Label tenantsCountLabel;
@@ -129,7 +133,22 @@ public class TenantSceneHandler implements Initializable {
     }
 
     @FXML
-    private Tenant getSelectedTenant() {
+    private void ediTenantScene (ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("editTenantScene.fxml"));
+            loader.setController(new EditTenantSceneHandler(controller, this));
+            Parent mainWindow = loader.load();
+            Scene mainScene = new Scene(mainWindow, 223, 520);
+            Stage mainStage  = (Stage)((Node) event.getSource()).getScene().getWindow();
+            mainStage.setScene(mainScene);
+            mainStage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    public Tenant getSelectedTenant() {
             Tenant getTenant = tenantsTable.getSelectionModel().getSelectedItem();
             System.out.println(getTenant.toString());
             return getTenant;
@@ -144,5 +163,37 @@ public class TenantSceneHandler implements Initializable {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    @FXML
+    private void searchTenant() {
+        FilteredList<Tenant> filteredList = new FilteredList<>(tenantData, s -> true);
+        tenantsTable.setItems(filteredList);
+        tenantSearchTextField.setOnKeyTyped(e -> {
+            tenantSearchTextField.textProperty().addListener((observable, oldValue, newValue) -> {
+                filteredList.setPredicate((Predicate<? super Tenant>) user -> {
+                    if (newValue == null || newValue.isEmpty()) {
+                        return true;
+                    }
+                    if (user.getFirstName().toLowerCase().contains(newValue.toLowerCase())) {
+                        return true;
+                    } else if (user.getLastName().toLowerCase().contains(newValue.toLowerCase())) {
+                        return true;
+                    } else if (user.getTenantID().toLowerCase().contains(newValue.toLowerCase())) {
+                        return true;
+                    } else if (user.getEmail().toLowerCase().contains(newValue.toLowerCase())) {
+                        return true;
+                    } else if (user.getSex().toLowerCase().contains(newValue.toLowerCase())) {
+                        return true;
+                    } else if (user.getTelephoneNumber().toLowerCase().contains(newValue.toLowerCase())) {
+                        return true;
+                    }
+                    return false;
+                });
+            });
+        });
+        SortedList<Tenant> sortedList = new SortedList<>(filteredList);
+        sortedList.comparatorProperty().bind(tenantsTable.comparatorProperty());
+        tenantsTable.setItems(sortedList);
     }
 }

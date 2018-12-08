@@ -1,9 +1,6 @@
 package SEP3.ClientSide.Domain.Mediator;
 
-import SEP3.ClientSide.Domain.Model.AdministratorList;
-import SEP3.ClientSide.Domain.Model.ApartmentList;
-import SEP3.ClientSide.Domain.Model.Tenant;
-import SEP3.ClientSide.Domain.Model.TenantList;
+import SEP3.ClientSide.Domain.Model.*;
 import com.google.gson.Gson;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -81,6 +78,28 @@ public class ClientModelManager implements ClientModel {
             int choice = 4;
             out.writeInt(choice);
             out.writeUTF(gson.toJson(tenant));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void addApartment(Apartment apartment) {
+        try {
+            int choice = 12;
+            out.writeInt(choice);
+            out.writeUTF(gson.toJson(apartment));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void removeApartment(Apartment apartment) {
+        try {
+            int choice = 13;
+            out.writeInt(choice);
+            out.writeUTF(gson.toJson(apartment));
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -7,7 +7,6 @@ import java.io.DataInputStream;
 import java.io.IOException;
 import java.net.Socket;
 import java.sql.*;
-import java.time.LocalDate;
 
 public class DatabaseServerModelManager implements DatabaseServerModel {
 
@@ -94,7 +93,7 @@ public class DatabaseServerModelManager implements DatabaseServerModel {
         }
     }
 
-    //-------------------Aparmtnet---------------------------------------
+    //-------------------Apartment---------------------------------------
 
     @Override
     public ApartmentList getHorsensApartmentListFromDatabase() {
@@ -122,6 +121,52 @@ public class DatabaseServerModelManager implements DatabaseServerModel {
         }
         return apartmentList;
     }
+
+    @Override
+    public void addApartment(Apartment apartment) {
+        try {
+            PreparedStatement preparedStatement;
+            Connection conn = databaseConnection.connect();
+
+            // database statement
+            String query = "insert into sep3db.apartmentshorsens(number, location, size, status, price, floor) values(?,?,?,?,?,?)";
+            preparedStatement = conn.prepareStatement(query);
+            preparedStatement.setInt(1,  apartment.getNumber());
+            preparedStatement.setString(2,  apartment.getLocation());
+            preparedStatement.setInt(3,  apartment.getSize());
+            preparedStatement.setBoolean(4,  apartment.getStatus());
+            preparedStatement.setDouble(5,  apartment.getPrice());
+            preparedStatement.setInt(6, apartment.getFloor());
+            preparedStatement.execute();
+            preparedStatement.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void removeApartment(Apartment apartment) {
+        try {
+            PreparedStatement preparedStatement;
+            Connection conn = databaseConnection.connect();
+
+            //database statement
+            String query = "delete from sep3db.apartmentshorsens where number = ? and location = ? and size = ? and status = ? and price = ? and floor = ?";
+            preparedStatement = conn.prepareStatement(query);
+            preparedStatement.setInt(1,  apartment.getNumber());
+            preparedStatement.setString(2,  apartment.getLocation());
+            preparedStatement.setInt(3,  apartment.getSize());
+            preparedStatement.setBoolean(4,  apartment.getStatus());
+            preparedStatement.setDouble(5,  apartment.getPrice());
+            preparedStatement.setInt(6, apartment.getFloor());
+            preparedStatement.execute();
+            preparedStatement.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    ////////////////// c#
 
     // C#
     @Override

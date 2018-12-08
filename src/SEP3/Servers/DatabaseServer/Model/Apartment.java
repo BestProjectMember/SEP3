@@ -34,7 +34,7 @@ public class Apartment {
         this.location = location;
     }
 
-    public double getSize() {
+    public int getSize() {
         return size;
     }
 

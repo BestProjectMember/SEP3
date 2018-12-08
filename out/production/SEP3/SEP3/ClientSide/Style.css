@@ -1,0 +1,4 @@
+.exitIcon {
+    -fx-background-image: url("../../../exit.png");
+    -fx-background-color: #eee590;
+}

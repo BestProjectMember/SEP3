@@ -1,6 +1,7 @@
 package SEP3.ClientSide.Controller;
 
 import SEP3.ClientSide.Domain.Mediator.ClientModel;
+import SEP3.ClientSide.Domain.Model.Apartment;
 import SEP3.ClientSide.Domain.Model.ApartmentList;
 import SEP3.ClientSide.Domain.Model.Tenant;
 import SEP3.ClientSide.Domain.Model.TenantList;
@@ -39,5 +40,13 @@ public class Controller {
 
     public void executeRemoveTenant(Tenant tenant){
         clientModel.removeTenant(tenant);
+    }
+
+    public void executeAddApartment(Apartment apartment) {
+        clientModel.addApartment(apartment);
+    }
+
+    public void executeRemoveApartment(Apartment apartment) {
+        clientModel.removeApartment(apartment);
     }
 }

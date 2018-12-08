@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="537.0" prefWidth="222.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text layoutX="37.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number">
+         <effect>
+            <Blend />
+         </effect>
+         <font>
+            <Font size="15.0" />
+         </font></Text>
+      <Text layoutX="36.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Location">
+         <effect>
+            <Blend />
+         </effect>
+         <font>
+            <Font size="14.0" />
+         </font></Text>
+      <Text layoutX="38.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Size">
+         <effect>
+            <Blend />
+         </effect>
+         <font>
+            <Font size="14.0" />
+         </font></Text>
+      <Text layoutX="37.0" layoutY="346.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status">
+         <effect>
+            <Blend />
+         </effect>
+         <font>
+            <Font size="14.0" />
+         </font></Text>
+      <Text layoutX="35.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price">
+         <effect>
+            <Blend />
+         </effect>
+         <font>
+            <Font size="14.0" />
+         </font></Text>
+      <Text layoutX="6.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edit Apartment" textAlignment="CENTER" wrappingWidth="214.0">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <Button layoutX="13.0" layoutY="450.0" mnemonicParsing="false" onAction="#editApartment" prefHeight="56.0" prefWidth="78.0" style="-fx-background-color: lightgreen;" text="EDIT" />
+      <Button layoutX="110.0" layoutY="450.0" mnemonicParsing="false" onAction="#handleGoBack" prefHeight="56.0" prefWidth="78.0" style="-fx-background-color: red;" text="BACK" />
+      <TextField fx:id="apartmentNumberInput" layoutX="37.0" layoutY="74.0" />
+      <TextField fx:id="apartmentPriceInput" layoutX="34.0" layoutY="298.0" />
+      <Text layoutX="37.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Floor">
+         <effect>
+            <Blend />
+         </effect>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <ChoiceBox fx:id="apartmentFloorInput" layoutX="32.0" layoutY="244.0" prefHeight="28.0" prefWidth="150.0" />
+      <RadioButton fx:id="takenButton" layoutX="40.0" layoutY="361.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="92.0" text="Taken" />
+      <RadioButton fx:id="notTakenButton" layoutX="40.0" layoutY="391.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="118.0" text="Not taken" />
+      <ChoiceBox fx:id="apartmentLocationInput" layoutX="38.0" layoutY="131.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="apartmentSizeInput" layoutX="35.0" layoutY="183.0" prefHeight="21.0" prefWidth="61.0" />
+   </children>
+</AnchorPane>

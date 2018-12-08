@@ -3,8 +3,11 @@ package SEP3.ClientSide.View;
 import SEP3.ClientSide.Controller.Controller;
 import SEP3.ClientSide.Domain.Model.Apartment;
 import SEP3.ClientSide.Domain.Model.ApartmentList;
+import SEP3.ClientSide.Domain.Model.Tenant;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -15,11 +18,13 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.function.Predicate;
 
 public class ApartmentsSceneHandler implements Initializable {
 
@@ -37,11 +42,13 @@ public class ApartmentsSceneHandler implements Initializable {
     @FXML private TableColumn<Apartment, Boolean> apartmentStatusColumn;
     @FXML private TableColumn<Apartment, Double>  apartmentPriceColumn;
     @FXML private TableColumn<Apartment, Integer>  apartmentFloorColumn;
-    // Items list
+    // Apartments list
     private ObservableList<Apartment> apartmentData;
 
     // Apartment count label
     @FXML private Label apartmentCount;
+
+    @FXML private TextField apartmentSearchField;
 
     public ApartmentsSceneHandler(Controller controller) {
         this.controller = controller;
@@ -112,6 +119,55 @@ public class ApartmentsSceneHandler implements Initializable {
         }
     }
 
+    @FXML
+    private void editApartmentScene (ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("editApartmentScene.fxml"));
+            loader.setController(new EditApartmentSceneHandler(controller, this));
+            Parent mainWindow = loader.load();
+            Scene mainScene = new Scene(mainWindow, 222, 537);
+            Stage mainStage  = (Stage)((Node) event.getSource()).getScene().getWindow();
+            mainStage.setScene(mainScene);
+            mainStage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
+    @FXML
+    private void searchApartment() {
+        FilteredList<Apartment> filteredList = new FilteredList<>(apartmentData, s -> true);
+        apartmentTable.setItems(filteredList);
+        apartmentSearchField.setOnKeyTyped(e -> {
+            apartmentSearchField.textProperty().addListener((observable, oldValue, newValue) -> {
+                filteredList.setPredicate((Predicate<? super Apartment>) user -> {
+                    if (newValue == null || newValue.isEmpty()) {
+                        return true;
+                    }
+                    if (String.valueOf(user.getNumber()).toLowerCase().contains(newValue.toLowerCase())) {
+                        return true;
+                    } else if (user.getLocation().toLowerCase().contains(newValue.toLowerCase())) {
+                        return true;
+                    } else if (String.valueOf(user.getSize()).toLowerCase().contains(newValue.toLowerCase())) {
+                        return true;
+                    } else if (String.valueOf(user.getPrice()).contains(newValue.toLowerCase())) {
+                        return true;
+                    } else if (String.valueOf(user.getFloor()).toLowerCase().contains(newValue.toLowerCase())) {
+                        return true;
+                    }
+                    return false;
+                });
+            });
+        });
+        SortedList<Apartment> sortedList = new SortedList<>(filteredList);
+        sortedList.comparatorProperty().bind(apartmentTable.comparatorProperty());
+        apartmentTable.setItems(sortedList);
+    }
 
+    @FXML
+    public Apartment getSelectedApartment() {
+        Apartment getApartment = apartmentTable.getSelectionModel().getSelectedItem();
+        System.out.println(getApartment.toString());
+        return getApartment;
+    }
 }

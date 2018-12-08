@@ -29,7 +29,7 @@
             </AnchorPane>
          </top>
          <left>
-            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black; -fx-background-color: #313131;" BorderPane.alignment="CENTER">
+            <AnchorPane prefHeight="530.0" prefWidth="155.0" style="-fx-border-color: black; -fx-background-color: #313131;" BorderPane.alignment="CENTER">
                <BorderPane.margin>
                   <Insets />
                </BorderPane.margin>
@@ -37,8 +37,9 @@
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
                <children>
-                  <Button layoutX="33.0" layoutY="115.0" mnemonicParsing="false" onAction="#addTenantScene" style="-fx-background-color: #2196F3;" text="*add tenant icon*" textFill="WHITE" />
-                  <Button layoutX="28.0" layoutY="189.0" mnemonicParsing="false" onAction="#removeTenant" prefHeight="35.0" prefWidth="143.0" style="-fx-background-color: #2196F3;" text="*remove tennant icon*" textFill="WHITE" />
+                  <Button layoutX="8.0" layoutY="140.0" mnemonicParsing="false" onAction="#addTenantScene" prefHeight="42.0" prefWidth="132.0" style="-fx-background-color: #2196F3;" text="*add tenant icon*" textFill="WHITE" />
+                  <Button layoutX="7.0" layoutY="190.0" mnemonicParsing="false" onAction="#removeTenant" prefHeight="41.0" prefWidth="135.0" style="-fx-background-color: #2196F3;" text="*remove tennant icon*" textFill="WHITE" />
+                  <Button layoutX="7.0" layoutY="237.0" mnemonicParsing="false" onAction="#ediTenantScene" prefHeight="43.0" prefWidth="134.0" style="-fx-background-color: #2196F3;" text="*edit tenant icon*" textFill="WHITE" />
                </children>
             </AnchorPane>
          </left>
@@ -59,18 +60,18 @@
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </padding>
                   </TableView>
-                  <Label fx:id="tenantsCountLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="257.0" layoutY="14.0" prefHeight="26.0" prefWidth="33.0" style="-fx-border-color: grey;">
+                  <Label fx:id="tenantsCountLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="257.0" layoutY="14.0" prefHeight="26.0" prefWidth="33.0" style="-fx-border-color: grey;" textFill="WHITE">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="14.0" layoutY="14.0" prefHeight="27.0" prefWidth="217.0" promptText="search tenant..." style="-fx-border-color: white; -fx-background-color: #313131;" AnchorPane.leftAnchor="14.0">
+                  <TextField fx:id="tenantSearchTextField" layoutX="14.0" layoutY="14.0" onKeyTyped="#searchTenant" prefHeight="27.0" prefWidth="217.0" promptText="search tenant..." style="-fx-border-color: white; -fx-background-color: #313131; -fx-text-inner-color: white;" AnchorPane.leftAnchor="14.0">
                      <cursor>
-                        <Cursor fx:constant="DEFAULT" />
+                        <Cursor fx:constant="TEXT" />
                      </cursor>
                   </TextField>
                   <AnchorPane fx:id="searchIcon" layoutX="204.0" layoutY="15.0" prefHeight="24.0" prefWidth="26.0" styleClass="searchIcon" />
-                  <Button layoutX="608.0" layoutY="11.0" mnemonicParsing="false" onAction="#handleGoBack" style="-fx-background-color: #2196F3;" text="*back*" textFill="WHITE" />
+                  <Button layoutX="608.0" layoutY="11.0" mnemonicParsing="false" onAction="#handleGoBack" prefHeight="27.0" prefWidth="121.0" style="-fx-background-color: #2196F3;" text="*back*" textFill="WHITE" />
                   <Label layoutX="301.0" layoutY="15.0" style="-fx-text-fill: white;" text="Tenants" textFill="WHITE">
                      <font>
                         <Font size="16.0" />

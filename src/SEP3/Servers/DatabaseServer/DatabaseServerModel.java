@@ -14,5 +14,7 @@ public interface DatabaseServerModel {
     AdministratorList getAdministratorListFromDatabase();
     void addTenant(Tenant tenant);
     void removeTenant(Tenant tenant);
+    void addApartment(Apartment apartment);
+    void removeApartment(Apartment apartment);
 
 }

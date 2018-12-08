@@ -1,5 +1,6 @@
 package SEP3.Servers.DatabaseServer;
 
+import SEP3.Servers.DatabaseServer.Model.Apartment;
 import SEP3.Servers.DatabaseServer.Model.Tenant;
 import com.google.gson.Gson;
 import java.io.DataInputStream;
@@ -64,6 +65,14 @@ public class CommunicatonThreadHandler implements Runnable {
                     case 9: // get admin by ID
                     case 10: // add admin
                     case 11: // remove admin
+                    case 12: // add apartment
+                        Apartment addThisApartment = gson.fromJson(inputStream.readUTF(), Apartment.class);
+                        model.addApartment(addThisApartment);
+                        break;
+                    case 13: // remove apartment
+                        Apartment removeThisApartment = gson.fromJson(inputStream.readUTF(), Apartment.class);
+                        model.removeApartment(removeThisApartment);
+                        break;
 
                 }
             }
