@@ -38,7 +38,6 @@ public class DatabaseServerModelManager implements DatabaseServerModel {
                 tenantList.addTenant(tenant);
 
             }
-            //System.out.println(tenantList.toString());
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (Exception e) {
@@ -274,6 +273,47 @@ public class DatabaseServerModelManager implements DatabaseServerModel {
             e.printStackTrace();
         }
         return adminCount;
+    }
+
+    @Override
+    public int countRequests() {
+        int requestCount = 0;
+        Connection conn = databaseConnection.connect();
+
+        try {
+            ResultSet rs = conn.createStatement().executeQuery("select * from sep3db.rqapartments");
+            while(rs.next()) {
+                requestCount++;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return requestCount;
+    }
+
+    @Override
+    public RqApartmentList getRequestListFromDatabase() {
+        Connection connection = databaseConnection.connect();
+        RqApartmentList requestList = new RqApartmentList();
+        try {
+            ResultSet rs = connection.createStatement().executeQuery("select * from sep3db.rqapartments");
+            while(rs.next()) {
+                RqApartment request = new RqApartment(
+                        rs.getString(1),
+                        rs.getString(2),
+                        rs.getString(3),
+                        rs.getString(4),
+                        rs.getString(5),
+                        rs.getString(6));
+                requestList.add(request);
+
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return requestList;
     }
 
 }

@@ -82,6 +82,13 @@ public class CommunicatonThreadHandler implements Runnable {
                     case 16: // count admins
                         outputStream.writeInt(model.countAdmins());
                         break;
+                    case 17: // get request list
+                        String requestList = gson.toJson(model.getRequestListFromDatabase());
+                        outputStream.writeUTF(requestList);
+                        break;
+                    case 18: // count requests
+                        outputStream.writeInt(model.countRequests());
+                        break;
 
                 }
             }

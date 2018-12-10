@@ -20,12 +20,14 @@ public class MainSceneHandler implements Initializable {
     @FXML Label tenantCount;
     @FXML Label apartmentCount;
     @FXML Label adminCount;
+    @FXML Label requestCount;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         tenantCount.setText(String.valueOf(controller.executeCountAllTenants()));
         apartmentCount.setText(String.valueOf(controller.executeCountAllApartments()));
         adminCount.setText(String.valueOf(controller.executeCountAllAdmins()));
+        requestCount.setText(String.valueOf(controller.executeCountAllRequests()));
     }
 
     public MainSceneHandler(Controller controller) {
@@ -38,7 +40,7 @@ public class MainSceneHandler implements Initializable {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("tenantsScene.fxml"));
             loader.setController(new TenantSceneHandler(controller));
             Parent mainWindow = loader.load();
-            Scene mainScene = new Scene(mainWindow, 905, 552);
+            Scene mainScene = new Scene(mainWindow, 874, 550);
             Stage mainStage  = (Stage)((Node) event.getSource()).getScene().getWindow();
             mainStage.setScene(mainScene);
             mainStage.show();
@@ -69,6 +71,22 @@ public class MainSceneHandler implements Initializable {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("adminsScene.fxml"));
             loader.setController(new AdminSceneHandler(controller));
+            Parent mainWindow = loader.load();
+            Scene mainScene = new Scene(mainWindow, 909, 572);
+            Stage mainStage  = (Stage)((Node) event.getSource()).getScene().getWindow();
+            mainStage.setScene(mainScene);
+            mainStage.show();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    public void toRequests(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("rqApartmentsScene.fxml"));
+            loader.setController(new RqApartmentsSceneHandler(controller));
             Parent mainWindow = loader.load();
             Scene mainScene = new Scene(mainWindow, 909, 572);
             Stage mainStage  = (Stage)((Node) event.getSource()).getScene().getWindow();

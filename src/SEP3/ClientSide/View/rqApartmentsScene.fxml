@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -19,7 +17,7 @@
          <top>
             <AnchorPane prefHeight="30.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                <children>
-                  <Label alignment="CENTER" contentDisplay="CENTER" layoutY="-6.0" prefHeight="39.0" prefWidth="905.0" style="-fx-background-color: grey; -fx-border-color: black;" text="Admins" textFill="WHITE" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-11.0" AnchorPane.topAnchor="-6.0">
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutY="-6.0" prefHeight="39.0" prefWidth="905.0" style="-fx-background-color: grey; -fx-border-color: black;" text="Apartments requests" textFill="WHITE" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-11.0" AnchorPane.topAnchor="-6.0">
                      <padding>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </padding>
@@ -31,7 +29,7 @@
             </AnchorPane>
          </top>
          <left>
-            <AnchorPane prefHeight="530.0" prefWidth="104.0" style="-fx-border-color: black; -fx-background-color: #313131;" BorderPane.alignment="CENTER">
+            <AnchorPane prefHeight="530.0" prefWidth="122.0" style="-fx-border-color: black; -fx-background-color: #313131;" BorderPane.alignment="CENTER">
                <BorderPane.margin>
                   <Insets />
                </BorderPane.margin>
@@ -39,7 +37,7 @@
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
                <children>
-                  <ImageView fitHeight="76.0" fitWidth="77.0" layoutX="13.0" layoutY="440.0" onMouseClicked="#exit" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="75.0" fitWidth="72.0" layoutX="18.0" layoutY="434.0" onMouseClicked="#exit" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../exit.png" />
                      </image>
@@ -50,30 +48,27 @@
          <center>
             <AnchorPane prefHeight="566.0" prefWidth="647.0" style="-fx-background-color: #313131;" BorderPane.alignment="CENTER">
                <children>
-                  <TableView fx:id="adminTable" fixedCellSize="0.0" layoutX="-2.0" layoutY="48.0" prefHeight="494.0" prefWidth="643.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+                  <TableView fx:id="rqApartmentTable" fixedCellSize="0.0" layoutX="-2.0" layoutY="48.0" prefHeight="494.0" prefWidth="643.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
                      <columns>
-                        <TableColumn fx:id="adminFNameColumn" maxWidth="2000.0" minWidth="-1.0" prefWidth="206.39999675750732" text="First Name" />
-                        <TableColumn fx:id="adminLNameColumn" maxWidth="2000.0" minWidth="-1.0" prefWidth="144.7999725341797" text="Last Name" />
-                        <TableColumn fx:id="adminIdColumn" editable="false" maxWidth="1000.0" prefWidth="170.40005493164062" text="Admin ID" />
-                        <TableColumn fx:id="adminEmailColumn" maxWidth="357.5999755859375" prefWidth="295.20001220703125" text="Phone Number" />
+                        <TableColumn fx:id="rqFNameColumn" maxWidth="2000.0" minWidth="-1.0" prefWidth="94.39999675750732" text="First Name" />
+                        <TableColumn fx:id="rqLNameColumn" maxWidth="2000.0" minWidth="-1.0" prefWidth="113.5999755859375" text="Last Name" />
+                        <TableColumn fx:id="rqIdColumn" editable="false" maxWidth="1000.0" prefWidth="104.80003356933594" text="Request ID" />
+                        <TableColumn fx:id="rqEmailColumn" maxWidth="184.80001831054688" prefWidth="118.39999389648438" text="Email" />
+                        <TableColumn fx:id="rqCampusColumn" editable="false" maxWidth="1000.0" prefWidth="132.800048828125" text="Campus" />
+                        <TableColumn fx:id="rcRoomNumberColumn" editable="false" maxWidth="1000.0" prefWidth="127.99993896484375" text="Room number" />
                      </columns>
                      <padding>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </padding>
                   </TableView>
-                  <Label fx:id="adminCount" alignment="CENTER" contentDisplay="CENTER" layoutX="257.0" layoutY="14.0" prefHeight="26.0" prefWidth="33.0" style="-fx-border-color: grey;" textFill="WHITE">
+                  <Label fx:id="requestCount" alignment="CENTER" contentDisplay="CENTER" layoutX="257.0" layoutY="14.0" prefHeight="26.0" prefWidth="33.0" style="-fx-border-color: grey;" textFill="WHITE">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="14.0" layoutY="14.0" prefHeight="27.0" prefWidth="217.0" promptText="search admin..." style="-fx-border-color: white; -fx-background-color: #313131; -fx-text-inner-color: white;" AnchorPane.leftAnchor="14.0">
-                     <cursor>
-                        <Cursor fx:constant="TEXT" />
-                     </cursor>
-                  </TextField>
                   <AnchorPane fx:id="searchIcon" layoutX="204.0" layoutY="15.0" prefHeight="24.0" prefWidth="26.0" styleClass="searchIcon" />
                   <Button layoutX="608.0" layoutY="11.0" mnemonicParsing="false" onAction="#handleGoBack" prefHeight="27.0" prefWidth="121.0" style="-fx-background-color: #2196F3;" text="*back*" textFill="WHITE" />
-                  <Label layoutX="301.0" layoutY="15.0" style="-fx-text-fill: white;" text="Admins" textFill="WHITE">
+                  <Label layoutX="301.0" layoutY="15.0" style="-fx-text-fill: white;" text="Requests" textFill="WHITE">
                      <font>
                         <Font size="16.0" />
                      </font>

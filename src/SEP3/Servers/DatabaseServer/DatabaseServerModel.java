@@ -19,5 +19,7 @@ public interface DatabaseServerModel {
     int countTenants();
     int countApartments();
     int countAdmins();
+    int countRequests();
+    RqApartmentList getRequestListFromDatabase();
 
 }

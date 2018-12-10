@@ -97,7 +97,7 @@ public class EditTenantSceneHandler implements Initializable {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("tenantsScene.fxml"));
             loader.setController(new TenantSceneHandler(controller));
             Parent mainWindow = loader.load();
-            Scene mainScene = new Scene(mainWindow, 905, 552);
+            Scene mainScene = new Scene(mainWindow, 874, 550);
             Stage mainStage  = (Stage)((Node) event.getSource()).getScene().getWindow();
             mainStage.setScene(mainScene);
             mainStage.show();

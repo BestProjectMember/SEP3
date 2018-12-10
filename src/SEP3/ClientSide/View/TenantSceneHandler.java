@@ -133,7 +133,7 @@ public class TenantSceneHandler implements Initializable {
     }
 
     @FXML
-    private void ediTenantScene (ActionEvent event) {
+    private void editTenantScene (ActionEvent event) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("editTenantScene.fxml"));
             loader.setController(new EditTenantSceneHandler(controller, this));

@@ -53,4 +53,10 @@ public class Controller {
     public int executeCountAllAdmins() {
         return clientModel.countAllAdmins();
     }
+    public RqApartmentList executeGetAllRequests() {
+        return clientModel.receiveRequestList();
+    }
+    public int executeCountAllRequests() {
+        return clientModel.countAllRequests();
+    }
 }

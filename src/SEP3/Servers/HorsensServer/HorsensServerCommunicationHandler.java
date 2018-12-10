@@ -87,7 +87,15 @@ public class HorsensServerCommunicationHandler implements Runnable {
                         outputStreamToDatabaseServer.writeInt(selection);
                         outputStreamToClient.writeInt(inputStreamFromDatabaseServer.readInt());
                         break;
-
+                    case 17: // get request list
+                        outputStreamToDatabaseServer.writeInt(selection);
+                        String requestListFromDatabase = inputStreamFromDatabaseServer.readUTF();
+                        outputStreamToClient.writeUTF(requestListFromDatabase);
+                        break;
+                    case 18: // count requests
+                        outputStreamToDatabaseServer.writeInt(selection);
+                        outputStreamToClient.writeInt(inputStreamFromDatabaseServer.readInt());
+                        break;
                 }
             }
 

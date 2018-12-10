@@ -16,4 +16,6 @@ public interface ClientModel {
     void removeApartment(Apartment apartment);
     AdministratorList receiveAdminList();
     int countAllAdmins();
+    RqApartmentList receiveRequestList();
+    int countAllRequests();
 }

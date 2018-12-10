@@ -12,6 +12,7 @@ public class ClientModelManager implements ClientModel {
     private TenantList tenantList;
     private AdministratorList administratorList;
     private ApartmentList apartmentList;
+    private RqApartmentList requestList;
     private DataInputStream in;
     private DataOutputStream out;
     private Client client;
@@ -20,11 +21,13 @@ public class ClientModelManager implements ClientModel {
     private int tenantCount;
     private int apartmentCount;
     private int adminCount;
+    private int requestCount;
 
     public ClientModelManager() throws IOException {
         tenantList = new TenantList();
         administratorList = new AdministratorList();
         apartmentList = new ApartmentList();
+        requestList = new RqApartmentList();
         client = new Client();
         clientSocket = client.getClientSocket();
         in = new DataInputStream(clientSocket.getInputStream());
@@ -163,7 +166,32 @@ public class ClientModelManager implements ClientModel {
         }
     }
 
+    @Override
+    public RqApartmentList receiveRequestList() {
+        try {
+            int choice = 17;
+            out.writeInt(choice);
+            System.out.println(choice);
+            String input = in.readUTF();
+            requestList = gson.fromJson(input, RqApartmentList.class);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return requestList;
+    }
 
-
-
+    @Override
+    public int countAllRequests() {
+        try {
+            int choice = 18;
+            out.writeInt(choice);
+            System.out.println(choice);
+            requestCount = in.readInt();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return requestCount;
+    }
 }

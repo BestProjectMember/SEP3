@@ -111,6 +111,10 @@
          <font>
             <Font size="16.0" />
          </font></Button>
-      <Button layoutX="15.0" layoutY="441.0" mnemonicParsing="false" onAction="#exit" prefHeight="38.0" prefWidth="56.0" style="-fx-background-color: red;" text="*exit" />
+      <ImageView fitHeight="71.0" fitWidth="70.0" layoutX="8.0" layoutY="401.0" onMouseClicked="#exit" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../exit.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
