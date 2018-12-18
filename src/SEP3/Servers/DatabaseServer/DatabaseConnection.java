@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 
 public class DatabaseConnection {
 
-    private Connection connection = null;
+    private Connection connection;
 
     public synchronized Connection connect() {
 

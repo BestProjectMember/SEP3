@@ -17,6 +17,7 @@ public class MainSceneHandler implements Initializable {
 
     private Controller controller;
 
+    // Object count labels
     @FXML Label tenantCount;
     @FXML Label apartmentCount;
     @FXML Label adminCount;

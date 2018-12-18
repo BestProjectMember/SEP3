@@ -63,7 +63,6 @@ public class TenantSceneHandler implements Initializable {
 
     private void refreshTenantsTable() throws IOException {
         tenantData.clear();
-        System.out.println(list.toString());
         list = controller.executeGetAllTenants();
         try {
             for (int i = 0; i<list.size(); i++) {
@@ -73,7 +72,9 @@ public class TenantSceneHandler implements Initializable {
                         list.get(i).getDOB(),
                         list.get(i).getEmail(),
                         list.get(i).getTelephoneNumber(),
-                        list.get(i).getSex()));
+                        list.get(i).getSex(),
+                        "-",
+                        "-"));
             }
             //setting cell value factory to table view
             tenantFNameColumn.setCellValueFactory(new PropertyValueFactory<>("firstName"));
@@ -135,13 +136,22 @@ public class TenantSceneHandler implements Initializable {
     @FXML
     private void editTenantScene (ActionEvent event) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("editTenantScene.fxml"));
-            loader.setController(new EditTenantSceneHandler(controller, this));
-            Parent mainWindow = loader.load();
-            Scene mainScene = new Scene(mainWindow, 223, 520);
-            Stage mainStage  = (Stage)((Node) event.getSource()).getScene().getWindow();
-            mainStage.setScene(mainScene);
-            mainStage.show();
+            if (getSelectedTenant() == null) {
+                Alert tenantNotSelected = new Alert(Alert.AlertType.ERROR);
+                tenantNotSelected.setTitle("Tenant not selected");
+                tenantNotSelected.setHeaderText("Select tenanat before editing");
+                tenantNotSelected.showAndWait();
+            }
+            else {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("editTenantScene.fxml"));
+                loader.setController(new EditTenantSceneHandler(controller, this));
+                Parent mainWindow = loader.load();
+                Scene mainScene = new Scene(mainWindow, 223, 520);
+                Stage mainStage  = (Stage)((Node) event.getSource()).getScene().getWindow();
+                mainStage.setScene(mainScene);
+                mainStage.show();
+            }
+
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -150,16 +160,24 @@ public class TenantSceneHandler implements Initializable {
     @FXML
     public Tenant getSelectedTenant() {
             Tenant getTenant = tenantsTable.getSelectionModel().getSelectedItem();
-            System.out.println(getTenant.toString());
             return getTenant;
     }
 
     @FXML
     private void removeTenant() {
         try {
+
             Tenant removeThisTenant = getSelectedTenant();
-            controller.executeRemoveTenant(removeThisTenant);
-            refreshTenantsTable();
+            if (removeThisTenant == null) {
+                Alert tenantNotSelected = new Alert(Alert.AlertType.ERROR);
+                tenantNotSelected.setTitle("Tenant not selected");
+                tenantNotSelected.setHeaderText("Select tenanat before removing");
+                tenantNotSelected.showAndWait();
+            }
+            else {
+                controller.executeRemoveTenant(removeThisTenant);
+                refreshTenantsTable();
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }

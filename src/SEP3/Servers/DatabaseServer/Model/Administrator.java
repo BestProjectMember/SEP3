@@ -38,16 +38,8 @@ public class Administrator {
         return administratorID;
     }
 
-    public void setAdministratorID(String administratorID) {
-        this.administratorID = administratorID;
-    }
-
     public String getTelephoneNumber() {
         return telephoneNumber;
-    }
-
-    public void setTelephoneNumber(String telephoneNumber) {
-        this.telephoneNumber = telephoneNumber;
     }
 
     @Override

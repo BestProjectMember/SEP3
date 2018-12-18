@@ -28,11 +28,6 @@
                         <Font size="28.0" />
                      </font>
                   </Label>
-                  <Button layoutX="14.0" layoutY="2.0" mnemonicParsing="false" onAction="#handleGoBack" prefHeight="28.0" prefWidth="100.0" style="-fx-background-color: grey; -fx-border-color: black;" text="BACK" textFill="WHITE">
-                     <font>
-                        <Font size="16.0" />
-                     </font>
-                  </Button>
                </children>
             </AnchorPane>
          </top>
@@ -88,13 +83,13 @@
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </padding>
                   </TableView>
-                  <Label fx:id="tenantsCountLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="588.0" layoutY="15.0" prefHeight="26.0" prefWidth="33.0" style="-fx-border-color: grey;" textFill="WHITE">
+                  <Label fx:id="tenantsCountLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="308.0" layoutY="13.0" prefHeight="26.0" prefWidth="33.0" style="-fx-border-color: grey;" textFill="WHITE">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Label>
                   <AnchorPane fx:id="searchIcon" layoutX="204.0" layoutY="15.0" prefHeight="24.0" prefWidth="26.0" styleClass="searchIcon" />
-                  <Label layoutX="628.0" layoutY="16.0" style="-fx-text-fill: white;" text="Tenants" textFill="WHITE">
+                  <Label layoutX="345.0" layoutY="14.0" style="-fx-text-fill: white;" text="Tenants" textFill="WHITE">
                      <font>
                         <Font size="16.0" />
                      </font>
@@ -109,6 +104,11 @@
                         <Image url="@../../../search.png" />
                      </image>
                   </ImageView>
+                  <Button layoutX="596.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleGoBack" prefHeight="28.0" prefWidth="100.0" style="-fx-background-color: #2196F3;" text="BACK" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
                </children>
             </AnchorPane>
          </center>

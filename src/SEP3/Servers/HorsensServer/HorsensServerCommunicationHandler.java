@@ -7,6 +7,7 @@ import java.net.Socket;
 
 
 public class HorsensServerCommunicationHandler implements Runnable {
+
     private DataInputStream inputStreamFromClient;
     private DataOutputStream outputStreamToClient;
     private Socket clientSocket;
@@ -15,6 +16,7 @@ public class HorsensServerCommunicationHandler implements Runnable {
     final String HOST = "localhost";
     private DataInputStream inputStreamFromDatabaseServer;
     private DataOutputStream outputStreamToDatabaseServer;
+
     public HorsensServerCommunicationHandler(Socket socket) {
         this.clientSocket = socket;
         try {
@@ -34,12 +36,15 @@ public class HorsensServerCommunicationHandler implements Runnable {
             while (continueCommuticating) {
                 Gson gson = new Gson();
                 int selection = inputStreamFromClient.readInt();
-                System.out.println("From client: " + selection);
                 switch (selection) {
                     case 1: // get tenant list
                         outputStreamToDatabaseServer.writeInt(selection);
                         String tenantListFromDatabase = inputStreamFromDatabaseServer.readUTF();
                         outputStreamToClient.writeUTF(tenantListFromDatabase);
+                        break;
+                    case 2: // count tenants
+                        outputStreamToDatabaseServer.writeInt(selection);
+                        outputStreamToClient.writeInt(inputStreamFromDatabaseServer.readInt());
                         break;
 
                     case 3: // add tenant
@@ -47,7 +52,6 @@ public class HorsensServerCommunicationHandler implements Runnable {
                         String addThisTenant = inputStreamFromClient.readUTF();
                         outputStreamToDatabaseServer.writeUTF(addThisTenant);
                         break;
-
                     case 4: //remove tenant
                         outputStreamToDatabaseServer.writeInt(selection);
                         String removeThisTenant = inputStreamFromClient.readUTF();
@@ -59,42 +63,43 @@ public class HorsensServerCommunicationHandler implements Runnable {
                         outputStreamToClient.writeUTF(apartmentListFromDatabase);
                         System.out.println(apartmentListFromDatabase);
                         break;
-                    case 8: // get admin list
-                        outputStreamToDatabaseServer.writeInt(selection);
-                        String adminListFromDatabase = inputStreamFromDatabaseServer.readUTF();
-                        outputStreamToClient.writeUTF(adminListFromDatabase);
-                        break;
 
-                    case 12: // add apartment
+                        case 6: // add apartment
                         outputStreamToDatabaseServer.writeInt(selection);
                         String addThisApartment = inputStreamFromClient.readUTF();
                         outputStreamToDatabaseServer.writeUTF(addThisApartment);
                         break;
-                    case 13: // remove apartment
+                    case 7: // remove apartment
                         outputStreamToDatabaseServer.writeInt(selection);
                         String removeThisApartment = inputStreamFromClient.readUTF();
                         outputStreamToDatabaseServer.writeUTF(removeThisApartment);
                         break;
-                    case 14: // count tenants
+                    case 8: // count apartments
                         outputStreamToDatabaseServer.writeInt(selection);
                         outputStreamToClient.writeInt(inputStreamFromDatabaseServer.readInt());
                         break;
-                    case 15: // count apartments
+                    case 9: // get admin list
+                        outputStreamToDatabaseServer.writeInt(selection);
+                        String adminListFromDatabase = inputStreamFromDatabaseServer.readUTF();
+                        outputStreamToClient.writeUTF(adminListFromDatabase);
+                        break;
+                    case 10: // count admins
                         outputStreamToDatabaseServer.writeInt(selection);
                         outputStreamToClient.writeInt(inputStreamFromDatabaseServer.readInt());
                         break;
-                    case 16: // count admins
-                        outputStreamToDatabaseServer.writeInt(selection);
-                        outputStreamToClient.writeInt(inputStreamFromDatabaseServer.readInt());
-                        break;
-                    case 17: // get request list
+                    case 11: // get request list
                         outputStreamToDatabaseServer.writeInt(selection);
                         String requestListFromDatabase = inputStreamFromDatabaseServer.readUTF();
                         outputStreamToClient.writeUTF(requestListFromDatabase);
                         break;
-                    case 18: // count requests
+                    case 12: // count requests
                         outputStreamToDatabaseServer.writeInt(selection);
                         outputStreamToClient.writeInt(inputStreamFromDatabaseServer.readInt());
+                        break;
+                    case 13: // remove request
+                        outputStreamToDatabaseServer.writeInt(selection);
+                        String removeThisRequest = inputStreamFromClient.readUTF();
+                        outputStreamToDatabaseServer.writeUTF(removeThisRequest);
                         break;
                 }
             }

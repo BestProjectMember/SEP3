@@ -11,6 +11,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -114,5 +115,24 @@ public class RqApartmentsSceneHandler implements Initializable {
         System.exit(0);
     }
 
+    @FXML
+    public RqApartment getSelectedRequest() {
+        RqApartment getRequest = rqApartmentTable.getSelectionModel().getSelectedItem();
+        return getRequest;
+    }
 
+    @FXML
+    private void removeRequest() {
+         if (getSelectedRequest() == null) {
+             Alert requestNotSelected  = new Alert(Alert.AlertType.ERROR);
+             requestNotSelected.setTitle("Request not selected");
+             requestNotSelected.setHeaderText("Select request before removing");
+             requestNotSelected.showAndWait();
+         }
+         else {
+             RqApartment removeThisRequest = getSelectedRequest();
+             controller.executeRemoveRequest(removeThisRequest);
+             refreshRequestsTable();
+         }
+    }
 }

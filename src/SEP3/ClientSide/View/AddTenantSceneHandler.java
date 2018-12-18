@@ -85,6 +85,7 @@ public class AddTenantSceneHandler implements Initializable {
         if (checkTenantFields()) {
             Tenant tenant = getTenantInput();
             controller.executeAddTenant(tenant);
+
             //Alert
             Alert tenantAddedAlert = new Alert(Alert.AlertType.INFORMATION);
             tenantAddedAlert.setTitle("Tenant added");

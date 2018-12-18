@@ -16,8 +16,7 @@ public class RqApartment {
     @SerializedName("roomNumber")
     public String roomNumber;
 
-    public RqApartment(String firstName, String lastName, String id, String email, String campus, String roomNumber)
-    {
+    public RqApartment(String firstName, String lastName, String id, String email, String campus, String roomNumber) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.id = id;

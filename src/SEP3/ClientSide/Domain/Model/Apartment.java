@@ -21,49 +21,20 @@ public class Apartment {
     public int getNumber() {
         return number;
     }
-
-    public void setNumber(int number) {
-        this.number = number;
-    }
-
     public String getLocation() {
         return location;
     }
-
-    public void setLocation(String location) {
-        this.location = location;
-    }
-
     public int getSize() {
         return size;
     }
-
-    public void setSize(int size) {
-        this.size = size;
-    }
-
     public boolean getStatus() {
         return status;
     }
-
-    public void setStatus(boolean status) {
-        this.status = status;
-    }
-
     public double getPrice() {
         return price;
     }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
     public int getFloor() {
         return floor;
-    }
-
-    public void setFloor(int floor) {
-        this.floor = floor;
     }
 
     @Override

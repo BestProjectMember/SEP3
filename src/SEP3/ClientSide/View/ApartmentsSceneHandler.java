@@ -3,7 +3,6 @@ package SEP3.ClientSide.View;
 import SEP3.ClientSide.Controller.Controller;
 import SEP3.ClientSide.Domain.Model.Apartment;
 import SEP3.ClientSide.Domain.Model.ApartmentList;
-import SEP3.ClientSide.Domain.Model.Tenant;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
@@ -15,13 +14,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
-
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.function.Predicate;
@@ -48,6 +43,7 @@ public class ApartmentsSceneHandler implements Initializable {
     // Apartment count label
     @FXML private Label apartmentCount;
 
+    // Apartment search field
     @FXML private TextField apartmentSearchField;
 
     public ApartmentsSceneHandler(Controller controller) {
@@ -122,13 +118,21 @@ public class ApartmentsSceneHandler implements Initializable {
     @FXML
     private void editApartmentScene (ActionEvent event) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("editApartmentScene.fxml"));
-            loader.setController(new EditApartmentSceneHandler(controller, this));
-            Parent mainWindow = loader.load();
-            Scene mainScene = new Scene(mainWindow, 222, 537);
-            Stage mainStage  = (Stage)((Node) event.getSource()).getScene().getWindow();
-            mainStage.setScene(mainScene);
-            mainStage.show();
+            if (getSelectedApartment() == null) {
+                Alert apartmentNotSelected = new Alert(Alert.AlertType.ERROR);
+                apartmentNotSelected.setTitle("Apartment not selected");
+                apartmentNotSelected.setHeaderText("Select apartment before editing");
+                apartmentNotSelected.showAndWait();
+            }
+            else {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("editApartmentScene.fxml"));
+                loader.setController(new EditApartmentSceneHandler(controller, this));
+                Parent mainWindow = loader.load();
+                Scene mainScene = new Scene(mainWindow, 222, 537);
+                Stage mainStage  = (Stage)((Node) event.getSource()).getScene().getWindow();
+                mainStage.setScene(mainScene);
+                mainStage.show();
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -167,7 +171,6 @@ public class ApartmentsSceneHandler implements Initializable {
     @FXML
     public Apartment getSelectedApartment() {
         Apartment getApartment = apartmentTable.getSelectionModel().getSelectedItem();
-        System.out.println(getApartment.toString());
         return getApartment;
     }
 

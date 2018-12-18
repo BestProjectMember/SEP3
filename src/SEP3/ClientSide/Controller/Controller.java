@@ -11,12 +11,7 @@ public class Controller {
     private View view;
     private ClientModel clientModel;
 
-    /**
-     * Controller constructor initializes clientModel and View variables
-     *
-     * @param //clientModel clientModel interface
-     * @param //GUI         View interface
-     */
+
     public Controller(ClientModel clientModel) {
         this.clientModel = clientModel;
         this.view = new GUI();
@@ -59,4 +54,11 @@ public class Controller {
     public int executeCountAllRequests() {
         return clientModel.countAllRequests();
     }
+    public void executeRemoveRequest(RqApartment request) {
+        clientModel.removeRequest(request);
+    }
+
+
+
+
 }

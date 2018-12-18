@@ -5,7 +5,6 @@ import java.util.ArrayList;
 public class RqApartmentList {
     private ArrayList<RqApartment> requestList;
 
-
     public RqApartmentList() {
         this.requestList = new ArrayList<>();
     }
@@ -24,7 +23,7 @@ public class RqApartmentList {
 
     @Override
     public String toString() {
-        String all = " ";
+        String all = "";
         for(int i=0; i<requestList.size();i++)
         {
             all += requestList.get(i).toString() + ("\n");

@@ -9,6 +9,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="572.0" prefWidth="909.0" style="-fx-background-color: #313131;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
@@ -42,13 +43,20 @@
                         <Image url="@../../../exit.png" />
                      </image>
                   </ImageView>
+                  <ImageView fitHeight="81.0" fitWidth="81.0" layoutX="14.0" layoutY="184.0" onMouseClicked="#removeRequest" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../remove.png" />
+                     </image>
+                  </ImageView>
+                  <Line endX="10.199989318847656" layoutX="101.0" layoutY="177.0" startX="-100.0" stroke="WHITE" />
+                  <Line endX="10.199989318847656" layoutX="99.0" layoutY="273.0" startX="-100.0" stroke="WHITE" />
                </children>
             </AnchorPane>
          </left>
          <center>
             <AnchorPane prefHeight="566.0" prefWidth="647.0" style="-fx-background-color: #313131;" BorderPane.alignment="CENTER">
                <children>
-                  <TableView fx:id="rqApartmentTable" fixedCellSize="0.0" layoutX="-2.0" layoutY="48.0" prefHeight="494.0" prefWidth="643.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+                  <TableView fx:id="rqApartmentTable" fixedCellSize="0.0" layoutX="-2.0" layoutY="48.0" onMouseClicked="#getSelectedRequest" prefHeight="494.0" prefWidth="643.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
                      <columns>
                         <TableColumn fx:id="rqFNameColumn" maxWidth="2000.0" minWidth="-1.0" prefWidth="94.39999675750732" text="First Name" />
                         <TableColumn fx:id="rqLNameColumn" maxWidth="2000.0" minWidth="-1.0" prefWidth="113.5999755859375" text="Last Name" />
@@ -67,7 +75,7 @@
                      </font>
                   </Label>
                   <AnchorPane fx:id="searchIcon" layoutX="204.0" layoutY="15.0" prefHeight="24.0" prefWidth="26.0" styleClass="searchIcon" />
-                  <Button layoutX="608.0" layoutY="11.0" mnemonicParsing="false" onAction="#handleGoBack" prefHeight="27.0" prefWidth="121.0" style="-fx-background-color: #2196F3;" text="*back*" textFill="WHITE" />
+                  <Button layoutX="608.0" layoutY="8.0" mnemonicParsing="false" onAction="#handleGoBack" prefHeight="30.0" prefWidth="122.0" style="-fx-background-color: #2196F3;" text="BACK" textFill="WHITE" />
                   <Label layoutX="301.0" layoutY="15.0" style="-fx-text-fill: white;" text="Requests" textFill="WHITE">
                      <font>
                         <Font size="16.0" />

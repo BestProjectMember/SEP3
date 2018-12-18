@@ -39,7 +39,6 @@ public class AdminSceneHandler implements Initializable {
 
     // Apartment count label
     @FXML private Label adminCount;
-
     @FXML private TextField adminSearchField;
 
     public AdminSceneHandler(Controller controller) {
@@ -57,7 +56,7 @@ public class AdminSceneHandler implements Initializable {
         }
     }
 
-    private void refreshAdminTable() throws IOException {
+    private void refreshAdminTable() {
         adminData.clear();
         adminList = controller.executeGetAllAdmins();
         try {
@@ -87,7 +86,7 @@ public class AdminSceneHandler implements Initializable {
     }
 
     @FXML
-    private void showAdminList() throws Exception {
+    private void showAdminList() {
         refreshAdminTable();
     }
 

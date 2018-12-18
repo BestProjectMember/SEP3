@@ -2,7 +2,6 @@ package SEP3.ClientSide.View;
 
 import SEP3.ClientSide.Controller.Controller;
 import SEP3.ClientSide.Domain.Model.Apartment;
-import SEP3.ClientSide.Domain.Model.Tenant;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

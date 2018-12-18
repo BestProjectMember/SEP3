@@ -2,18 +2,18 @@ package SEP3.ClientSide.View;
 
 import javafx.application.Application;
 
-public class ViewLauncher implements Runnable {
+public class  ViewLauncher implements Runnable {
 
-    private Application view;
+    private Application application;
 
     /**
      * ViewLauncher constructor which takes
      * Application object as argument
-     * @param view Application object
+     * @param application Application object
      */
-    public ViewLauncher(Application view)
+    public ViewLauncher(Application application)
     {
-        this.view = view;
+        this.application = application;
     }
 
     /**
@@ -24,6 +24,6 @@ public class ViewLauncher implements Runnable {
     @Override
     public void run()
     {
-        Application.launch(view.getClass());
+        Application.launch(application.getClass());
     }
 }

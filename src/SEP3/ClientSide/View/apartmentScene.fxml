@@ -18,7 +18,7 @@
    <children>
       <ImageView fitHeight="89.0" fitWidth="94.0" pickOnBounds="true" smooth="false">
          <image>
-            <Image url="@../../../../apartment.jpg" />
+            <Image url="@../../../apartmentIcon.jpg" />
          </image>
       </ImageView>
       <Line endX="-1.9999847412109375" layoutX="94.0" layoutY="90.0" startX="-100.0" strokeWidth="3.0" />
@@ -60,23 +60,18 @@
       </Line>
       <AnchorPane layoutX="95.0" layoutY="-6.0" prefHeight="498.0" prefWidth="785.0" style="-fx-background-color: grey;">
          <children>
-            <TextField fx:id="apartmentSearchField" focusTraversable="false" layoutX="25.0" layoutY="44.0" onKeyTyped="#searchApartment" promptText="search...." style="-fx-border-color: white; -fx-background-color: grey; -fx-text-inner-color: white;" />
+            <TextField fx:id="apartmentSearchField" focusTraversable="false" layoutX="25.0" layoutY="44.0" onKeyTyped="#searchApartment" prefHeight="27.0" prefWidth="176.0" promptText="search apartment..." style="-fx-border-color: white; -fx-background-color: grey; -fx-text-inner-color: white;" />
             <ImageView fitHeight="38.0" fitWidth="37.0" layoutX="606.0" layoutY="39.0" preserveRatio="true">
                <image>
                   <Image url="@../../../../../../../AppData/Local/Temp/icons8_User_48px.png" />
                </image>
             </ImageView>
             <Line endX="108.0" endY="-3.814697265625E-6" layoutX="674.0" layoutY="37.0" startX="-674.0" startY="-1.9073486328125E-5" />
-            <Text layoutX="201.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Apartments Campus Horsens">
+            <Text fill="WHITE" layoutX="201.0" layoutY="26.0" stroke="#f8f4f4" strokeType="OUTSIDE" strokeWidth="0.0" text="Apartments Campus Horsens">
                <font>
                   <Font name="Arial" size="24.0" />
                </font>
             </Text>
-            <Label layoutX="643.0" layoutY="38.0" prefHeight="37.0" prefWidth="101.0" text="Name">
-               <font>
-                  <Font name="System Bold" size="16.0" />
-               </font>
-            </Label>
             <AnchorPane layoutX="-1.0" layoutY="87.0" prefHeight="408.0" prefWidth="784.0" style="-fx-background-color: #413539;">
                <children>
                   <TableView fx:id="apartmentTable" fixedCellSize="0.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#getSelectedApartment" prefHeight="371.0" prefWidth="762.0" style="-fx-background-color: white;">
@@ -104,10 +99,21 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <Text fill="WHITE" layoutX="380.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Apartment count" />
-            <Button layoutX="680.0" layoutY="5.0" mnemonicParsing="false" onAction="#handleGoBack" style="-fx-background-color: #2196F3;" text="*back button*" />
+            <Text fill="WHITE" layoutX="380.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Apartments">
+               <font>
+                  <Font size="14.0" />
+               </font></Text>
+            <Button layoutX="658.0" layoutY="50.0" mnemonicParsing="false" onAction="#handleGoBack" prefHeight="32.0" prefWidth="94.0" style="-fx-background-color: #2196F3;" text="BACK" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <ImageView fitHeight="32.0" fitWidth="29.0" layoutX="172.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../search.png" />
+               </image>
+            </ImageView>
          </children></AnchorPane>
-      <Button layoutX="3.0" layoutY="145.0" mnemonicParsing="false" onAction="#editApartmentScene" prefHeight="79.0" prefWidth="87.0" style="-fx-background-color: #2196F3;" text="*edit button" textFill="WHITE">
+      <Button layoutX="3.0" layoutY="145.0" mnemonicParsing="false" onAction="#editApartmentScene" prefHeight="79.0" prefWidth="87.0" style="-fx-background-color: #2196F3;" text="EDIT" textFill="WHITE">
          <font>
             <Font size="16.0" />
          </font></Button>

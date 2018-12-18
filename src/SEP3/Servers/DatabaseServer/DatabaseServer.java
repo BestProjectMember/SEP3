@@ -9,7 +9,6 @@ public class DatabaseServer implements Runnable {
     private ServerSocket welcomeSocket;
     private DatabaseConnection connection;
 
-
     public DatabaseServer(int port) throws IOException {
         this.welcomeSocket = new ServerSocket(port);
         connection = new DatabaseConnection();
@@ -25,15 +24,12 @@ public class DatabaseServer implements Runnable {
 
                 Socket socket = welcomeSocket.accept();
                 System.out.println("Horsens server at port " + socket.getPort());
-                CommunicatonThreadHandler handler = new CommunicatonThreadHandler(socket);
-                //handler.ReadFromCsharp(); //todo readFromCsharp
+                DatabaseServerCommunicationHandler handler = new DatabaseServerCommunicationHandler(socket);
                 Thread t = new Thread(handler);
                 t.start();
             } catch (IOException e) {
                 e.printStackTrace();
             }
-
         }
     }
-
 }

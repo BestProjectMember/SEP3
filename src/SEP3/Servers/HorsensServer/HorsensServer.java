@@ -17,7 +17,6 @@ public class HorsensServer implements Runnable {
                 Socket socket = welcomeSocket.accept();
                 System.out.println("Client connected at port " + socket.getPort());
                 HorsensServerCommunicationHandler handler = new HorsensServerCommunicationHandler(socket);
-                //handler.ReadFromCsharp(); //todo readFromCsharp
                 Thread t = new Thread(handler);
                 t.start();
             } catch (IOException e) {

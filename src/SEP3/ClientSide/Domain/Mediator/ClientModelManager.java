@@ -40,7 +40,6 @@ public class ClientModelManager implements ClientModel {
         try {
             int choice = 1;
             out.writeInt(choice);
-            System.out.println(choice);
             String input = in.readUTF();
             tenantList = gson.fromJson(input, TenantList.class);
         } catch (IOException e) {
@@ -54,43 +53,13 @@ public class ClientModelManager implements ClientModel {
     @Override
     public int countAllTenants() {
         try {
-            int choice = 14;
+            int choice = 2;
             out.writeInt(choice);
-            System.out.println(choice);
             tenantCount = in.readInt();
         } catch (IOException e) {
             e.printStackTrace();
         }
         return tenantCount;
-    }
-
-        @Override
-    public ApartmentList receiveApartmentList() {
-        try {
-            int choice = 5;
-            out.writeInt(choice);
-            System.out.println(choice);
-            String input = in.readUTF();
-            apartmentList = gson.fromJson(input, ApartmentList.class);
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return apartmentList;
-    }
-
-    @Override
-    public int countAllApartments() {
-        try {
-            int choice = 15;
-            out.writeInt(choice);
-            System.out.println(choice);
-            apartmentCount = in.readInt();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return apartmentCount;
     }
 
     @Override
@@ -114,13 +83,59 @@ public class ClientModelManager implements ClientModel {
             e.printStackTrace();
         }
     }
+        @Override
+    public ApartmentList receiveApartmentList() {
+        try {
+            int choice = 5;
+            out.writeInt(choice);
+            String input = in.readUTF();
+            apartmentList = gson.fromJson(input, ApartmentList.class);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return apartmentList;
+    }
+
+    @Override
+    public void addApartment(Apartment apartment) {
+        try {
+            int choice = 6;
+            out.writeInt(choice);
+            out.writeUTF(gson.toJson(apartment));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void removeApartment(Apartment apartment) {
+        try {
+            int choice = 7;
+            out.writeInt(choice);
+            out.writeUTF(gson.toJson(apartment));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    @Override
+    public int countAllApartments() {
+        try {
+            int choice = 8;
+            out.writeInt(choice);
+            apartmentCount = in.readInt();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return apartmentCount;
+    }
 
     @Override
     public AdministratorList receiveAdminList() {
         try {
-            int choice = 8;
+            int choice = 9;
             out.writeInt(choice);
-            System.out.println(choice);
             String input = in.readUTF();
             administratorList = gson.fromJson(input, AdministratorList.class);
         } catch (IOException e) {
@@ -134,9 +149,8 @@ public class ClientModelManager implements ClientModel {
     @Override
     public int countAllAdmins() {
         try {
-            int choice = 16;
+            int choice = 10;
             out.writeInt(choice);
-            System.out.println(choice);
             adminCount = in.readInt();
         } catch (IOException e) {
             e.printStackTrace();
@@ -145,33 +159,10 @@ public class ClientModelManager implements ClientModel {
     }
 
     @Override
-    public void addApartment(Apartment apartment) {
-        try {
-            int choice = 12;
-            out.writeInt(choice);
-            out.writeUTF(gson.toJson(apartment));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    @Override
-    public void removeApartment(Apartment apartment) {
-        try {
-            int choice = 13;
-            out.writeInt(choice);
-            out.writeUTF(gson.toJson(apartment));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    @Override
     public RqApartmentList receiveRequestList() {
         try {
-            int choice = 17;
+            int choice = 11;
             out.writeInt(choice);
-            System.out.println(choice);
             String input = in.readUTF();
             requestList = gson.fromJson(input, RqApartmentList.class);
         } catch (IOException e) {
@@ -185,13 +176,23 @@ public class ClientModelManager implements ClientModel {
     @Override
     public int countAllRequests() {
         try {
-            int choice = 18;
+            int choice = 12;
             out.writeInt(choice);
-            System.out.println(choice);
             requestCount = in.readInt();
         } catch (IOException e) {
             e.printStackTrace();
         }
         return requestCount;
+    }
+
+    @Override
+    public void removeRequest(RqApartment request) {
+        try {
+            int choice = 13;
+            out.writeInt(choice);
+            out.writeUTF(gson.toJson(request));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

@@ -2,9 +2,7 @@ package SEP3.ClientSide.View;
 
 import SEP3.ClientSide.Controller.Controller;
 import javafx.application.Application;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -48,7 +46,7 @@ public class GUI extends Application implements View {
         loader.setController(this.mainSceneHandler);
         Parent mainWindow = loader.load();
         Scene mainScene = new Scene(mainWindow, 800, 550);
-        primaryStage.initStyle(StageStyle.UNDECORATED);
+//        primaryStage.initStyle(StageStyle.UNDECORATED);
         primaryStage.setScene(mainScene);
         primaryStage.show();
     }

@@ -2,21 +2,19 @@ package SEP3.Servers.DatabaseServer;
 
 import SEP3.Servers.DatabaseServer.Model.*;
 import com.google.gson.Gson;
-
-import java.io.DataInputStream;
-import java.io.IOException;
 import java.net.Socket;
 import java.sql.*;
 
 public class DatabaseServerModelManager implements DatabaseServerModel {
 
     private DatabaseConnection databaseConnection;
-    private Gson gson = new Gson();
+    private Gson gson;
     private Socket socket;
-
 
     public DatabaseServerModelManager() {
         this.databaseConnection = new DatabaseConnection();
+        gson = new Gson();
+        socket = new Socket();
     }
 
     //-----------------------Tenant--------------------------
@@ -198,42 +196,6 @@ public class DatabaseServerModelManager implements DatabaseServerModel {
         return apartmentCount;
     }
 
-    ////////////////// c#
-
-    // C#
-    @Override
-    public RqApartment receiveApartmentRequestFromWeb(Socket socket) throws IOException {
-        DataInputStream inputStream = new DataInputStream(socket.getInputStream());
-        byte[] jsonBytes=new byte[1024];
-        inputStream.read(jsonBytes);
-        RqApartment a = gson.fromJson(new String(jsonBytes).trim(), RqApartment.class);
-        System.out.println(a);
-        return a;
-    }
-
-    @Override
-    public void addApartmentRequest() {
-        try {
-                RqApartment rqApartment = receiveApartmentRequestFromWeb(socket);
-                PreparedStatement preparedStatement;
-                DatabaseConnection dc = new DatabaseConnection();
-                Connection conn = dc.connect();
-                // database statement
-                String query = "insert into sep3db.rqapartments(firstName, lastName , id, email, campus, roomNumber) values(?,?,?,?,?,?)";
-                preparedStatement = conn.prepareStatement(query);
-                preparedStatement.setString(1, rqApartment.getFirstName());
-                preparedStatement.setString(2, rqApartment.getLastName());
-                preparedStatement.setString(3, rqApartment.getId());
-                preparedStatement.setString(4, rqApartment.getEmail());
-                preparedStatement.setString(5, rqApartment.getCampus());
-                preparedStatement.setString(6, rqApartment.getRoomNumber());
-                preparedStatement.execute();
-                preparedStatement.close();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-    }
-
     //--------------------Admin---------------------------
     @Override
     public AdministratorList getAdministratorListFromDatabase() {
@@ -275,6 +237,8 @@ public class DatabaseServerModelManager implements DatabaseServerModel {
         return adminCount;
     }
 
+
+    //--------------------Requests---------------------------
     @Override
     public int countRequests() {
         int requestCount = 0;
@@ -314,6 +278,28 @@ public class DatabaseServerModelManager implements DatabaseServerModel {
             e.printStackTrace();
         }
         return requestList;
+    }
+
+    @Override
+    public void removeRequest(RqApartment request) {
+        try {
+            PreparedStatement preparedStatement;
+            Connection conn = databaseConnection.connect();
+
+            //database statement
+            String query = "delete from sep3db.rqapartments where firstName = ? and lastName = ? and id = ? and email = ? and campus = ? and roomNumber = ?";
+            preparedStatement = conn.prepareStatement(query);
+            preparedStatement.setString(1,  request.getFirstName());
+            preparedStatement.setString(2,  request.getLastName());
+            preparedStatement.setString(3,  request.getId());
+            preparedStatement.setString(4,  request.getEmail());
+            preparedStatement.setString(5,  request.getCampus());
+            preparedStatement.setString(6, request.getRoomNumber());
+            preparedStatement.execute();
+            preparedStatement.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 }
